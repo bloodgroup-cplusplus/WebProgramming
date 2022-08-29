@@ -1,0 +1,40 @@
+[debug] [2022-08-29T09:45:47.776Z] ----------------------------------------------------------------------
+[debug] [2022-08-29T09:45:47.777Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-08-29T09:45:47.777Z] CLI Version:   11.8.0
+[debug] [2022-08-29T09:45:47.777Z] Platform:      darwin
+[debug] [2022-08-29T09:45:47.777Z] Node Version:  v16.13.1
+[debug] [2022-08-29T09:45:47.778Z] Time:          Mon Aug 29 2022 15:15:47 GMT+0530 (India Standard Time)
+[debug] [2022-08-29T09:45:47.778Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-29T09:45:47.805Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-29T09:45:47.805Z] > authorizing via signed-in user (bhushansemail@gmail.com)
+[debug] [2022-08-29T09:45:47.805Z] [iam] checking project atlantean-glyph-359709 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-08-29T09:45:47.806Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/atlantean-glyph-359709:testIamPermissions [none]
+[debug] [2022-08-29T09:45:47.807Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/atlantean-glyph-359709:testIamPermissions x-goog-quota-user=projects/atlantean-glyph-359709
+[debug] [2022-08-29T09:45:47.807Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/atlantean-glyph-359709:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-29T09:45:49.814Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/atlantean-glyph-359709:testIamPermissions 200
+[debug] [2022-08-29T09:45:49.815Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/atlantean-glyph-359709:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-29T09:45:49.815Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/atlantean-glyph-359709/serviceAccounts/atlantean-glyph-359709@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-08-29T09:45:49.815Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/atlantean-glyph-359709/serviceAccounts/atlantean-glyph-359709@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-08-29T09:45:51.651Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/atlantean-glyph-359709/serviceAccounts/atlantean-glyph-359709@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2022-08-29T09:45:51.651Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/atlantean-glyph-359709/serviceAccounts/atlantean-glyph-359709@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-08-29T09:45:51.652Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/atlantean-glyph-359709 [none]
+[debug] [2022-08-29T09:45:52.572Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/atlantean-glyph-359709 200
+[debug] [2022-08-29T09:45:52.572Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/atlantean-glyph-359709 {"projectId":"atlantean-glyph-359709","projectNumber":"366050361853","displayName":"My First Project","name":"projects/atlantean-glyph-359709","resources":{"hostingSite":"atlantean-glyph-359709","realtimeDatabaseInstance":"atlantean-glyph-359709-default-rtdb","storageBucket":"atlantean-glyph-359709.appspot.com","locationId":"asia-northeast3"},"state":"ACTIVE","etag":"1_bf16b696-8d7d-404b-981f-7cd79dbeb3ac"}
+[info] 
+[info] === Deploying to 'atlantean-glyph-359709'...
+[info] 
+[info] i  deploying firestore, functions, hosting 
+[debug] [2022-08-29T09:45:53.031Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at new NodeError (node:internal/errors:371:5)
+    at validateString (node:internal/validators:119:11)
+    at Object.join (node:path:1172:7)
+    at Config.path (/usr/local/lib/node_modules/firebase-tools/lib/config.js:123:45)
+    at getChildEnvironment (/usr/local/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:51:49)
+    at runTargetCommands (/usr/local/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:72:14)
+    at /usr/local/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:124:24
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async chain (/usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:33:9)
+    at async deploy (/usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:67:5)
+[error] 
+[error] Error: An unexpected error has occurred.
