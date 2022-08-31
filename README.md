@@ -26,6 +26,8 @@
 ![Screen Shot 2022-08-31 at 10 04 34](https://user-images.githubusercontent.com/81256027/187593497-462f9430-5a3f-4a2a-b549-af2faa3f17c7.png)
 
 
+![Screen Shot 2022-08-31 at 14 10 47](https://user-images.githubusercontent.com/81256027/187636063-d032ec4b-18d4-41d9-8213-c3cde49d981d.png)
 
 
+![Screen Shot 2022-08-31 at 14 11 31](https://user-images.githubusercontent.com/81256027/187636283-a05062e3-f9fa-4f2e-9e79-34cb6b5553e3.png)
 
