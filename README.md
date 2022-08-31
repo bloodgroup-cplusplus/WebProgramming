@@ -44,5 +44,7 @@
 
 https://mbebenita.github.io/WasmExplorer/
 
+https://wasdk.github.io/WasmFiddle/?
+
 
 
