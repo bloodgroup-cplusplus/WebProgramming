@@ -1,0 +1,13 @@
+{
+    // Required
+    "manifest_version": 3,
+    "name": "Timer Extension",
+    "version": "1.0.0",
+    "description":"hello chrome world",
+    "default_locale": "en",
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    }
+}
