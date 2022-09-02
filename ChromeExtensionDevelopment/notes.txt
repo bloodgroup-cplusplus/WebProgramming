@@ -1,0 +1,13 @@
+INTRO TRACK
+
+1- Chrome extensions basics
+    Introduction to chrome APIs
+    Basic timer extension built in JS and HTML/CSS
+
+2- Study timer extension project 
+    Hands on beginner project building a production grade Study
+    timer(pomodoro) extension using js and html/css 
+
+3- Data Fetching 
+    Build a TV show search extension using new Chrome APIs
+    Data fetcing using HTTP request to thrid party apis 
