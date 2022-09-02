@@ -39,3 +39,14 @@ CLOSING TRACK
     optional bonus section covering the basics of chrome themes 
 
 
+
+WHY BUILD CHROME EXTENSION 
+
+    Simple and cheap to build and deploy 
+    Great for personal projects or personal use 
+    Transferable skills using modern web frameworks 
+    easily turn static web apps into extensions
+    lot of flexibility to be creative 
+
+
+    
