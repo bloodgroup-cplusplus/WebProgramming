@@ -11,3 +11,31 @@ INTRO TRACK
 3- Data Fetching 
     Build a TV show search extension using new Chrome APIs
     Data fetcing using HTTP request to thrid party apis 
+
+
+
+
+INTERMEDIATE TRACK 
+
+4- WEBPACK BUILD SYSTEM 
+    Design a build system that enables the use of Typescript and react code 
+    in our extension using a single command 
+
+5- Weather Extension project 
+    Multi-featuerd weather extension using react and typescript 
+    Introductes material Ui components library 
+    Integrates nearly every chrome APi learned in the course 
+
+6- AD Blocker extension project 
+    Basic principle behind a simple ad blocker in typescript 
+    light discussion about the current state of ad blockers
+
+CLOSING TRACK 
+
+7- CHROME web store publishing 
+    Deploying your chrome extension for the world to see
+
+8 0 Chrome themes 
+    optional bonus section covering the basics of chrome themes 
+
+
