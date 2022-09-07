@@ -4,6 +4,9 @@
 
 let video = document.getElementById("video");
 let model;
+let canvas=document.getElementById("canvas")
+let ctx = canvas.getContext("2d");
+
 
 const setupCamera =() =>{
 	navigator.mediaDevices.getUserMedia({
@@ -17,13 +20,28 @@ const setupCamera =() =>{
 
 const detectFaces = async ()=>{
 	const prediction = await model.estimateFaces(video,false);
-	console.log(prediction);
+	//console.log(prediction);
+	ctx.drawImage(video,0,0,600,400);
+	prediction.array.forEach((pred) => {
+		ctx.beginPath();
+		ctx.lineWidth="4";
+		ctx.strokeStyle="blue";
+		ctx.rect(
+			pred.topLeft[0],
+			pred.topLeft[1],
+			pred.bottomRight[0]-pred.topLeft[0],
+			pred.bottomRight[1]-pred.topLeft[1]
+		);
+		ctx.stroke();
+	
+		
+	});
 
 };
 
 setupCamera();
-video.addEventListener("loadeddata", ()=>{
+video.addEventListener("loadeddata", async()=>{
 	model = await blazeface.load();
-	detectFaces();
-})
+	setInterval(detectFaces(),100);
+});
 
