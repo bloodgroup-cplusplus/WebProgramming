@@ -1,3 +1,20 @@
+// Install dependencies 
+// Import Dependencies
+// Setup webcam and canvas
+// Define references to those
+// Load facemesh
+// Detect Function
+// Drawing Utilities
+// Load Triangulation
+// Setup Traingle path 
+// Setup point drawing
+// ADD drawMesh to detect function 
+
+
+
+
+
+
 import logo from './logo.svg';
 import './App.css';
 
