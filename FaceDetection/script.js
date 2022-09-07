@@ -1,7 +1,5 @@
 
 
-
-
 let video = document.getElementById("video");
 let model;
 let canvas=document.getElementById("canvas")
@@ -22,7 +20,9 @@ const detectFaces = async ()=>{
 	const prediction = await model.estimateFaces(video,false);
 	//console.log(prediction);
 	ctx.drawImage(video,0,0,600,400);
-	prediction.array.forEach((pred) => {
+	console.log(prediction)
+
+	prediction.forEach((pred) => {
 		ctx.beginPath();
 		ctx.lineWidth="4";
 		ctx.strokeStyle="blue";
@@ -33,6 +33,10 @@ const detectFaces = async ()=>{
 			pred.bottomRight[1]-pred.topLeft[1]
 		);
 		ctx.stroke();
+		ctx.fillStyle="red";
+		pred.landmarks.forEach(landmark=>{
+			ctx.fillRect(landmark[0],landmark[1],5,5);
+		});
 	
 		
 	});
@@ -42,6 +46,6 @@ const detectFaces = async ()=>{
 setupCamera();
 video.addEventListener("loadeddata", async()=>{
 	model = await blazeface.load();
-	setInterval(detectFaces(),100);
+	setInterval(detectFaces,1000);
 });
 
