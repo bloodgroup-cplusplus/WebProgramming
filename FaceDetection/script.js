@@ -4,8 +4,6 @@ let video = document.getElementById("video");
 let model;
 let canvas=document.getElementById("canvas")
 let ctx = canvas.getContext("2d");
-
-
 const setupCamera =() =>{
 	navigator.mediaDevices.getUserMedia({
 		video:{width:600,height:400},
@@ -17,7 +15,7 @@ const setupCamera =() =>{
 };
 
 const detectFaces = async ()=>{
-	const prediction = await model.estimateFaces(video,false);
+	const prediction = await model.estimateFaces(video, false);
 	//console.log(prediction);
 	ctx.drawImage(video,0,0,600,400);
 	console.log(prediction)
@@ -43,9 +41,11 @@ const detectFaces = async ()=>{
 
 };
 
+
 setupCamera();
 video.addEventListener("loadeddata", async()=>{
 	model = await blazeface.load();
-	setInterval(detectFaces,1000);
+	//model=await face-landmarks-detection.load(face-landmarks-detection.SupportedPackages.mediapipeFacemesh);
+	setInterval(detectFaces,40);
 });
 
