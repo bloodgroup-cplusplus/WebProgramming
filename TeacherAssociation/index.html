@@ -18,5 +18,24 @@
         <footer>
             <p>footer</p>
         </footer>
+        <script type="text/babel">
+            const Banner =()=>{
+                //when we return a template for a component we create it inside a
+                // react statement 
+                // we are going to write jsx which is more like html 
+                return (
+
+                <div>
+                    <p>banner</p>
+
+                    </div>
+                )
+
+            }
+            //render the component to the DOM
+
+            ReactDOM.render(<Banner/>, document.getElementById("banner"))
+
+        </script>
     </body>
 </html>
