@@ -26,4 +26,20 @@ What is Svelte?
     Ease of Use 
 
 
+What should you know first 
+
+Javascript fundamentals
+Async programming(promises)
+Array Methods(for Each, map , filter ,etc)
+fetch/API /Http request 
+NPM (node pakage manager )
+
+Compnents are reusable pieces of the UI including the output (html) logic(Js) and styling (CSS). All 3 are encapsulated in 
+svelte component 
+
+
+
+
+
+
 
