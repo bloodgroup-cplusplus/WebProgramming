@@ -8,17 +8,21 @@ export const navLinks = [
     title: "Home",
   },
   {
-    id: "features",
-    title: "Features",
+    id: "signup",
+    title: "Signup",
   },
   {
-    id: "product",
-    title: "Product",
+    id: "login",
+    title: "Login",
   },
   {
-    id: "clients",
-    title: "Clients",
+    id: "feed",
+    title: "Feed",
   },
+  {
+    id:"donate",
+    title: "Donate"
+  }
 ];
 
 export const features = [
