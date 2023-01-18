@@ -26,43 +26,54 @@ async function loadScript(src)
 
 if(document.domain === 'localhost')
 {
-  //development
+
+  const key_secret="hj6ZSnz00dSxNCmYA3ZOcOZM"
 
 }
 else {
+  console.log("chad")
   //production
 }
 
 
-async function displayRazorpay(){
-  const res= await loadScript("https://checkout.razorpay.com/v1/checkout.js")
-  if(!res)
-  {
-    alert("Razorpay SDK Failed.")
-    return 
-  }
 
-  const options ={
-    key:__DEV__ ? 'YOUR_KEY':'API_NOT_FOUND',
-    amount:'400000',
-    currency:'INR',
-    name:'Acme Corp',
-    description:'Test Transaction',
-    handler:function(response){
-      alert(response.razorpay_payment_id)
-      alert(response.razorpay_order_id)
-      alert(response.razorpay_signature)
-    },
-     theme:{
-     color:'#F37254'
-   }
-  }
-  const paymentObject=new window.Razorpay(options)
-  paymentObject.open()
-
-}
 
 function App() {
+
+  async function displayRazorpay(){
+    const res= await loadScript("https://checkout.razorpay.com/v1/checkout.js")
+    if(!res)
+    {
+      alert("Razorpay SDK Failed.")
+      return 
+  
+    }
+    const data= await fetch('http://localhost:1337/razorpay',{method:'POST'}).then((t)=>
+      t.json()
+    )
+  
+    console.log(data)
+    const options ={
+      key:__DEV__ ? "rzp_test_O1TBRbokgN3lgn" :'API_NOT_FOUND',
+      amount:data.amount,
+      currency:data.currency,
+      name:'Sikkim Teachers Association Membership Fee',
+      order_id:data.id,
+      description:'Test Transaction',
+      image:'http://localhost:1337/image2vector.svg',
+      handler:function(response){
+        alert(response.razorpay_payment_id)
+        alert(response.razorpay_order_id)
+        alert(response.razorpay_signature)
+      },
+       theme:{
+       color:'#FFE4C4'
+     }
+    }
+    const paymentObject=new window.Razorpay(options)
+    paymentObject.open()
+  
+  }
   
   return (
     <div className="App">
@@ -74,7 +85,6 @@ function App() {
         <a
           className='App-link'
           onClick={displayRazorpay}
-          href='https://reactjs.org'
           target="_blank"
           rel="noopener noreferrer"
           >
