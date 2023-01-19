@@ -1,11 +1,11 @@
 import './App.css';
-// this is an example of react components 
+// this is an example of react components  and how to add props to it 
 const Person=(props)=>{
   return (
     <>
     <h1>Name :{props.name}</h1>
     <h2> last Name:{props.lastName}</h2>
-    <h2> Age:30</h2>
+    <h2> Age:{props.age}</h2>
     </>
   )
 }
@@ -18,7 +18,7 @@ const App =() => {
   const isNameShowing = false;
   return (
     <div className="App">
-      <Person name={'John'} lastName={'Bosco'}/>
+      <Person name={'John'} lastName={'Bosco'} age={45}/>
       <h1> Hello, {isNameShowing?name :"someone"}</h1>
       {name? (
           <>
