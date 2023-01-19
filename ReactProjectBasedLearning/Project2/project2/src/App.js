@@ -1,4 +1,5 @@
 import './App.css';
+import {useState} from 'react';
 // this is an example of react components  and how to add props to it 
 const Person=(props)=>{
   return (
@@ -16,6 +17,8 @@ const App =() => {
   const name=null
   //ternary variables 
   const isNameShowing = false;
+  // state variables 
+  const [counter,setCount] =useState(0);
   return (
     <div className="App">
       <Person name={'John'} lastName={'Bosco'} age={45}/>
@@ -31,6 +34,11 @@ const App =() => {
           <h2> THere is no name</h2>
           </>
          )}
+
+        <button onClick={()=> setCount((prevCount)=> prevCount-=1)}>-</button>
+        <h1>{counter}</h1>
+        <button onClick={()=> setCount((prevCount)=>prevCount+=1)}>+</button>
+        
 
       
     </div>
