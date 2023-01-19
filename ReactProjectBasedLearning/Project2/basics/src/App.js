@@ -1,5 +1,5 @@
 import './App.css';
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 // this is an example of react components  and how to add props to it 
 const Person=(props)=>{
   return (
@@ -19,6 +19,16 @@ const App =() => {
   const isNameShowing = false;
   // state variables 
   const [counter,setCount] =useState(0);
+  // this counter variable should never be modified manually 
+  // it should only be modified by the setCount function that is there above 
+  // use effect has a dependency array as the second parameter 
+  // when the dependency array is empty 
+  // the code is only going to happend in initial load of the component 
+
+  useEffect(()=>{
+    alert("You've chanded the counter to " + counter)
+    setCount(100);
+  },[])
   return (
     <div className="App">
       <Person name={'John'} lastName={'Bosco'} age={45}/>
