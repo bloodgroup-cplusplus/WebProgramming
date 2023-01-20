@@ -9,8 +9,8 @@ export default {
             type:'postedBy'
         },
         {
-            name:'save',
-            title:'Save',
+            name:'userId',
+            title:'UserId',
             type:'string'
         },
 
