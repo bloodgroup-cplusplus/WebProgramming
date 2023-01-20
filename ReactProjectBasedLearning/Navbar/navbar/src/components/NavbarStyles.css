@@ -17,3 +17,53 @@
 
 
 }
+
+.logo{
+
+    color:#fff;
+    justify-self:start;
+    cursor:pointer;
+
+
+
+}
+
+.fa-react{
+    margin-left:0.2rem;
+    font-size:1.6rem;
+
+}
+
+.nav-menu{
+    display:grid;
+    grid-template-columns: repeat(6,auto);
+    grid-gap:10px;
+    list-style:none;
+    align-items:center;
+    text-align:center;
+    justify-content:end;
+}
+
+.nav-links{
+    text-decoration:none;
+    color:gray ;
+    padding:0.7rem 1rem;
+    white-space:nowrap;
+
+}
+
+.nav-links i{
+    padding-right:10px; 
+
+}
+
+.nav-links:hover{
+    background-color: rgb(255,255,255);
+    border-radius:4px; 
+    transition:all 0.2s ease-in-out;
+
+}
+
+.fa-bars{
+    color:gray ;
+}
