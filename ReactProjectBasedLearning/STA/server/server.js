@@ -10,7 +10,7 @@ app.use(bodyParser.json())
 
 
 var razorpay= new Razorpay({
-    key_id:"rzp_test_O1TBRbokgN31gn",
+    key_id:"rzp_test_O1TBRbokgN3lgn",
     key_secret:"hj6ZSnz00dSxNCmYA3ZOcOZM"
 })
 
@@ -45,6 +45,12 @@ app.post('/razorpay',async(req,res)=>{
     try{
         const response=await razorpay.orders.create(options)
         console.log(response)
+        res.json({
+            id:response.id,
+            currency:"INR",
+            amount:response.amount
+        })
+
     }catch(error)
     {
         console.log(error)
