@@ -1,11 +1,41 @@
 import React from 'react'
 import {useState} from 'react';
+import {FaTrashAlt} from "react-icons/fa"
 
 
 const Content = () => {
-    const[name,setName]=useState("")
-    const[count,setCount]=useState(0);
-    const handleNameChange=()=>{
+    const[items,setItems]=useState([
+        {
+            id:1,
+            checked:false,
+            item: "On half pound bag of cocoa covered Almonds unsalted"
+
+        },
+
+        {
+            id:2,
+            checked:false,
+            item: "Item 2"
+
+        },
+
+
+        {
+            id:3,
+            checked:false,
+            item: "Item3"
+
+        },
+
+
+ 
+    ]);
+
+//-------------------------------------------------------------------------------------------------
+    // STATE AND STATE VARIABLES
+    // const[name,setName] = useState("")
+    // const[count,setCount] = useState(0);
+    /*const handleNameChange=()=>{
         const names=["Berus","Kyle","Chad"];
         const int = Math.floor(Math.random()*3);
         setName(names[int]);
@@ -25,8 +55,7 @@ const Content = () => {
 
     const handleClick3 =(e)=>{
         console.log(e.target.innerText)
-    }
-  return (
+    }*
     <main>
         <p>
              Hello {name}!
@@ -38,8 +67,31 @@ const Content = () => {
         
         <button onClick={()=> {handleClick2('Dave')}}>Click It</button>
         <button onClick={(e)=>handleClick3(e)}>Click It</button>
+    </main>*/
+
+//-------------------------------------------------------------------------------------------
+
+
+  return (
+    <main>
+        <ul>
+            {items.map((item)=>(
+                <li className="item" key={item.id}>
+                    <input 
+                        type="checkbox"
+                        checked={item.checked}
+                        />
+                        <label>{item.item}</label>
+                        <FaTrashAlt 
+                            role="button" 
+                            tabIndex="0"/>
+                </li>
+            ))}
+        </ul>
+
     </main>
-  )
-}
+      )
+            }
+
 
 export default Content
