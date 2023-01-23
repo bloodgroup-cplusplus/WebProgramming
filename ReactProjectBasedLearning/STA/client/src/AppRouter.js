@@ -9,8 +9,7 @@ import Feed from "./Pages/Feed"
 function AppRouter()
 {
     return (
-        <BrowserRouter>
-        
+        <BrowserRouter> 
         <Routes>
             <Route path= "/" element= {<Home/>}/>
             <Route path="/login" element={<Login/>}/>

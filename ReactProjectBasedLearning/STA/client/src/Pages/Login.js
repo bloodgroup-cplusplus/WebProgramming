@@ -1,5 +1,20 @@
+import { getDocs } from 'firebase/firestore'
 import React from 'react'
 
+async function user_login()
+{
+  var flag=false 
+  const querySnapshot=await getDocs(collection(db,"Teachers_Data"));
+  querySnapshot.forEach((doc)=>{
+    if(doc.data()["sta"]==)
+    {
+      
+
+
+    }
+  })
+
+}
 const Login = () => {
   return (
     <div>
