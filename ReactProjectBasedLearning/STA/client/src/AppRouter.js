@@ -5,6 +5,7 @@ import Home from "./Pages/Home"
 import Signup from "./Pages/Signup"
 import Login from "./Pages/Login"
 import Feed from "./Pages/Feed"
+import Generate from "./Pages/Generate"
 
 function AppRouter()
 {
@@ -15,6 +16,7 @@ function AppRouter()
             <Route path="/login" element={<Login/>}/>
             <Route path="/signup" element={<Signup/>}/>
             <Route path="/feed"   element={<Feed/>}/>
+            <Route path="/generate" element={<Generate/>}/>
 
         </Routes>
         </BrowserRouter>

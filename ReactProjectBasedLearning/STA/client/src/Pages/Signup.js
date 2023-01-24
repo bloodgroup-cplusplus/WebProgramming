@@ -64,7 +64,8 @@ const Signup = () => {
 
   }
 
-  async function check_if_data_exists(teacherRef)
+
+  /*async function check_if_data_exists(teacherRef)
   {
     const docSnap=getDoc(teacherRef);
     if(docSnap.exists())
@@ -73,6 +74,7 @@ const Signup = () => {
       window.location.href=""
     }
   }
+  */
 
 
 

@@ -1,7 +1,7 @@
-import { getDocs } from 'firebase/firestore'
+//import { getDocs } from 'firebase/firestore'
 import React from 'react'
 
-async function user_login()
+/*async function user_login()
 {
   var flag=false 
   const querySnapshot=await getDocs(collection(db,"Teachers_Data"));
@@ -14,7 +14,7 @@ async function user_login()
     }
   })
 
-}
+}*/
 const Login = () => {
   return (
     <div>
