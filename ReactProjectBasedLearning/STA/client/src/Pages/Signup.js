@@ -43,19 +43,20 @@ const Signup = () => {
 
   }
   async function  start_registration(){
-    /*user_exists=check_user()
+    user_exists=check_user()
     if (user_exists)
     {
       alert("You have already registered click on login and sign in with your sta-id") 
-      window.location.href=""
+      window.location.href="http://localhost:3000/login"
       return 
 
-    }*/
+    }
     displayRazorpay()
     if (payment_happened)
     {
       console.log("payment happened")
-      //add_data()
+      add_data()
+      add_files()
     }
   }
 
