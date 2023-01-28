@@ -49,3 +49,26 @@ State and Why we need It?
 * Toggling between true or false 
 * state= isOpen( true or false) 
 * can we use variables 
+
+----------------------------------------------------------------------------------------
+
+a Simple react functional component that looks like this 
+
+
+const App=() =>{
+    return (
+        <div className="app"> Hello, Chad!</div>
+
+
+    )
+}
+
+
+is actually changed into javascript like this 
+
+
+React.createElement(
+    'div'
+    {class: 'app'},
+    "Hello Chad!"
+)

@@ -19,7 +19,6 @@ function App() {
     // console log runs before the update actually happens 
     setName(name === "mario"?"luigi":"mario")
   }
-  console.log(handleClick)
   return (
     <div className="App">
       <h1>My name is {name}</h1>
