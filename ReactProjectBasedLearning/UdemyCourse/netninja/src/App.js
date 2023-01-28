@@ -30,9 +30,19 @@ function App() {
     {title:"Race on moo moo farm ", id:3}
   ])
 
-  const handleClick=()=>{
+  const handleClick=(id)=>{
     // console log runs before the update actually happens 
     setName(name === "mario"?"luigi":"mario")
+    // we will use javascirpt filter method 
+    //setEvents(events.filter((event)=>{
+      // if we say true means all items stay in the filtered array
+     // return  id!==event.id 
+    //}))
+    setEvents((prevEvents)=>{
+      return events.filter((event)=>{
+        return id!==event.id
+      })
+    })
     // the way we can cycle is using the map method ( higher order functions )
 
     // what is a key prop 
@@ -40,6 +50,7 @@ function App() {
     // it is used for efficient removal addtion 
     // keep each item unique key value 
     // key is something that is unique and 
+    console.log(id)
 
   }
   return (
@@ -49,6 +60,7 @@ function App() {
       {events.map((event,index)=> (
         <div key={event.id}>
           <h2> {index} - {event.title}</h2>
+          <button onClick={()=>{handleClick(event.id)}}>delete-event</button>
           </div>
       ))}
     </div>
