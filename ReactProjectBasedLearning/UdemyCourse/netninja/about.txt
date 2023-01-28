@@ -66,6 +66,9 @@ const App=() =>{
 
 is actually changed into javascript like this 
  this is called the virtual dom 
+ // react compares the previous virtual dom with the new one 
+ // it gives a deeper understanding of what is happening with the States
+ 
 
 React.createElement(
     'div'
