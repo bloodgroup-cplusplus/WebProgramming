@@ -31,3 +31,21 @@ reportwebvitals: performance of react files
 
 
 Index.js: kickstart our application 
+
+
+----------------------------------------------------------------------------------------------------
+
+
+State and Why we need It?
+* States are component data which may change over time 
+* We might have a todolist on a webpage 
+
+* If we were to add a new to-do in a todolist 
+* If we were to delete a todo 
+* In this example the to-do data inside the component is called as todo-state 
+* A dropdown content box on a webpage could be a react component 
+* State might not be that obvious 
+* We toggle when to hide and when to show it 
+* Toggling between true or false 
+* state= isOpen( true or false) 
+* can we use variables 
