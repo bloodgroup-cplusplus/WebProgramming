@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* the index.css is simply styles for common elements and classes used in the index 
+index css is imported in index.js (css is injected in the html page while it is imported in the index.js file 
+if we see the style tag we see the entire css code in the body selector . 
+Below the stlye tag we see extra styles targeting the app class */
+
