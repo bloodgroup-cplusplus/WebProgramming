@@ -1,0 +1,33 @@
+The general layout-of the land 
+
+Node-modules : react library itself is a node package 
+Public: put any files that would be made public to the browser 
+favicon: 
+robots.txt: crawlers find this file 
+We have a single html file here 
+If we have a single page application we only get a single page application served back to the browser 
+Root is the place where react app will be injected to the page 
+
+
+Soruce folder : Uncompiled react-source code will go 
+99% of stuffs are done inside the source folder 
+
+Any react content or component are going to go inside a source folder 
+
+App.js :- This is a react component file 
+Each component will have its own file ( React components are just functions )
+
+
+App.css:- This is being used to style app.js compoentnt 
+
+Index.css-: is used to style the entire page 
+
+
+App.test.js : writing test for app components 
+
+setupTest.js: test files 
+
+reportwebvitals: performance of react files 
+
+
+Index.js: kickstart our application 
