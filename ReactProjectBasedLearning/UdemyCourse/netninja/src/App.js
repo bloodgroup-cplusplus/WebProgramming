@@ -59,9 +59,10 @@ function App() {
     console.log(id)
 
   }
+  const subtitle= "Chad leborn"
   return (
     <div className="App">
-      <Title/>
+      <Title title="Events in your Area" subtitle={subtitle}/>
       <h1>My name is {name}</h1>
       {showEvents &&(
       <div>
