@@ -75,3 +75,11 @@ React.createElement(
     {class: 'app'},
     "Hello Chad!"
 )
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+* use state should be at a top level of a function component 
+* a react hook should be used 
+* hook cannot be used outside a component 
+* most of the times hooks are used on top of the components 
