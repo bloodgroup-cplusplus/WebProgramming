@@ -13,6 +13,7 @@ import { useState } from 'react'
 function App() {
   // we can use array destructuring to grab this value 
   const [name,setName]=useState('mario')
+  const [showEvents,setShowEvents]= useState(true) 
   // first one is the actaul state value and the second one is the function that is used to 
   // change the state value 
 
@@ -29,6 +30,10 @@ function App() {
     {title:"browser's live stream",id:2},
     {title:"Race on moo moo farm ", id:3}
   ])
+
+  console.log(showEvents)
+
+  
 
   const handleClick=(id)=>{
     // console log runs before the update actually happens 
@@ -56,8 +61,13 @@ function App() {
   return (
     <div className="App">
       <h1>My name is {name}</h1>
-      <button onClick={handleClick}> Change name</button>
-      {events.map((event,index)=> (
+      <div>
+      <button onClick={()=>setShowEvents(false)}> Hide Events</button>
+      </div>
+      <div>
+        <button onClick={()=> setShowEvents(true)}>show event</button>
+      </div>
+      { showEvents && events.map((event,index)=> (
         <div key={event.id}>
           <h2> {index} - {event.title}</h2>
           <button onClick={()=>{handleClick(event.id)}}>delete-event</button>
