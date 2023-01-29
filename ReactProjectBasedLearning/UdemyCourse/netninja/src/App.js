@@ -61,12 +61,16 @@ function App() {
   return (
     <div className="App">
       <h1>My name is {name}</h1>
+      {showEvents &&(
       <div>
       <button onClick={()=>setShowEvents(false)}> Hide Events</button>
       </div>
+      )}
+      {!showEvents &&(
       <div>
         <button onClick={()=> setShowEvents(true)}>show event</button>
       </div>
+      )}
       { showEvents && events.map((event,index)=> (
         <div key={event.id}>
           <h2> {index} - {event.title}</h2>
