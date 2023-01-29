@@ -4,6 +4,7 @@ import './App.css';
 // component data which can change over time 
 // whenever the state value changes it triggers our component to be changed over time 
 import { useState } from 'react'
+import Title from './Title'
 
 
 
@@ -60,6 +61,7 @@ function App() {
   }
   return (
     <div className="App">
+      <Title/>
       <h1>My name is {name}</h1>
       {showEvents &&(
       <div>
