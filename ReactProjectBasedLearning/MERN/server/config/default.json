@@ -1,6 +1,6 @@
 {
     "mongoURI":
-    "mongodb+srv://chad:chad123@mernatoz-9kdpd.mongodb.net/test?retryWrites=true&w=majority"
+    "mongodb+srv://chad:chad123@cluster0.c40rqhk.mongodb.net/?retryWrites=true&w=majority"
 
 
 }
