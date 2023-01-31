@@ -60,7 +60,7 @@ function App() {
     // keep each item unique key value 
     // key is something that is unique and 
     const handleClose=()=>{
-      setShowModal(true?false:true)
+      setShowModal(showModal?false:true)
     }
     
     console.log(showModal)
@@ -99,6 +99,9 @@ function App() {
         <h2>Terms and Conditions</h2>
         <p> Terms and Conditions lorem ipsum dolor sit amet, consect</p>
       </Modal>}
+      <div>
+        <button onClick={()=> setShowModal(true)}>Add New Event</button>
+      </div>
 
     </div>
 

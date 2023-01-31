@@ -147,3 +147,13 @@ export default function Clock({name}){
         </div>
     )
 }
+
+------------------------------------------------------------------------------------
+
+CSS Modules : Css modules automatically scope to only apply in specific components 
+
+let's make a module for eventlist 
+
+css modules are scoped to the components that we use them in 
+
+using one css module in one component wont harm another component 
