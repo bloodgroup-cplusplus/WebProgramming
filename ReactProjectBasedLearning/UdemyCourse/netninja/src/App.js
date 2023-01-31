@@ -6,6 +6,7 @@ import './App.css';
 import { useState } from 'react'
 import Title from './components/Title'
 import Modal from './components/Modal'
+import NewEventForm from './components/NewEventForm';
 
 
 
@@ -96,8 +97,7 @@ function App() {
 
       <button onClick={handleClose}>ShowPopup</button>
       {showModal &&<Modal handleClose={handleClose} isSalesModal={true}>
-        <h2>Terms and Conditions</h2>
-        <p> Terms and Conditions lorem ipsum dolor sit amet, consect</p>
+        <NewEventForm/>
       </Modal>}
       <div>
         <button onClick={()=> setShowModal(true)}>Add New Event</button>
