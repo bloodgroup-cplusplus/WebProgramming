@@ -1,8 +1,10 @@
 import React from 'react'
+// this is used to create a portal
+import ReactDOM from 'react-dom' 
 
 import './Modal.css'
 export default function Modal({children,handleClose}) {
-  return (
+  return ReactDOM.createPortal((
     <div className='modal-backdrop'>
         <div className='modal'>
             {children}
@@ -10,5 +12,5 @@ export default function Modal({children,handleClose}) {
         </div>
       
     </div>
-  )
+  ), document.body)
 }

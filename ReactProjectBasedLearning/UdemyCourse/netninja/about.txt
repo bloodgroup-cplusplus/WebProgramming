@@ -95,3 +95,55 @@ React.createElement(
 
 
 </React.fragment>
+
+
+------------------------------------------------------------------------------------------------------
+
+PORTALS 
+
+* A portal is a way to take a component and render it outside a dom outside the scope of parent component 
+* we use a portal in whatever component we want to pick up and use it in place 
+
+--------------------------------------------------------------------------------------
+
+Class components are old way of making react projects . 
+
+Differnce lies beween created 
+class component is a js class which extends a react cmoponent 
+
+class Clock extends React.Component 
+{
+    constructor(props)
+    {
+        super(props)
+        this.state={
+            date:new Date()
+        }
+    }
+}
+
+render(){
+
+    return (
+
+        <div>
+        <h1> Hello, {this.props.name}/>
+
+    );
+}
+
+
+while a function component works this way 
+
+import {useState} from "react"
+
+export default function Clock({name}){
+    const [date,setDate]=useState(new Date())
+
+    return (
+        <div>
+        <h1>Hello,{name}</h1>
+        <h2> It is {date.toLocaleTimeString()}.</h2>
+        </div>
+    )
+}
