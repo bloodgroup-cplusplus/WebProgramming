@@ -95,7 +95,7 @@ function App() {
       </Modal> */}
 
       <button onClick={handleClose}>ShowPopup</button>
-      {showModal &&<Modal handleClose={handleClose} isSalesModal={false}>
+      {showModal &&<Modal handleClose={handleClose} isSalesModal={true}>
         <h2>Terms and Conditions</h2>
         <p> Terms and Conditions lorem ipsum dolor sit amet, consect</p>
       </Modal>}

@@ -11,7 +11,9 @@ export default function Modal({children,handleClose,isSalesModal}) {
           borderColor:isSalesModal?"#ff4500":"#555",
           textAlign:"center"}}>
             {children}
-           <button onClick={handleClose} >close</button>
+           <button onClick={handleClose} 
+           className={isSalesModal?"sales-btn":""}
+           >close</button>
         </div>
       
     </div>
