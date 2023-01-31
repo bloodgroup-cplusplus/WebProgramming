@@ -83,3 +83,15 @@ React.createElement(
 * a react hook should be used 
 * hook cannot be used outside a component 
 * most of the times hooks are used on top of the components 
+
+
+-------------------------------------------------------------
+
+* To use <props inside a fragment without using div we need the React.fragment keyword 
+
+<div key= {event.id}> if we want to remove the div and just create an empty fragment then we do something like this
+
+<React.fragment key={event.id}>
+
+
+</React.fragment>
