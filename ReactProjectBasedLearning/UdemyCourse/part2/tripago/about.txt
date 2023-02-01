@@ -3,3 +3,6 @@ for our webpage
 
 
 
+install json server globally : sudo npm i -g json-server 
+
+fetch request in json using json-server --watch {pathname}
