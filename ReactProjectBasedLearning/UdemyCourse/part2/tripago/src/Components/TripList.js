@@ -18,7 +18,7 @@ export default function TripList() {
     // keeps on running once the fetch command is carried out 
     // we get into a infinite loop 
     // we can stop this by using a use effect hook 
-    const {data:trips,isPending} = useFetch(url)
+    const {data:trips,isPending,error} = useFetch(url)
 
     // this function perfomrs the fetch request 
     //const fetchTrips= useCallback(async()=>{
@@ -72,6 +72,7 @@ export default function TripList() {
     <div>
         <h2>Trip List</h2>
         {isPending && <div>Loading trips..</div>}
+        {error && <div>{error}</div>}
         <ul>
             { trips && trips.map(trip=>(
                 <li key={trip.id}>
