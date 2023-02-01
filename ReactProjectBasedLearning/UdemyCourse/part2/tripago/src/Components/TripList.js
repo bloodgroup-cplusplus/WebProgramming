@@ -1,14 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
-import { useEffect } from 'react'
-import { useCallback } from 'react'
+// when we export a default value we don't import it using curly braces 
+import {useFetch} from '../hooks/useFetch'
 
 //styles 
 import './TripList.css'
 
 export default function TripList() {
     // store the data from fetch to a state 
-    const [trips,setTrips]=useState([])
+    //const [trips,setTrips]=useState([])
     const[url,setUrl]=useState('http://localhost:3000/trips')
     //console.log(trips)
     //fetch('http://localhost:3000/trips')
@@ -18,13 +18,14 @@ export default function TripList() {
     // keeps on running once the fetch command is carried out 
     // we get into a infinite loop 
     // we can stop this by using a use effect hook 
+    const {data:trips} = useFetch(url)
 
     // this function perfomrs the fetch request 
-    const fetchTrips= useCallback(async()=>{
-        const response=await fetch(url)
-        const json = await response.json()
-        setTrips(json)
-    },[])
+    //const fetchTrips= useCallback(async()=>{
+     //   const response=await fetch(url)
+      //  const json = await response.json()
+       // setTrips(json)
+    //},[url])
 
 
 
@@ -32,13 +33,13 @@ export default function TripList() {
 // use effects allows us to run the codee cetain times when conditions are met 
 // so that we don't end up in an infinite loop at the component 
 // we need to use the hook in the component 
-    useEffect(()=>{
+   // useEffect(()=>{
         // we cannot use async and await in useEffect we will be sticking with 
         // the then keyword 
         // since we only need the data to be fetched once we keep it inside the uesEffect hook 
         //fetch(url).then(response=>response.json())
         //.then(json=>setTrips(json))
-        fetchTrips()
+        //fetchTrips()
 
         // use effect only runs at start or dependency value changes 
         // it only runs once it only runs initially at value evaluation 
@@ -48,13 +49,13 @@ export default function TripList() {
         // on adding a dynamic url our use effect function has a dependency over
         // the said url 
         // for component evaluation from second time it will trigger the use effect 
-    },[url,fetchTrips])
+    //},[fetchTrips])
     // we see that each time react renders it doesn't see within the function 
     // but it just sees the function references instead of function 
     // so we keep on geeting the infinite loop despite calling it 
     // to prevent this we use something known as the function callback 
 
-    console.log(trips)
+    //console.log(trips)
     // use effect is automatically going to run the first function when our compnent first 
     // runs and evaluates 
     // when the component is re-evaluated  the useeffect will only change if any
@@ -71,7 +72,7 @@ export default function TripList() {
     <div>
         <h2>Trip List</h2>
         <ul>
-            {trips.map(trip=>(
+            { trips && trips.map(trip=>(
                 <li key={trip.id}>
                     <h3>{trip.title}</h3>
                     <p>{trip.price}</p>
