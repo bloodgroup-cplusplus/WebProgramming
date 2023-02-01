@@ -2,6 +2,9 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 
+//styles 
+import './TripList.css'
+
 export default function TripList() {
     // store the data from fetch to a state 
     const [trips,setTrips]=useState([])
@@ -45,6 +48,15 @@ export default function TripList() {
   return (
     <div>
         <h2>Trip List</h2>
+        <ul>
+            {trips.map(trip=>(
+                <li key={trip.id}>
+                    <h3>{trip.title}</h3>
+                    <p>{trip.price}</p>
+                </li>
+            ))}
+            
+        </ul>
       
     </div>
   )
