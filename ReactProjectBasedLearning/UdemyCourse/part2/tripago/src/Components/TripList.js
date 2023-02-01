@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import { useCallback } from 'react'
 
 //styles 
 import './TripList.css'
@@ -18,6 +19,13 @@ export default function TripList() {
     // we get into a infinite loop 
     // we can stop this by using a use effect hook 
 
+    // this function perfomrs the fetch request 
+    const fetchTrips= useCallback(async()=>{
+        const response=await fetch(url)
+        const json = await response.json()
+        setTrips(json)
+    },[])
+
 
 
 // we need another way to perform side effects
@@ -28,8 +36,9 @@ export default function TripList() {
         // we cannot use async and await in useEffect we will be sticking with 
         // the then keyword 
         // since we only need the data to be fetched once we keep it inside the uesEffect hook 
-        fetch(url).then(response=>response.json())
-        .then(json=>setTrips(json))
+        //fetch(url).then(response=>response.json())
+        //.then(json=>setTrips(json))
+        fetchTrips()
 
         // use effect only runs at start or dependency value changes 
         // it only runs once it only runs initially at value evaluation 
@@ -39,7 +48,11 @@ export default function TripList() {
         // on adding a dynamic url our use effect function has a dependency over
         // the said url 
         // for component evaluation from second time it will trigger the use effect 
-    },[url])
+    },[url,fetchTrips])
+    // we see that each time react renders it doesn't see within the function 
+    // but it just sees the function references instead of function 
+    // so we keep on geeting the infinite loop despite calling it 
+    // to prevent this we use something known as the function callback 
 
     console.log(trips)
     // use effect is automatically going to run the first function when our compnent first 
