@@ -1,13 +1,13 @@
 import './App.css';
 import { useState } from 'react';
 import SingleCard from './Components/SingleCard';
-
+import { useEffect } from 'react';
 
 
  const cardImages=[
   
   {"src":"/img/helmet-1.png"},
-  {"src":"/imag/potion-1.png"},
+  {"src":"/img/potion-1.png"},
   {"src":"/img/ring-1.png"},
   {"src":"/img/scroll-1.png"},
   {"src":"/img/shield-1.png"},
@@ -16,6 +16,8 @@ import SingleCard from './Components/SingleCard';
 function App() {
   const [cards,setCards]= useState([])
   const[turns,setTurns]=useState(0)
+  const[choiceOne, setChoiceOne]=useState(null)
+  const[choiceTwo, setChoiceTwo]=useState(null)
 
   //shuffle cards 
   const shuffleCards=()=>{
@@ -29,6 +31,41 @@ function App() {
 
   }
   console.log(cards,turns)
+  //handle a choice 
+
+  const handleChoice = (card)=>{
+    // if there is no value then it's choice 1 else its' choice 2 
+    choiceOne ? setChoiceTwo(card):setChoiceOne(card)
+    // we don't do it here as it is not updated yet
+  }
+
+  // compare 2 selecetd card
+
+  useEffect(()=>{
+    // check if we have value for choice 1 and chchoice 2
+    if(choiceOne && choiceTwo)
+    {
+      if(choiceOne.src === choiceTwo.src)
+      {
+        console.log("those cards match")
+        resetTurn()
+      }
+      else {
+        console.log("Those cards do not match ")
+        resetTurn()
+      }
+
+    }
+
+  },[choiceOne,choiceTwo])
+
+  //reset choice and increase turn 
+
+  const resetTurn=()=>{
+    setChoiceOne(null)
+    setChoiceTwo(null)
+    setTurns(prevTurns=>prevTurns+1)
+  }
 
   return (
     <div className="App">
@@ -37,7 +74,7 @@ function App() {
 
       <div className='card-grid'>
         {cards.map(card=>(
-          <SingleCard key={card.id} card={card}/>
+          <SingleCard key={card.id} card={card} handleChoice={handleChoice}/>
         ))}
 
       </div>
