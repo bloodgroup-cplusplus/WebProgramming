@@ -8,6 +8,7 @@ import './TripList.css'
 export default function TripList() {
     // store the data from fetch to a state 
     const [trips,setTrips]=useState([])
+    const[url,setUrl]=useState('http://localhost:3000/trips')
     //console.log(trips)
     //fetch('http://localhost:3000/trips')
     //.then(response =>response.json()) // this returns the json 
@@ -27,10 +28,18 @@ export default function TripList() {
         // we cannot use async and await in useEffect we will be sticking with 
         // the then keyword 
         // since we only need the data to be fetched once we keep it inside the uesEffect hook 
-        fetch('http://localhost:3000/trips').then(response=>response.json())
+        fetch(url).then(response=>response.json())
         .then(json=>setTrips(json))
 
-    },[])
+        // use effect only runs at start or dependency value changes 
+        // it only runs once it only runs initially at value evaluation 
+        // let's say the api endpoint is dynamic and it might change at 
+        // user changing of button 
+        // we add url aas a dependency as our url could be something dynamic 
+        // on adding a dynamic url our use effect function has a dependency over
+        // the said url 
+        // for component evaluation from second time it will trigger the use effect 
+    },[url])
 
     console.log(trips)
     // use effect is automatically going to run the first function when our compnent first 
@@ -57,6 +66,15 @@ export default function TripList() {
             ))}
             
         </ul>
+        <div className='filters'>
+            <button onClick={()=> setUrl('http://localhost:3000/trips?loc=europe')}>
+                European Trips
+            </button>
+            
+            <button onClick={()=>setUrl("http://localhost:3000/trips")}>
+                All Trips
+            </button>
+        </div>
       
     </div>
   )
