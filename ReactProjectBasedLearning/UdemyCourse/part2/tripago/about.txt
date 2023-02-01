@@ -1,0 +1,5 @@
+we are going to use json package server to serve data which will act as an api for serving data 
+for our webpage 
+
+
+
