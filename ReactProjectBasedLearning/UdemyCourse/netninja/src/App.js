@@ -30,10 +30,16 @@ function App() {
 
   // we can output a title in a h2 or something 
   const[events, setEvents] = useState([
-    {title:"mario's birthday bash", id:1},
-    {title:"browser's live stream",id:2},
-    {title:"Race on moo moo farm ", id:3}
+    //{title:"mario's birthday bash", id:1},
+    //{title:"browser's live stream",id:2},
+    //{title:"Race on moo moo farm ", id:3}
   ])
+
+  const addEvent=(event)=>{
+    setEvents((prevEvents)=>{
+      return [...prevEvents,event]
+    })
+  }
 
   console.log(showEvents)
 
@@ -97,7 +103,7 @@ function App() {
 
       <button onClick={handleClose}>ShowPopup</button>
       {showModal &&<Modal handleClose={handleClose} isSalesModal={true}>
-        <NewEventForm/>
+        <NewEventForm addEvent={addEvent}/>
       </Modal>}
       <div>
         <button onClick={()=> setShowModal(true)}>Add New Event</button>

@@ -157,3 +157,14 @@ let's make a module for eventlist
 css modules are scoped to the components that we use them in 
 
 using one css module in one component wont harm another component 
+
+
+Using the Ref Hook 
+
+Refs are a way of getting reference to a raw dom element directly  in vinalla js 
+we could potentially get refs to each one of inputs 
+
+Just like in vanilla js 
+
+We use a hook called "useRef" in react 
+typically we use state and usestate but it makes a sense to learn it 
