@@ -1,0 +1,101 @@
+What is Svelte 
+* Svelte provides a way to build declarative, state driven user interfaces 
+* Svelte itself is a compiler ( we don't have to run it on the broweser)
+* Your compiled code will directly modify the DOm without the overhead of virtual dom 
+* Svelte produces the code that will manipulate the DOM at build time. It's not something that you
+need to load on the client side(browser)
+
+* In other frameworks, you have to serve the framework itself in addition to your own code. In 
+Svelte, the framework is embedded in your code 
+
+
+
+React JS Example:
+
+
+HelloMessage.js                                                 App.js 
+                                                        import {useSate} from "react";
+                                                        import HelloMessage from "./HelloMessage"
+                                                        function App()
+                                                        {
+                                                            const [name,setName]=useState("World");
+                                                            function handleChange(event){
+                                                                setName(event.target.value)
+                                                            }
+                                                            return (
+                                                                <>
+                                                                    <HelloMessage name={name} />
+                                                                    <input 
+                                                                        type="text"
+                                                                        value={name}
+                                                                        onChange={handleNameChange}
+                                                                    />
+                                                                </>
+                                                            );                                                        }
+function HelloMessage(props){
+    return (
+        <div className="greeting">
+            Hello {props.name}
+            </div>
+    );
+}
+
+*we need to wrap in div or fragments in case of react 
+* we need to update state when we update our input 
+* 
+
+
+We have the same example using svelte 
+
+
+HelloMessage.svelte                                         App.svelte
+
+
+<script>                                            <script>
+    export let name =''                             import HelloMessage from "./HelloMessage.svelte'
+</script>                                               let name = "World";
+                                                    </script>
+<div class="greeting>                               <HelloMessage name={name} />
+    Hello {name}                                    <input bind:value={name}>
+</div>
+
+
+* svelte is a compiler it will be compiled 
+* react component is typically around 40% larger than its Svelte equivalent 
+* svelte code is more equivalent 
+
+
+
+* React uses virtual dom 
+
+
+                            Browser (Loads)
+
+                            React JS
+                            React DOM 
+
+                            Component(s)
+                            React keeps a refrence to old virtual dom object snapshot (before state changed)
+                            and new virtual dom object snapshot(after state changed)
+                            Check each div and div attributes 
+                            1- div element did not change, nod need to update the DOM node 
+                            2- No change in attributes 
+                            3- Text has changed; Update the real DOM 
+
+* In svelte 
+It directly does (3) (above react) much more efficient than other frameworks 
+
+* In most cases the virtual dom is fast enough 
+
+* However Svelte eliminates the extra overhead of virtual DOM comparision 
+
+* Your compiled Svlete code will manipulate the DOM Directly without having to compare virtual DOM objects 
+
+
+* Your svelte app will be smaller since you won't have to load a library in the browser. You only load 
+your compiled code 
+
+
+* "The svelte implementation of TodoMVC ewights 3.6kb zipped. For comparision, React plus ReactDOM
+without any app code wighs about 45kb zipped. It takes about 10x as long for the borwser just to evaluate 
+React as it does for Svelte to be up and running with an interative Tool MVC
