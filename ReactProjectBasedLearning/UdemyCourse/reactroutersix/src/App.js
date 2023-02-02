@@ -1,5 +1,9 @@
 import './App.css';
-import {BrowserRouter, Link, Route, Switch} from 'react-router-dom'
+import About from "./pages/About"
+import Home from "./pages/Home"
+import Products from "./pages/Products"
+import ProductDetails from './pages/ProductDetails';
+import {BrowserRouter, Link, Route, Routes} from 'react-router-dom'
 
 function App() {
   return (
@@ -11,18 +15,18 @@ function App() {
           <Link to="/about">About</Link>
           <Link to="/products">Products</Link>
         </nav>
-        <Switch>
-          <Route exact path ="/" component ={Home} />
-          <Route path="/about">
-            <About/>
-          </Route>
-          <Route path ="/products/:id">
-            <ProductDetails/>
-          </Route>
-          <Route path="/products">
-            <Products/>
-          </Route>
-        </Switch>
+        <Routes>
+          <Route  path ="/" element ={<Home/>} />
+          <Route path="/about" element={<About/>}/>
+          <Route path ="/products/:id" element={<ProductDetails/>}/>
+          <Route path="/products" element={<Products/>}/>
+          <Route path ="/test" element={(
+            <div>
+              <h2> Test Page</h2>
+              <p>Hello!</p>
+            </div>
+          )}/>
+        </Routes>
       </BrowserRouter>
    </div>
   );

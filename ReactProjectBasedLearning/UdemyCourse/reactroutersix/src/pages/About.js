@@ -16,9 +16,9 @@ export default function About()
 
             <p> asdf;akldsfjasdfoadjsfd adslfj dsfkl; jadsf;adksf</p>
     
-    <Route path = "/about/offers">
+   {/*<Route path = "/about/offers">
         <Offers/>
-        </Route>
+    </Route> */}
     </div>
     )
 
