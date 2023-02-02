@@ -3,7 +3,7 @@ import About from "./pages/About"
 import Home from "./pages/Home"
 import Products from "./pages/Products"
 import ProductDetails from './pages/ProductDetails';
-import {BrowserRouter, Link, Route, Routes} from 'react-router-dom'
+import {BrowserRouter, Link, Route, Routes,Navigate} from 'react-router-dom'
 
 function App() {
   return (
