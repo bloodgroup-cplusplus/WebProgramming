@@ -127,3 +127,21 @@ Package the json has the dev scripts and build and preview for production and bu
 
 we have jsconfig and index.html 
 
+
+
+
+Each svelte component contains three parts 
+
+
+Script
+<script></script>
+
+Markup 
+
+<h1></h1>
+
+
+Style 
+
+<style></style>
+
