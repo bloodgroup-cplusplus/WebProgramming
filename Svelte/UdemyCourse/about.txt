@@ -99,3 +99,22 @@ your compiled code
 * "The svelte implementation of TodoMVC ewights 3.6kb zipped. For comparision, React plus ReactDOM
 without any app code wighs about 45kb zipped. It takes about 10x as long for the borwser just to evaluate 
 React as it does for Svelte to be up and running with an interative Tool MVC
+
+
+
+
+
+SVELTE                                                                SVELTE KIT 
+
+* component based javascript framework                   * Svelte kit is a framework for building 
+                                                            building extremely high performance 
+                                                            web apps 
+
+* Allows you to build state driven components           * Routing, prefetching, offline support, 
+                                                         SSR, progressive enhancemnt and more.
+for the web in a declarative way 
+
+
+
+
+SvelteKit to Svelte is like NextJS to React JS or NuxtJs To Vue.
