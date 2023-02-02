@@ -30,7 +30,7 @@ ul{
   font-size:1em;
 
 }
-.btn-hover{
+.btn:hover{
   background:#1f9751;
   color:#fff;
 
