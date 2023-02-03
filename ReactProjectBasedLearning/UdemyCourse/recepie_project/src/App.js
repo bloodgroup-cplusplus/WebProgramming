@@ -18,7 +18,6 @@ import Navbar from './components/Navbar'
 function App() {
   return (
     <div className="App">
-      Happy hour
       <BrowserRouter>
       <Navbar/>
       <Routes>
