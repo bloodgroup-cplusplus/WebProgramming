@@ -6,6 +6,12 @@
     // import components
 
     import Counter from './Counter.svelte';
+
+    // let's say we have a constant called props and we want to spread the props
+    const props = {
+        maxCount: 10,
+        initialCount: 5
+    };
 </script>
 
 <!-- this was some introductory html-->
@@ -17,7 +23,9 @@
 
 <!--We can simply use the component this way-->
 
-<Counter />
+<!--Counter initialCount={3} maxCount={13} /!-->
+<!--lets spread the props-->
+<Counter {...props} x="y" , y="x" />
 
 <!--button>button</button!-->
 <style>
