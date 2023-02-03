@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import {projectAuth} from '../firebase/config'
+import {projectAuth,createUserWithEmailAndPassword,updateProfile} from '../firebase/config'
 
 
 
@@ -10,14 +10,14 @@ export const useSignup =() =>{
     // for loading state
 
 
-    const signup = async(email,password,displayName) =>{
+    const signup = async(email,password,name) =>{
         // these three things are coming from the form 
         setError(null);
         setIsPending(true)
         try{
             // signup the user 
             // we await from firebase auth method
-            const response=await projectAuth.createUserWithEmailAndPassword(email,password)
+            const response=await createUserWithEmailAndPassword(projectAuth,email,password)
             console.log(response.user)
 
             if (!response)
@@ -26,7 +26,7 @@ export const useSignup =() =>{
                 throw new Error('Could not complete signup')
             }
             // update their display names 
-            await response.user.updateProfile({displayName:displayName})
+            await updateProfile({name:name})
             setIsPending(false)
             setError(null)
         }

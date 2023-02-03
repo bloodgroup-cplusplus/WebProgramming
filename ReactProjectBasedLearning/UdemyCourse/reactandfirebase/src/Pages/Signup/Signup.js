@@ -8,44 +8,44 @@ import {useSignup} from "../../hooks/useSignup"
 import React from 'react'
 
 export default function Signup() {
-  const[sta,setSta] = useState('')
+  const[password,setPassword] = useState('')
   const[email, setEmail]= useState('')
   const[name,setName] = useState('')
   const{signup, isPending, error} =useSignup()
 
   const handleSubmit=(e)=>{
     e.preventDefault()
-    signup(email,sta,name)
+    signup(email,password,name)
   }
   return (
     <form onSubmit={handleSubmit} className={styles['signup-form']}>
       <h2>Signup</h2>
       <label>
         <span>
-          Name
+          Email
         </span>
         <input
-          type="text"
-          onChange={(e)=>setName(e.target.value)}
-          value={name}
+          type="email"
+          onChange={(e)=>setEmail(e.target.value)}
+          value={email}
           />
       </label>
 
       <label>
-        <span>Email:</span>
+        <span>password</span>
         <input
-        type="email"
-        onChange={(e)=>setEmail(e.target.value)}
-        value={email}
+        type="password"
+        onChange={(e)=>setPassword(e.target.value)}
+        value={password}
         />
       </label>
 
       <label>
-        <span>STA</span>
+        <span>Name</span>
         <input 
         type='text'
-        onChange={(e)=>setSta(e.target.value)}
-        value={sta}
+        onChange={(e)=>setName(e.target.value)}
+        value={name}
         />
 
       </label>
