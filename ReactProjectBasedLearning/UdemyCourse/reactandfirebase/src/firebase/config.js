@@ -1,5 +1,5 @@
 import {initializeApp} from 'firebase/app';
-import { getAuth,createUserWithEmailAndPassword,updateProfile } from "firebase/auth";
+import { getAuth,createUserWithEmailAndPassword,updateProfile,signOut } from "firebase/auth";
 import {getFirestore} from "firebase/firestore"
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -21,4 +21,4 @@ const firebaseConfig = {
   const projectFirestore= getFirestore(app)
   const projectAuth= getAuth(app)
 
-  export{projectFirestore,projectAuth,createUserWithEmailAndPassword,updateProfile}
+  export{projectFirestore,projectAuth,createUserWithEmailAndPassword,updateProfile,signOut}

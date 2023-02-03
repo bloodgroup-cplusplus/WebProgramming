@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import {projectAuth,createUserWithEmailAndPassword,updateProfile} from '../firebase/config'
-
+import { useAuthContext } from './useAuthContext'
 
 
 export const useSignup =() =>{
@@ -8,6 +8,10 @@ export const useSignup =() =>{
     //error for error
     const [isPending,setIsPending] = useState(false)
     // for loading state
+
+    // login dispatch 
+    const {dispatch} = useAuthContext()
+
 
 
     const signup = async(email,password,name) =>{
@@ -18,7 +22,6 @@ export const useSignup =() =>{
             // signup the user 
             // we await from firebase auth method
             const response=await createUserWithEmailAndPassword(projectAuth,email,password)
-            console.log(response.user)
 
             if (!response)
             {
@@ -27,6 +30,11 @@ export const useSignup =() =>{
             }
             // update their display names 
             await updateProfile({name:name})
+            
+            // dispatch login action 
+            dispatch({type:'LOGIN',payload:response.user}) 
+
+
             setIsPending(false)
             setError(null)
         }
