@@ -18,6 +18,7 @@
 <!--We can simply use the component this way-->
 
 <Counter />
+<button>button</button>
 
 <style>
     /* we can directly use h1 instead of classname in styles cause svelte will directly generate

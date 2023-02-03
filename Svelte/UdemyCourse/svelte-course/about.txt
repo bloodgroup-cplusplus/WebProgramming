@@ -145,3 +145,26 @@ Style
 
 <style></style>
 
+
+What is minification?
+
+
+Minification is the process of minimizing code and markup in your 
+web pages and script files. It’s one of the main methods used to reduce
+load times and bandwidth usage on websites. Minification dramatically 
+improves site speed and accessibility, directly translating into a 
+better user experience. It’s also beneficial to users accessing your 
+website through a limited data plan and who would like to save on 
+their bandwidth usage while surfing the web.
+
+Why minify HTML, CSS, and JavaScript (JS)
+When creating HTML, CSS and JavaScript (JS) files, developers tend to use spacing, comments and well-named variables to make code and markup readable for themselves. It also helps others who might later work on the assets. While this is a plus in the development phase, it becomes a negative when it comes to serving your pages. Web servers and browsers can parse file content without comments and well-structured code, both of which create additional network traffic without providing any functional benefit.
+
+To minify JS, CSS and HTML files, comments and extra spaces need to be removed, as well as crunch variable names so as to minimize code and reduce file size. The minified file version provides the same functionality while reducing the bandwidth of network requests.
+
+Here’s how a developer would write a JavaScript file for usage in a website:
+
+
+The minified version of this sample code is 48% smaller. In some cases, minification can reduce file size by as much as 60%. For instance, there’s a 176 kb difference between the original and minified version of the JQuery JavaScript library.
+
+Minification has become standard practice for page optimization. All major JavaScript library developers (bootstrap, JQuery, AngularJS, etc.) provide minified versions of their files for production deployments, usually denoted with a min.js name extension.
