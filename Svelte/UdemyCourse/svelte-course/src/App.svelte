@@ -18,8 +18,8 @@
 <!--We can simply use the component this way-->
 
 <Counter />
-<button>button</button>
 
+<!--button>button</button!-->
 <style>
     /* we can directly use h1 instead of classname in styles cause svelte will directly generate
   a hash of html components so that we can directly use it in our styles this is called stlye copying 
