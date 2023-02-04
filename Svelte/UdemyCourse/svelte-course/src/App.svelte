@@ -1,39 +1,8 @@
 <script>
-    //let name = 'chad';
-    //let src = 'http://picsum.com/200/200';
-    //let string = 'Some <strong> string </string> with html ';
-
-    // import components
-
-    import Counter from './Counter.svelte';
-
-    // let's say we have a constant called props and we want to spread the props
-    const props = {
-        maxCount: 10,
-        initialCount: 5
-    };
+    import Button from './lib/Button.svelte';
 </script>
 
-<!-- this was some introductory html-->
-<!--h1>
-    Hello {name.toUpperCase()}!
-</h1>
-<img {src} alt={`Some text ${name}`} />
-<p>{@html string}</p!-->
+<Button>Button Text</Button>
 
-<!--We can simply use the component this way-->
-
-<!--Counter initialCount={3} maxCount={13} /!-->
-<!--lets spread the props-->
-<Counter {...props} x="y" , y="x" />
-
-<!--button>button</button!-->
 <style>
-    /* we can directly use h1 instead of classname in styles cause svelte will directly generate
-  a hash of html components so that we can directly use it in our styles this is called stlye copying 
-  in svelte  */
-
-    /* h1{
-    color: red;
-  }*/
 </style>
