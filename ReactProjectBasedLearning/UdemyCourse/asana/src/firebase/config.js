@@ -1,6 +1,6 @@
 import {initializeApp} from 'firebase/app'
-import {getFirestore,serverTimestamp} from "firebase/firestore"
-import {getAuth} from "firebase/auth"
+import {getFirestore,serverTimestamp,collection} from "firebase/firestore"
+import {getAuth,onAuthStateChanged,signInWithEmailAndPassword,signOut,createUserWithEmailAndPassword} from "firebase/auth"
 
 
 // firebase config
@@ -32,5 +32,6 @@ const projectAuth = getAuth(app)
 
 
 
-export {projectFirestore, projectAuth, serverTimestamp}
+export {projectFirestore, projectAuth, serverTimestamp,onAuthStateChanged,signInWithEmailAndPassword,signOut,createUserWithEmailAndPassword,collection}
+
 
