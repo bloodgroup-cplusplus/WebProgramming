@@ -1,4 +1,13 @@
 import './globals.css'
+// let's import any google font 
+
+import { Montserrat } from '@next/font/google'
+
+const montserrat= Montserrat({
+  weignt:['400','700'],
+  subsets:['latin'],
+
+})
 
 export default function RootLayout({ children }) {
   return (
@@ -8,7 +17,7 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-     <body>
+     <body className={`${montserrat.className}`}>
       {children}
        <nav>
         <h1> logo</h1>
