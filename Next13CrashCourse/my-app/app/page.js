@@ -8,6 +8,11 @@ import { Inter } from '@next/font/google'
 
 //"use client"
 
+
+// components import 
+
+import Movie from "./movie"
+
 export default async function Home() {
   var res;
   try{
@@ -22,9 +27,12 @@ export default async function Home() {
     <main >
     <h1 className='text-lg py-2 '>Hello next 13 </h1>
     {res.results.map(movie=>(
-      <div>
-        <h1>{movie.title}</h1>
-      </div>
+      <Movie
+      key={movie.id}
+      id={movie.id}
+      title={movie.title}
+      poster_path={movie.poster_path}
+      release_date={movie.release_date}/>
     ))}
     </main>
   )
