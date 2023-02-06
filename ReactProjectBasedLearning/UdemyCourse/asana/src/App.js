@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter,Routes,Route,Navigate} from "react-router-dom"
+import {BrowserRouter,Routes,Route} from "react-router-dom"
 import { useAuthContext } from './hooks/useAuthContext';
 
 
@@ -25,8 +25,8 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path="/" element= {<Home/>}/>
-          <Route path ="/login" element={<Login/>}/>
-          <Route path = "/signup" element={<Signup/>}/>
+          <Route path ="/login" element={!user?<Login/>:<Dashboard/>}/>
+          <Route path = "/signup" element={!user?<Signup/> : <Dashboard/>}/>
           <Route path = "/feed" element={<Feed/>}/>
           <Route path = "/dashboard" element={ user?<Dashboard/>: <Login/>}/>
           <Route path = "/projects/:id" element={user?<Project/>:<Login/>}/>
