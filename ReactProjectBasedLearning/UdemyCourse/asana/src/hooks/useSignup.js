@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react'
-import {ref,projectAuth,projectStorage,uploadBytes,createUserWithEmailAndPassword,updateProfile,getDownloadURL} from "../firebase/config"
+import {ref,projectAuth,projectStorage,projectFirestore,uploadBytes,setDoc,createUserWithEmailAndPassword,updateProfile,getDownloadURL} from "../firebase/config"
 import {useAuthContext} from "./useAuthContext"
 
 export const useSignup = () =>{
@@ -54,6 +54,12 @@ export const useSignup = () =>{
             {
                 throw new Error('name not updated')
             }
+
+            //create a user document 
+
+            await setDoc((projectFirestore,"Teachers_Data",`${response.usr.uid}`),{
+
+                })
             
 
             // dispatch login action 

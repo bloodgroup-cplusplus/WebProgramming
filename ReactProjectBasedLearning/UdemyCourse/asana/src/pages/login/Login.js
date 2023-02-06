@@ -25,6 +25,7 @@ export default function Login() {
     <form onSubmit={handleSubmit} className= "auth-form">
       <h2>Login</h2>
       <label>
+        <span>email</span>
         <input 
         required 
         type="email"

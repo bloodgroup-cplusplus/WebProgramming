@@ -1,5 +1,5 @@
 import {initializeApp} from 'firebase/app'
-import {getFirestore,serverTimestamp,collection} from "firebase/firestore"
+import {getFirestore,serverTimestamp,collection,addDoc,setDoc} from "firebase/firestore"
 import {getAuth,onAuthStateChanged,signInWithEmailAndPassword,signOut,createUserWithEmailAndPassword,updateProfile} from "firebase/auth"
 import {getStorage,ref,uploadBytes,getDownloadURL} from "firebase/storage"
 
@@ -35,6 +35,6 @@ const projectStorage=getStorage(app)
 
 
 
-export {ref,uploadBytes, getDownloadURL,projectFirestore,projectStorage, projectAuth, serverTimestamp,onAuthStateChanged,signInWithEmailAndPassword,signOut,createUserWithEmailAndPassword,collection,updateProfile}
+export {addDoc,setDoc,ref,uploadBytes, getDownloadURL,projectFirestore,projectStorage, projectAuth, serverTimestamp,onAuthStateChanged,signInWithEmailAndPassword,signOut,createUserWithEmailAndPassword,collection,updateProfile}
 
 
