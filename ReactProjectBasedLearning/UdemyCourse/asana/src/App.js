@@ -29,9 +29,9 @@ function App() {
           <Route path = "/signup" element={<Signup/>}/>
           <Route path = "/feed" element={<Feed/>}/>
           <Route path = "/dashboard" element={ user?<Dashboard/>: <Login/>}/>
-          <Route path = "/projects/:id" element={<Project/>}/>
+          <Route path = "/projects/:id" element={user?<Project/>:<Login/>}/>
           <Route path = "/chad" />
-          <Route path = "/create" element = {<Create/>}/>
+          <Route path = "/create" element = {user?<Create/>:<Login/>}/>
         </Routes>
       </div>
    </BrowserRouter>
