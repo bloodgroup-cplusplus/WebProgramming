@@ -2,9 +2,11 @@
 
 import {Link} from 'react-router-dom'
 import "./Navbar.css"
+import {useLogout} from "../hooks/useLogout"
 
 
 export default function Navbar() {
+  const {logout,isPending} = useLogout()
   return (
     <div className='navbar'>
         <ul>
@@ -12,15 +14,16 @@ export default function Navbar() {
                 <img src={NaN} alt="STA logo" />
                 <span>STA</span>
             </li>
-
-
-            
-
            <li> <Link to = "/">Home</Link></li>
            <li><Link to = "/signup">Signup</Link></li>
            <li> <Link to ="/login">Login</Link></li>
            <li> <Link to = "/feed">Feed</Link></li>
            <li> <Link to = "https://pages.razorpay.com/pl_KlizCHgO1U1j6y/view" target={"_blank"}>Donate</Link></li>
+           <li>
+            {!isPending&&<button className='btn' onClick={logout} >Logout</button>}
+            {isPending &&<button className='btn' disabled>Logging out ...</button>}
+           </li>
+
 
         </ul>
       

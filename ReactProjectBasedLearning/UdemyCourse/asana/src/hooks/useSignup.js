@@ -19,6 +19,7 @@ export const useSignup = () =>{
 
             if(!res)
             {
+                alert("No res")
                 throw new Error('could not complete signup')
             }
 
@@ -36,7 +37,6 @@ export const useSignup = () =>{
                     const blob=xhr.response;
                 };
                 xhr.open('GET',url)
-                xhr.
                 xhr.send();
                 image_url=url;
 
@@ -47,7 +47,7 @@ export const useSignup = () =>{
              //add display name to user 
             const profile_update= await updateProfile(projectAuth.currentUser,{
                displayName:{displayName},
-                imageUrl:{url}
+                imageUrl:{image_url}
 
             })
             if(!profile_update)
@@ -57,7 +57,10 @@ export const useSignup = () =>{
 
             //create a user document 
 
-            await setDoc((projectFirestore,"Teachers_Data",`${response.usr.uid}`),{
+            await setDoc((projectFirestore,"Teachers_Data",`${res.user.uid}`),{
+                online:true,
+                displayName,
+                photoURL:image_url
 
                 })
             
