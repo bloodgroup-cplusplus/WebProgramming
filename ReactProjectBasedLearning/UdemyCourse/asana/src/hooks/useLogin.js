@@ -1,5 +1,5 @@
 import {useState,useEffect} from "react"
-import {projectAuth,signInWithEmailAndPassword} from "../firebase/config"
+import {projectAuth,signInWithEmailAndPassword,projectFirestore,doc,updateDoc} from "../firebase/config"
 import { useAuthContext } from "./useAuthContext"
 
 
@@ -17,6 +17,12 @@ export const useLogin =() =>{
         try{
             //login 
             const res= await signInWithEmailAndPassword(projectAuth,email,password)
+
+            // update online status 
+            const updationRef= doc(projectFirestore,"Teachers_Data",res.user.uid)
+            await updateDoc(updationRef,{
+                online:true
+            })
 
             // dispatch login actino 
 

@@ -1,5 +1,5 @@
 import {useEffect,useState} from "react"
-import { projectAuth,signOut,collection,updateDoc,projectFirestore,doc} from "../firebase/config"
+import { projectAuth,signOut,updateDoc,projectFirestore,doc} from "../firebase/config"
 import { useAuthContext } from "./useAuthContext"
 
 
