@@ -1,6 +1,7 @@
 import {initializeApp} from 'firebase/app'
 import {getFirestore,serverTimestamp,collection} from "firebase/firestore"
-import {getAuth,onAuthStateChanged,signInWithEmailAndPassword,signOut,createUserWithEmailAndPassword} from "firebase/auth"
+import {getAuth,onAuthStateChanged,signInWithEmailAndPassword,signOut,createUserWithEmailAndPassword,updateProfile} from "firebase/auth"
+import {getStorage,ref,uploadBytes,getDownloadURL} from "firebase/storage"
 
 
 // firebase config
@@ -28,10 +29,12 @@ const projectFirestore = getFirestore(app)
 
 const projectAuth = getAuth(app)
 
+const projectStorage=getStorage(app)
+
 // firebase timestamps 
 
 
 
-export {projectFirestore, projectAuth, serverTimestamp,onAuthStateChanged,signInWithEmailAndPassword,signOut,createUserWithEmailAndPassword,collection}
+export {ref,uploadBytes, getDownloadURL,projectFirestore,projectStorage, projectAuth, serverTimestamp,onAuthStateChanged,signInWithEmailAndPassword,signOut,createUserWithEmailAndPassword,collection,updateProfile}
 
 

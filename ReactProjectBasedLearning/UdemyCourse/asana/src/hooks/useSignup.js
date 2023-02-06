@@ -1,5 +1,6 @@
+import { getDownloadURL, ref } from 'firebase/storage'
 import {useState,useEffect} from 'react'
-import {projectAuth,createUserWithEmailAndPassword,updateProfile} from "../firebase/config"
+import {projectAuth,projectStorage,uploadBytes,createUserWithEmailAndPassword,updateProfile,getDownloadURL} from "../firebase/config"
 import {useAuthContext} from "./useAuthContext"
 
 export const useSignup = () =>{
@@ -21,9 +22,30 @@ export const useSignup = () =>{
             {
                 throw new Error('could not complete signup')
             }
+
+            // upload user thumbnail 
+            const uploadPath=`teacher_profile/${res.user.uid}/${thumbnail.name}`
+            const img_ref=await ref(projectStorage,uploadPath)
+            uploadBytes(img_ref,thumbnail).then((snapshot)=>{
+                console.log("uploaded a blob or file");
+            });
+            getDownloadURL(ref(projectStorage,uploadPath)).then((url)=>{
+                const xhr= new XMLHttpRequest();
+                xhr.responseType="blob";
+                xhr.onload=(event)=>{
+                    const blobl= xhr.response;
+                };
+                xhr.open('GET',url)
+                xhr.send();
+            }).catch((error)=>{
+                console.log("File not downloaded")
+            })
+
             // add display name to user 
             const profile_update= await updateProfile(projectAuth.currentUser,{
-                displayName:{displayName}
+                displayName:{displayName},
+                imageUrl:{url}
+
             })
             if(!profile_update)
             {
