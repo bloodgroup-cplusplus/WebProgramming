@@ -1,6 +1,5 @@
-import { getDownloadURL, ref } from 'firebase/storage'
 import {useState,useEffect} from 'react'
-import {projectAuth,projectStorage,uploadBytes,createUserWithEmailAndPassword,updateProfile,getDownloadURL} from "../firebase/config"
+import {ref,projectAuth,projectStorage,uploadBytes,createUserWithEmailAndPassword,updateProfile,getDownloadURL} from "../firebase/config"
 import {useAuthContext} from "./useAuthContext"
 
 export const useSignup = () =>{
@@ -10,7 +9,7 @@ export const useSignup = () =>{
     const {dispatch} = useAuthContext()
 
 
-    const signup = async(email,password,displayName)=>{
+    const signup = async(email,password,displayName,thumbnail)=>{
         setError(null)
         setIsPending(true)
 
@@ -25,25 +24,29 @@ export const useSignup = () =>{
 
             // upload user thumbnail 
             const uploadPath=`teacher_profile/${res.user.uid}/${thumbnail.name}`
-            const img_ref=await ref(projectStorage,uploadPath)
+            const img_ref= ref(projectStorage,uploadPath)
+            var image_url;
             uploadBytes(img_ref,thumbnail).then((snapshot)=>{
                 console.log("uploaded a blob or file");
             });
-            getDownloadURL(ref(projectStorage,uploadPath)).then((url)=>{
+            getDownloadURL(img_ref).then((url)=>{
                 const xhr= new XMLHttpRequest();
                 xhr.responseType="blob";
                 xhr.onload=(event)=>{
-                    const blobl= xhr.response;
+                    const blob=xhr.response;
                 };
                 xhr.open('GET',url)
+                xhr.
                 xhr.send();
+                image_url=url;
+
             }).catch((error)=>{
                 console.log("File not downloaded")
             })
 
-            // add display name to user 
+             //add display name to user 
             const profile_update= await updateProfile(projectAuth.currentUser,{
-                displayName:{displayName},
+               displayName:{displayName},
                 imageUrl:{url}
 
             })

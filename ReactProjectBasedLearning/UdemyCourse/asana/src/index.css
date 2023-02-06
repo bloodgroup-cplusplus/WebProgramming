@@ -53,7 +53,7 @@ label span {
   display: block;
   margin-bottom: 6px;
 }
-input, textarea {
+input, textarea,select {
   padding: 8px 6px;
   font-size: 1em;
   color: #777;
@@ -65,6 +65,9 @@ input, textarea {
 textarea {
   min-height: 160px;
 }
+
+
+
 .error {
   color: red;
   background: pink;
