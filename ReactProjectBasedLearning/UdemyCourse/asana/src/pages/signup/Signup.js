@@ -9,10 +9,39 @@ import {useState} from "react"
 export default function Signup() {
   const [email,setEmail] = useState("")
   const[password,setPassword] =useState("")
-  const[displayName,setDisplayName] = useState(null)
+  const[displayName,setDisplayName] = useState("")
   const[dob,setDob] =useState("")
   const[phone,setPhone] = useState("")
   const [district,setDistrict] = useState("")
+  const [thumbnail, setThumbnail] = useState(null)
+  const[thumbnailError,setThumbnailError] = useState(null)
+
+  const handleFileChange=(e)=>{
+    setThumbnail(null)
+    let selected= e.target.files[0]
+    if(!selected)
+    {
+      setThumbnailError("please select a file")
+      return 
+    }
+
+    if(!selected.type.includes('image'))
+    {
+       setThumbnailError("selected file must be an image")
+       return 
+
+    }
+
+    if(selected.size>1000000000)
+    {
+      setThumbnailError("Image file size must be less than 10mb")
+      return 
+    }
+
+    setThumbnailError(null)
+    setThumbnail(selected)
+    console.log("thumbnail updated")
+  }
   return (
     <form className='auth-form'>
       <h2>Sign up </h2>
@@ -85,8 +114,10 @@ export default function Signup() {
         <input 
         required 
         type="file"
+        onChange={handleFileChange}
         />
       
+      {thumbnailError && <div className='error'>{thumbnailError}</div>}
       </label>
 
     <button className='btn'>Continue to Razorpay</button>
