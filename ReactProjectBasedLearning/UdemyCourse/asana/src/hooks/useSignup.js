@@ -26,11 +26,12 @@ export const useSignup = () =>{
             // upload user thumbnail 
             const uploadPath=`teacher_profile/${res.user.uid}/${thumbnail.name}`
             const img_ref= ref(projectStorage,uploadPath)
-            var image_url;
-            uploadBytes(img_ref,thumbnail).then((snapshot)=>{
+            await uploadBytes(img_ref,thumbnail).then((snapshot)=>{
                 console.log("uploaded a blob or file");
             });
-            getDownloadURL(img_ref).then((url)=>{
+            const image_url=await getDownloadURL(img_ref)
+            console.log(image_url)
+            /*.then((url)=>{
                 const xhr= new XMLHttpRequest();
                 xhr.responseType="blob";
                 xhr.onload=(event)=>{
@@ -42,7 +43,7 @@ export const useSignup = () =>{
 
             }).catch((error)=>{
                 console.log("File not downloaded")
-            })
+            })*/
 
              //add display name to user 
             const profile_update= await updateProfile(projectAuth.currentUser,{

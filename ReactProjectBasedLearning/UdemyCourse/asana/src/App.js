@@ -1,4 +1,3 @@
-import './App.css';
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 import { useAuthContext } from './hooks/useAuthContext';
 
@@ -18,11 +17,13 @@ import Navbar from './components/Navbar';
 function App() {
   const{user,authIsReady} = useAuthContext()
   return (
-    <div className='app'>
+    <div className="text-lg text-red-500">
       {authIsReady &&(
     <BrowserRouter>
       <div className='container'>
+
         <Navbar/>
+        {/*<ResponsiveNavbar/>*/}
         <Routes>
           <Route path="/" element= {<Home/>}/>
           <Route path ="/login" element={!user?<Login/>:<Dashboard/>}/>

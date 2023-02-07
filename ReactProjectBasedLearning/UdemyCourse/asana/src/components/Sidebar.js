@@ -8,6 +8,7 @@ import {NavLink} from "react-router-dom"
 
 import { useAuthContext } from "../hooks/useAuthContext"
 
+import {Avatar} from "./Avatar"
 
 import "./Sidebar.css"
 import AddIcon from "../assets/add_icon.svg"

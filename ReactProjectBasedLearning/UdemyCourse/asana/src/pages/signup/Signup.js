@@ -21,10 +21,16 @@ export default function Signup() {
   const [thumbnail, setThumbnail] = useState(null)
   const[thumbnailError,setThumbnailError] = useState(null)
   const{signup,isPending,error} = useSignup()
+  const {payment,isVerified,isCaptured,isOrdered} = usePayment()
 
   const handleSubmit=(e)=>{
     e.preventDefault()
-    signup(email,password,displayName,thumbnail)
+    payment()
+    if(isVerified && isCaptured && isOrdered)
+    {
+      signup(email,password,displayName,thumbnail)
+    }
+    alert("registration failed due To error in payment refresh page to try again")
   }
 
   const handleFileChange=(e)=>{
