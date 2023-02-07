@@ -26,6 +26,9 @@ export default function Signup() {
   const handleSubmit=(e)=>{
     e.preventDefault()
     payment()
+    console.log(isVerified)
+    console.log(isCaptured)
+    console.log(isOrdered)
   }
 
   const handleFileChange=(e)=>{
