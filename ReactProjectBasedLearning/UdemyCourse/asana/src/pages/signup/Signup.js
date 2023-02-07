@@ -26,11 +26,6 @@ export default function Signup() {
   const handleSubmit=(e)=>{
     e.preventDefault()
     payment()
-    if(isVerified && isCaptured && isOrdered)
-    {
-      signup(email,password,displayName,thumbnail)
-    }
-    alert("registration failed due To error in payment refresh page to try again")
   }
 
   const handleFileChange=(e)=>{
