@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react'
-import {ref,projectAuth,projectStorage,projectFirestore,uploadBytes,setDoc,createUserWithEmailAndPassword,updateProfile,getDownloadURL} from "../firebase/config"
+import {ref,doc,projectAuth,projectStorage,projectFirestore,uploadBytes,setDoc,createUserWithEmailAndPassword,updateProfile,getDownloadURL} from "../firebase/config"
 import {useAuthContext} from "./useAuthContext"
 
 export const useSignup = () =>{
@@ -57,10 +57,10 @@ export const useSignup = () =>{
             }
 
             //create a user document 
-
-            await setDoc((projectFirestore,"Teachers_Data",`${res.user.uid}`),{
+            const tablename=res.user.uid
+            await setDoc(doc(projectFirestore,"Teachers_Data", {tablename}),{
                 online:true,
-                displayName,
+                name:displayName,
                 photoURL:image_url
 
                 })

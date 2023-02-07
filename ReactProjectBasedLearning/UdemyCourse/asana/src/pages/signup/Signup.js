@@ -25,10 +25,11 @@ export default function Signup() {
 
   const handleSubmit=(e)=>{
     e.preventDefault()
-    payment()
-    console.log(isVerified)
-    console.log(isCaptured)
-    console.log(isOrdered)
+    signup(email,password,displayName,thumbnail)
+    //payment()
+    //console.log(isVerified)
+    //console.log(isCaptured)
+    //console.log(isOrdered)
   }
 
   const handleFileChange=(e)=>{
