@@ -10,6 +10,10 @@ export default function Griviences() {
     const handleSubmit=(e)=>{
         e.preventDefault()
         console.log({
+            name,
+            schoolName,
+            staid,
+            grivience
 
         })
     }
