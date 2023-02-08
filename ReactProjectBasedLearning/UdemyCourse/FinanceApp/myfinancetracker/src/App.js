@@ -8,22 +8,24 @@ import Home from "./pages/home/Home"
 import Feed from "./pages/feed/Feed"
 import Signup from "./pages/signup/Signup"
 import Login from "./pages/login/Login"
+import Profile from "./pages/profile/Profile"
 
 // import compentns
 import Navbar from './components/Navbar';
 
 function App() {
   // we need to destructure auth is ready property from it 
-  const {authIsReady} = useAuthContext()
+  const {authIsReady,user} = useAuthContext()
   return (
     <div className="App">
       {authIsReady &&(
       <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route path = "/" element={<Home/>}/>
-        <Route path = "/login" element = {<Login/>}/>
-        <Route path = "/signup" element = {<Signup/>}/>
+        <Route path = "/" element={user?<Profile/>:<Home/>}/>
+        <Route path = "/home" element={user?<Home/>:<Home/>}/>
+        <Route path = "/login" element = {user?<Profile/>:<Login/>}/>
+        <Route path = "/signup" element = {user?<Profile/>:<Signup/>}/>
         <Route path = "/feed" element = {<Feed/>}/>
       </Routes>
       </BrowserRouter>
