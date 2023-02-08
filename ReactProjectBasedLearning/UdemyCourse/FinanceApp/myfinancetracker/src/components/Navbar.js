@@ -19,7 +19,7 @@ export default function Navbar() {
             <ol><Link to ="/login">Login</Link></ol>
             <ol><Link to = "/signup">Signup</Link></ol>
             <ol><Link to = "/feed">Feed</Link></ol>
-            <ol><Link to = "https://pages.razorpay.com/pl_KlizCHgO1U1j6y/view">Donate</Link></ol>
+            <ol><Link to = "https://pages.razorpay.com/pl_KlizCHgO1U1j6y/view" target={"_blank"}>Donate</Link></ol>
             </>
             )}
             {user &&(
@@ -27,7 +27,7 @@ export default function Navbar() {
             <ol>{user.displayName}</ol>
             <ol><Link to = "/home">Home</Link></ol>
             <ol><Link to = "/feed">Feed</Link></ol>
-            <ol><Link to = "https://pages.razorpay.com/pl_KlizCHgO1U1j6y/view">Donate</Link></ol>
+            <ol><Link to = "https://pages.razorpay.com/pl_KlizCHgO1U1j6y/view" target={"_blank"}>Donate</Link></ol>
             <ol>
                  <button className="btn"  onClick={logout}>Logout</button>
             </ol>
