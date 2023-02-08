@@ -1,5 +1,6 @@
 import './App.css';
 import {BrowserRouter,Routes,Route} from "react-router-dom"
+import { useAuthContext } from './hooks/useAuthContext';
 
 
 // import pages
@@ -12,8 +13,11 @@ import Login from "./pages/login/Login"
 import Navbar from './components/Navbar';
 
 function App() {
+  // we need to destructure auth is ready property from it 
+  const {authIsReady} = useAuthContext()
   return (
     <div className="App">
+      {authIsReady &&(
       <BrowserRouter>
       <Navbar/>
       <Routes>
@@ -23,6 +27,7 @@ function App() {
         <Route path = "/feed" element = {<Feed/>}/>
       </Routes>
       </BrowserRouter>
+      )}
    </div>
   );
 }
