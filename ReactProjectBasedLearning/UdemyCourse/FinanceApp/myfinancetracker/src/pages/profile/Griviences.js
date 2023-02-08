@@ -54,13 +54,13 @@ export default function Griviences() {
 
             <label>
                 <span> Grivience:</span>
-                <input 
-                    type="message"
+                <textarea
                     required
                     onChange={(e)=>setGrevience(e.target.value)}
                     value={grivience}
                     />
             </label>
+            <button>Submit</button>
         </form>
       
     </>
