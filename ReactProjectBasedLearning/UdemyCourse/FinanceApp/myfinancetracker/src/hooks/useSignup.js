@@ -1,5 +1,5 @@
 // use state 
-import {useState} from "react"
+import {useEffect, useState} from "react"
 import {projectAuth,createUserWithEmailAndPassword,updateProfile} from "../firebase/config"
 
 import { useAuthContext } from "./useAuthContext"
@@ -10,6 +10,7 @@ export const useSignup = () =>{
 
     const [error, setError] = useState(null)
     const[isPending,setIsPending] = useState(false)
+    const[isCancelled,setIsCancelled] = useState(false)
     const {dispatch} = useAuthContext()
 
     // we need to wait for the user to fill up the form 
@@ -54,20 +55,30 @@ export const useSignup = () =>{
             dispatch({type:'LOGIN',payload:res.user})
 
 
-            setIsPending(false)
-            setError(null)
+            if(!isCancelled)
+            {
+
+                setIsPending(false)
+                setError(null)
+            }
 
         }
         catch(error) 
         {
-            console.log(error.message)
-            setError(error.message)
-            setIsPending(false)
+            if(!isCancelled)
+            {
+                console.log(error.message)
+                setError(error.message)
+                setIsPending(false)
+            }
 
         }
 
     }
     // we need to export the things from the hook that i might import on the other components 
+    useEffect(()=>{
+        return ()=>setIsCancelled(true)
+    },[])
 
     return {error,isPending,signup}
 
