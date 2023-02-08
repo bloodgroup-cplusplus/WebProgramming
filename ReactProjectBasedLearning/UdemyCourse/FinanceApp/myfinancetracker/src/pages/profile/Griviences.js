@@ -1,19 +1,23 @@
 import React from 'react'
 import {useState} from "react"
+import { useFirestore } from '../../hooks/useFirestore'
 
-export default function Griviences() {
+export default function Griviences({uid}) {
     const [name,setName] = useState('')
     const [schoolName,setSchoolName] = useState('')
     const [staid,setStaId] = useState('')
     const[grivience,setGrevience] = useState('')
+    const{addDocument,response} = useFirestore('Griviences')
 
     const handleSubmit=(e)=>{
         e.preventDefault()
-        console.log({
+        addDocument({
             name,
             schoolName,
             staid,
-            grivience
+            grivience,
+            uid
+            
 
         })
     }

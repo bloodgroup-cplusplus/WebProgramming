@@ -7,7 +7,7 @@
 // we use this object everytime we want to create the project firestore
 
 import {useReducer,useEffect,useState} from "react"
-import { projectFirestore,doc,collection as firestore_collection } from "../firebase/config"
+import { projectFirestore,doc,serverTimestamp,addDoc,collection as firestore_collection } from "../firebase/config"
 
 // we want to create a hook itself 
 // lets create an initial state 
@@ -23,6 +23,17 @@ const firestoreReducer = (state,action ) =>{
     switch(action.type)
     {
         // we will have differnet cases inside the switch statement dependnet on the type
+        case 'IS_PENDING':
+            // if that is the case than we want to return a new state 
+            // we want to take the current properties on those state and spread them out 
+            return {...state,isPending:true,document:null,success:false,error:null}
+
+        case 'ADDED_DOCUMENT':
+            return {isPending:false,document:action.payload,success:true,error:null}
+
+
+        case 'ERROR':
+            return {isPending:false,document:null,success:false,error:action.payload}
 
         default:
             // default case just returns the state
@@ -58,16 +69,38 @@ export const useFirestore=(collection) =>{
     // we could use for deleteing and adding the reference 
     // ref is kept so that we can add or delete document 
 
+    // only dispatch if not cancelled 
+    const dispatchIfNotCancelled= (action) =>{
+        if(!isCancelled)
+        {
+            dispatch(action)
+        }
+    }
 
     // first let's add document 
 
     // add a document 
-    const addDocument = (doc) =>{
+    const addDocument = async(doc) =>{
+        dispatch({type:'IS_PENDING'})
+        try{
+            const createdAt=serverTimestamp() 
+            const addedDocument= await addDoc(ref,{...doc,createdAt})
+            dispatchIfNotCancelled({type:'ADDED_DOCUMENT',payload:addedDocument})
 
-    }
+
+
+
+        }
+        catch(err)
+        {
+            dispatchIfNotCancelled({type:'ERROR',payload:err.message})
+        }
+
+        }
+
     //delete document 
     // we need the id to make delete request
-    const deleteDocument = (id) =>{
+    const deleteDocument = async(id) =>{
 
 
     }
