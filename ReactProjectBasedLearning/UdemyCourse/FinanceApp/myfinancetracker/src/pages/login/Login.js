@@ -21,8 +21,6 @@ export default function Login() {
       onChange={(e)=>setEmail(e.target.value)}
       value={email}
       />
-      <br></br>
-      <br></br>
       </label>
       <label>
         <span>Password:</span>
@@ -32,8 +30,6 @@ export default function Login() {
           value={password}
           />
       </label>
-      <br></br>
-      <br></br>
       
       <button className="btn">Login </button>
      </form>
