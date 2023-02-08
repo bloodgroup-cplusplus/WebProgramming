@@ -20,6 +20,11 @@ export const authReducer = (state,action) =>{
             // update the user property but the payload
             // we need to dispatch this action from somewhere
             return {...state,user:action.payload}
+
+
+        case 'LOGOUT':
+            return {...state,user:null}
+
         default:
             return state
 
