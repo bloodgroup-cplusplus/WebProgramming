@@ -23,8 +23,10 @@ export default function Signup() {
   const{signup,isPending,error} = useSignup()
   const {payment,isVerified,isCaptured,isOrdered} = usePayment()
 
-  const handleSubmit=(e)=>{
+  const handleSubmit= async(e)=>{
     e.preventDefault()
+    await payment()
+    console.log(isVerified)
     signup(email,password,displayName,thumbnail)
     //payment()
     //console.log(isVerified)

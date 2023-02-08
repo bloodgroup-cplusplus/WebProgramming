@@ -31,7 +31,6 @@ function App() {
           <Route path = "/feed" element={<Feed/>}/>
           <Route path = "/dashboard" element={ user?<Dashboard/>: <Login/>}/>
           <Route path = "/projects/:id" element={user?<Project/>:<Login/>}/>
-          <Route path = "/chad" />
           <Route path = "/create" element = {user?<Create/>:<Login/>}/>
         </Routes>
       </div>

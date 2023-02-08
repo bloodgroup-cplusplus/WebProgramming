@@ -31,39 +31,34 @@ export const useSignup = () =>{
             });
             const image_url=await getDownloadURL(img_ref)
             console.log(image_url)
-            /*.then((url)=>{
-                const xhr= new XMLHttpRequest();
-                xhr.responseType="blob";
-                xhr.onload=(event)=>{
-                    const blob=xhr.response;
-                };
-                xhr.open('GET',url)
-                xhr.send();
-                image_url=url;
+            
 
+            
+             updateProfile(projectAuth.currentUser,{
+               displayName:displayName,
+                imageUrl:image_url
+
+            }).then(()=>{
+                console.log("Profile Updated")
             }).catch((error)=>{
-                console.log("File not downloaded")
-            })*/
-
-             //add display name to user 
-            const profile_update= await updateProfile(projectAuth.currentUser,{
-               displayName:{displayName},
-                imageUrl:{image_url}
+                console.log("An error occurred while updating profile")
 
             })
-            if(!profile_update)
-            {
-                throw new Error('name not updated')
-            }
 
             //create a user document 
-            const tablename=res.user.uid
-            await setDoc(doc(projectFirestore,"Teachers_Data", {tablename}),{
+            var data={
                 online:true,
-                name:displayName,
+                displayName,
                 photoURL:image_url
+            }
 
-                })
+            try{
+                await setDoc(doc(projectFirestore,"Teachers_Data",res.user.uid),data)
+                console.log("Data added to cloud firestore")
+            }catch(error)
+            {
+                console.log(error)
+            }
             
 
             // dispatch login action 

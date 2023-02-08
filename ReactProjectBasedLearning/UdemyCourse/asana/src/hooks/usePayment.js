@@ -41,7 +41,7 @@ export const usePayment =() =>{
             )
        
             const options={
-                 key:KEY_ID,
+                key:KEY_ID,
                 amount:data.amount,
                 currency:data.currency,
                 name:"Sikkim Teachers Association Membership Fee",
