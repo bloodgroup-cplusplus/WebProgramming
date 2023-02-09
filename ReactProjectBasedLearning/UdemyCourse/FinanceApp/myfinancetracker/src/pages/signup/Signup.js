@@ -1,18 +1,45 @@
 import styles from "./Signup.module.css"
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import {useSignup} from "../../hooks/useSignup"
+import {usePayment} from "../../hooks/usePayment"
 
 import React from 'react'
 
 export default function Signup() {
   const [email,setEmail] = useState("")
   const[password,setPassword] = useState("")
-  const {displayName, setDisplayName} = useState("")
+  const [loading,setLoading] = useState(false)
+  const [displayName, setDisplayName] = useState("")
+  const{payment,isVerified}=usePayment()
   const {signup,isPending,error} = useSignup()
-  const handleSubmit=(e)=>{
+  const handleSubmit= async(e)=>{
     e.preventDefault()
-    signup(email,password,displayName)
+    setLoading(true);
+    try{
+          await payment(email,password,displayName,signup) 
+    }
+    catch(error)
+    {
+      console.error(error)
+      alert('payment failed')
+    }
+    finally{
+      setLoading(false)
+    }
+
+    
+
+
+
   }
+  useEffect(()=>{
+    console.log(isVerified)
+    if(isVerified)
+    {
+      console.log("chad")
+    }
+},[isVerified])
+
   return (
     <form on onSubmit={handleSubmit} className={styles['signup-form']}>
     <h2>Signup</h2> 

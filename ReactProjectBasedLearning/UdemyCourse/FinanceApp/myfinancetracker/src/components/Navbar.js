@@ -24,7 +24,7 @@ export default function Navbar() {
             )}
             {user &&(
             <>
-            <ol>{user.displayName}</ol>
+            <ol> Hi {user.displayName}</ol>
             <ol><Link to = "/home">Home</Link></ol>
             <ol><Link to = "/feed">Feed</Link></ol>
             <ol><Link to = "https://pages.razorpay.com/pl_KlizCHgO1U1j6y/view" target={"_blank"}>Donate</Link></ol>

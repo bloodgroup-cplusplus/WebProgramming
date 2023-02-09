@@ -1,5 +1,5 @@
 // use state 
-import {useEffect, useState} from "react"
+import {useEffect, useState,useCallback} from "react"
 import {projectAuth,createUserWithEmailAndPassword,updateProfile} from "../firebase/config"
 
 import { useAuthContext } from "./useAuthContext"
@@ -16,7 +16,7 @@ export const useSignup = () =>{
     // we need to wait for the user to fill up the form 
 
     // inside the function we use the await keyword
-    const signup = async (email,password,displayName)=>{
+    const signup = useCallback(async (email,password,displayName)=>{
         // certain properties that firebase auth allows 
         // display name 
         //photo url 
@@ -74,7 +74,7 @@ export const useSignup = () =>{
 
         }
 
-    }
+    },[]);
     // we need to export the things from the hook that i might import on the other components 
     useEffect(()=>{
         return ()=>setIsCancelled(true)
