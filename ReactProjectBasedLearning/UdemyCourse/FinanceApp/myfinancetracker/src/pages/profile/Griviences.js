@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {useState} from "react"
 import { useFirestore } from '../../hooks/useFirestore'
 
@@ -21,6 +21,16 @@ export default function Griviences({uid}) {
 
         })
     }
+    useEffect(()=>{
+        if(response.success)
+        {
+            setName('')
+            setSchoolName('')
+            setStaId('')
+            setGrevience('')
+            response('')
+        }
+    },[response.success])
   return (
     <>
         <h3>Add a Grivience</h3>
