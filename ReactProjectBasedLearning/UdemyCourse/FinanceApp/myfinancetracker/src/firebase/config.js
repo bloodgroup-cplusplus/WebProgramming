@@ -1,5 +1,5 @@
 import {initializeApp} from 'firebase/app'
-import {getFirestore,serverTimestamp,collection,addDoc,setDoc,updateDoc,doc} from "firebase/firestore"
+import {getFirestore,serverTimestamp,collection,addDoc,setDoc,updateDoc,doc,onSnapshot} from "firebase/firestore"
 import {getAuth,onAuthStateChanged,signInWithEmailAndPassword,signOut,createUserWithEmailAndPassword,updateProfile} from "firebase/auth"
 import {getStorage,ref,uploadBytes,getDownloadURL} from "firebase/storage"
 
@@ -7,14 +7,14 @@ import {getStorage,ref,uploadBytes,getDownloadURL} from "firebase/storage"
 // firebase config
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBoLL3VJBp-cAYhGL08cXpxyCHv0sgrcAE",
-    authDomain: "stademo2022.firebaseapp.com",
-    projectId: "stademo2022",
-    storageBucket: "stademo2022.appspot.com",
-    messagingSenderId: "267963995076",
-    appId: "1:267963995076:web:3bbd1f82b72f95d5bc4a91",
-    measurementId: "G-H164QGCE13"
-  };
+  apiKey: "AIzaSyD1H2YKLoLE5-V-aeeZIHPZb2BEoZ-qw6k",
+  authDomain: "fir-f0f56.firebaseapp.com",
+  projectId: "fir-f0f56",
+  storageBucket: "fir-f0f56.appspot.com",
+  messagingSenderId: "310785965569",
+  appId: "1:310785965569:web:8d2610a71b1a787af24a00"
+};
+
 
 
 
@@ -35,5 +35,5 @@ const projectStorage=getStorage(app)
 
 
 
-export {doc,updateDoc,addDoc,setDoc,ref,uploadBytes, getDownloadURL,projectFirestore,projectStorage, projectAuth, serverTimestamp,onAuthStateChanged,signInWithEmailAndPassword,signOut,createUserWithEmailAndPassword,collection,updateProfile}
+export {doc,updateDoc,addDoc,setDoc,ref,uploadBytes, getDownloadURL,projectFirestore,projectStorage, projectAuth, serverTimestamp,onAuthStateChanged,signInWithEmailAndPassword,signOut,createUserWithEmailAndPassword,collection,updateProfile,onSnapshot}
 

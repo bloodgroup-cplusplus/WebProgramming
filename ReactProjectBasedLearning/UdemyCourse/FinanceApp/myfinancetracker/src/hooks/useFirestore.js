@@ -7,7 +7,7 @@
 // we use this object everytime we want to create the project firestore
 
 import {useReducer,useEffect,useState} from "react"
-import { projectFirestore,doc,serverTimestamp,addDoc,collection as firestore_collection } from "../firebase/config"
+import { projectFirestore,serverTimestamp,addDoc,collection as firestore_collection } from "../firebase/config"
 
 // we want to create a hook itself 
 // lets create an initial state 
@@ -17,7 +17,7 @@ let initialState={
     document:null, // when we make some kind of request , the firestore document response is the document firstly its null
     isPending:false, // pending state is false to begin with 
     error:null, // if we get error from firestore we update it to yes
-    success:null // true or false . If success true else false 
+    success:null,// true or false . If success true else false 
 }
 const firestoreReducer = (state,action ) =>{
     switch(action.type)
@@ -26,9 +26,10 @@ const firestoreReducer = (state,action ) =>{
         case 'IS_PENDING':
             // if that is the case than we want to return a new state 
             // we want to take the current properties on those state and spread them out 
-            return {...state,isPending:true,document:null,success:false,error:null}
+            return {isPending:true,document:null,success:false,error:null}
 
         case 'ADDED_DOCUMENT':
+            console.log("it comes here")
             return {isPending:false,document:action.payload,success:true,error:null}
 
 
@@ -64,7 +65,7 @@ export const useFirestore=(collection) =>{
     // collection ref  from firestore reference 
     // get refrence to somekind of collection from firestoer database 
 
-    const ref = doc(firestore_collection(projectFirestore,collection))
+    //const ref = doc(firestore_collection(projectFirestore,collection))
     // we could use ref.add() to add document later on 
     // we could use for deleteing and adding the reference 
     // ref is kept so that we can add or delete document 
@@ -84,7 +85,8 @@ export const useFirestore=(collection) =>{
         dispatch({type:'IS_PENDING'})
         try{
             const createdAt=serverTimestamp() 
-            const addedDocument= await addDoc(ref,{...doc,createdAt})
+            const addedDocument= await addDoc(firestore_collection(projectFirestore,collection),{...doc,createdAt})
+            alert("Your grivience is added")
             dispatchIfNotCancelled({type:'ADDED_DOCUMENT',payload:addedDocument})
 
 
@@ -93,6 +95,7 @@ export const useFirestore=(collection) =>{
         }
         catch(err)
         {
+            console.log("document not added")
             dispatchIfNotCancelled({type:'ERROR',payload:err.message})
         }
 
@@ -100,7 +103,7 @@ export const useFirestore=(collection) =>{
 
     //delete document 
     // we need the id to make delete request
-    const deleteDocument = async(id) =>{
+    const deleteDocument = async(doc) =>{
 
 
     }

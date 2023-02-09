@@ -95,3 +95,16 @@
     font-weight:bold;
     font-size:1.6em;
 }
+.transactions button{
+    position:absolute;
+    top:0;
+    right:0;
+    background:#ddd;
+    color:#777;
+    border:none;
+    paddding:12px 8px;
+    text-align:center;
+    line-height:0;
+    font-size:0.9em;
+    cursor:pointer;
+}

@@ -1,12 +1,18 @@
 import React from 'react'
 // import some styles from hole modules 
 // styles ( import stlyes from )
-import styles from "./Profile.modules.css"
+import styles from "./Profile.module.css"
 
-export default function GriviencesList() {
+export default function GriviencesList({griviences}) {
   return (
-    <div>
       
-    </div>
+    <ul className={styles.transactions}>
+        {griviences.map((transaction)=>(
+            <li key= {transaction.id}>
+                <p className={styles.amount}>{transaction.grivience}</p>
+            </li>
+        ))}
+
+    </ul>
   )
 }

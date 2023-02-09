@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react'
-import {useState} from "react"
+import {useState,useEffect} from "react"
 import { useFirestore } from '../../hooks/useFirestore'
 
-export default function Griviences({uid}) {
+export default function GriviencesForm({uid}) {
     const [name,setName] = useState('')
     const [schoolName,setSchoolName] = useState('')
     const [staid,setStaId] = useState('')
@@ -17,18 +16,18 @@ export default function Griviences({uid}) {
             staid,
             grivience,
             uid
-            
-
         })
     }
+    //reset the form fields 
+
     useEffect(()=>{
+        console.log(response.success)
         if(response.success)
         {
             setName('')
             setSchoolName('')
             setStaId('')
             setGrevience('')
-            response('')
         }
     },[response.success])
   return (
