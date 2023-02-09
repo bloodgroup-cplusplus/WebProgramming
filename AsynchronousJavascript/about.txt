@@ -1,0 +1,19 @@
+synchronous code is easy to understand 
+one pieoce of code executes before the next piece start 
+
+the code is blocking anything from happening 
+
+non-blocking call avoids anything from hapepning 
+
+asynchrounous : let it run and other will continue 
+
+why would anyone write this code until we get a response 
+
+The one reason is to respond until user responds 
+
+If we could allow other parts to execute and run while we are wating 
+
+we will look at patterns about how to do async coding 
+
+setTimeout() allows other things to run while other things is required
+
