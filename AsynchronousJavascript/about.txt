@@ -17,3 +17,126 @@ we will look at patterns about how to do async coding
 
 setTimeout() allows other things to run while other things is required
 
+
+
+SYNCHRONOUS CODE 
+
+Advantage: Easy to write and to reason about. 
+Disadvantage: May create blocking code. 
+
+
+Disadvantage: Less performant 
+
+
+ASYNCHRONOUS CODE 
+
+Advantage: Very performant 
+It is fast 
+
+Advantages: It eliminates code blocking 
+
+Disadvantage : it can be difficult to reason about 
+Disadvantage : Harder to write 
+
+
+
+EVENT LOOP 
+
+In order for JavaScript to achieve asynchronous coding it makes use of callbacks the environment performs
+
+an operation like set time out providing a callback function and then moves on to do something else.
+
+When the operation has been completed a message is queued along with the provide a callback function.
+
+At some point in the future the message is decoded and the callback is fired the event loop is important
+
+in making this happen.
+
+It continuously checks for queued messages and takes care of the next one in line.
+
+Now we won't dive into deep technical detail on the event loop but it is important to have a basic understanding
+
+of it because it is through the event loop the a synchronicity is achieved.
+
+Let's look at some diagrams.
+
+The purpose of the event loop is to make sure that all the code is handled so javascript is a single
+
+threaded environment so we can only execute one piece of code at a time.
+
+But the event loop makes it possible to achieve a synchronicity because we're able to set code aside
+
+such as a callback that was created by set time out.
+
+Set that aside and then the event loop will check for that and make sure that it gets taken care of
+
+when it's time to execute that.
+
+So here is our event loop.
+
+Now this yellow Q This represents regular javascript statements that have a priority.
+
+So these are the priority.
+
+These are the things that are getting executed over here.
+
+This green cue these are messages that are added.
+
+So for example when set time out executes and the time expires a message is added to this Q which includes
+
+the callback and when the event loop has finished taking care of these required statements it will then
+
+check for the next item in the message Q And then will invoke the callback.
+
+So let's just walk through this.
+
+So our loop is cycling around it grabs the next item and it takes care of that because that Q is not
+
+empty yet it keeps cycling grabs the next item and takes care of it.
+
+And now that that queue is empty it can now grab something off of the message queue and then invoke
+
+the callback.
+
+Now it's very possible that something from this callback will add a statement to the queue that is a
+
+priority like this.
+
+Now we have something in that.
+
+So the event loop will take care of those before it continues on with anything else in the message queue.
+
+So here we've taken care of that.
+
+Now we can grab another item from the message queue.
+
+We can invoke the associated callback and continue on.
+
+So the event loop is key in making a synchronicity available.
+
+As things are added to its cues it keeps going around and making sure that those things are handled.
+
+And by putting them into a queue that's a part of the event loop instead of taking care of them right
+
+away.
+
+It allows the JavaScript engine to do other things so it runs into something says oh I can put this
+
+in the queue it does it continues doing other things.
+
+The event loop will eventually encounter something in the queue and that will be one of the things that
+
+is executed.
+
+And so instead of waiting for something to finish we are doing other things at the same time and the
+
+event loop makes sure that we still come back and visit those things that have been queued that need
+
+to be taken care of.
+
+So that's a quick overview of the event loop and it's just important to be aware that the event loop
+
+is an important part in making a synchronicity possible in JavaScript.
+
+All right let's move on to the next topic.
+
