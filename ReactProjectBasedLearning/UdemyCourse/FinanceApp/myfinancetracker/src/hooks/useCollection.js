@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event"
 import {useEffect, useState} from "react"
 import { projectFirestore,onSnapshot,collection as firestore_collection} from "../firebase/config"
 
@@ -21,6 +22,7 @@ export const useCollection =(collection) =>{
             // we basically want to cycle and update the documents 
             let results=[]
             snapshot.docs.forEach(doc=>{
+                if(doc.data()['uid'])
                 results.push({...doc.data(),id:doc.id})
             }) // array of documents from that snapshot 
             // docid should nt be confused with the uid 
