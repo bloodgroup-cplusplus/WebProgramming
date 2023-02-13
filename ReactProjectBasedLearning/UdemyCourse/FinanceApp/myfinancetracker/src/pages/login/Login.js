@@ -18,46 +18,46 @@ export default function Login() {
   }
   return (
     <>
-    <section class="container forms">
-      <div class="form login">
-        <div class="form-content">
+    <section className="container forms">
+      <div className="form login">
+        <div className="form-content">
           <header>Login</header>
           <form onSubmit={handleSubmit}>
-            <div class= "field input-field">
+            <div className= "field input-field">
               <input 
                  type= "email" 
                  placeholder="Email" 
-                 class= "input"
+                 className= "input"
                  value={email}
                  onChange={(e)=>setEmail(e.target.value)}
                  required
                  />            
               </div>
 
-            <div class="field input-field">
+            <div className="field input-field">
               <input 
               type="password" 
               placeholder="Password" 
-              class="password"
+              className="password"
               required
               value={password}
               onChange={(e)=>setPassword(e.target.value)}/>
 
             </div>
-            <div class="field button-field">
+            <div className="field button-field">
               {!isPending && <button>Login</button>}
               {isPending && <button disabled>Loading</button>}
               {error && alert(error)}
             </div>
           </form>
-          <div class='form-link'>
+          <div className='form-link'>
             <span>Don't Have an account? <a href="/signup" class="link signup-link">Signup</a></span>
           </div>
         </div>
-        <div class="line"></div>
-        <div class="media-options">
+        <div className="line"></div>
+        <div className="media-options">
           <a href="#" class="field google">
-            <img src="google_logo.png" alt="" class="goolge-img"></img>
+            <img src="google_logo.png" alt="" className="goolge-img"></img>
             <span>Login With Google</span>
           </a>
         </div>

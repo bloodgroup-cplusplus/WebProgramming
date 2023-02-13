@@ -24,7 +24,8 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path = "/" element={user?<Profile/>:<Home/>}/>
-        <Route path = "/home" element={user?<Home/>:<Home/>}/>
+        <Route path = "/griviences" element={user?<Griviences/>:<Login/>}/>
+        <Route path = "/home" element={user?<Profile/>:<Home/>}/>
         <Route path = "/login" element = {user?<Profile/>:<Login/>}/>
         <Route path = "/signup" element = {user?<Profile/>:<Signup/>}/>
         <Route path = "/feed" element = {<Feed/>}/>

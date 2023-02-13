@@ -1,6 +1,6 @@
 // use state 
 import {useEffect, useState,useCallback} from "react"
-import {projectAuth,createUserWithEmailAndPassword,updateProfile} from "../firebase/config"
+import {projectAuth,ref,projectFirestore,doc,createUserWithEmailAndPassword,updateProfile, uploadBytes,projectStorage, setDoc} from "../firebase/config"
 
 import { useAuthContext } from "./useAuthContext"
 
@@ -16,7 +16,7 @@ export const useSignup = () =>{
     // we need to wait for the user to fill up the form 
 
     // inside the function we use the await keyword
-    const signup = useCallback(async (email,password,displayName)=>{
+    const signup = useCallback(async (email,password,phoneNumber,dateOfBirth,school,designation,district,bac,appointmentOrderNumber,gpfCpfNumber,retirementDate,displayName,formalPhoto,appointmentOrderPhoto)=>{
         // certain properties that firebase auth allows 
         // display name 
         //photo url 
@@ -31,6 +31,14 @@ export const useSignup = () =>{
         // we are starting the request to sign the user up 
 
         // we are gong to try to do something and if it fails we do something 
+        // generate a random number generator for sta-id
+        function generate_random_number(min,max)
+        {
+            return Math.random() *(max-min)+min;
+        }
+        var random_number=generate_random_number(100000,1000000000)
+
+       const sta_id=`STA/${random_number}/2023`
 
         try{
             // signup the user 
@@ -46,7 +54,48 @@ export const useSignup = () =>{
             // it doesn't allow display name first 
             // we need to add display name to the user 
             // add display name to user 
+            const data={
 
+                displayName,
+                email,
+                phoneNumber,
+                dateOfBirth,
+                school,
+                designation,
+                district,
+                bac,
+                appointmentOrderNumber,
+                gpfCpfNumber,
+                retirementDate,
+                sta_id
+            }
+
+
+            // upload teacher's data 
+            try{
+                await setDoc(doc(projectFirestore,"Teachers_Data",res.user.uid),data)
+                    console.log("data added to cloud firestore")
+            }catch(error)
+            {
+                console.log(error)
+            }
+
+
+            // upload users photo 
+            const teacherPhotouploadPath = `teacher_profile/${res.user.uid}/${formalPhoto.name}`
+            const teacherImgRef=ref(projectStorage,teacherPhotouploadPath)
+            await uploadBytes(teacherImgRef,formalPhoto.name).then((snapshot)=>{
+                console.log("Teacher Photo Uploaded")
+            })
+
+            // upload users appointment order photo 
+            const appointmentOrderuploadPath = `teacher_profile/${res.user.uid}/${appointmentOrderPhoto.name}`
+            const appointmentOrderImgRef=ref(projectStorage,appointmentOrderuploadPath)
+            await uploadBytes(appointmentOrderImgRef,appointmentOrderPhoto.name).then((snapshot)=>{
+                console.log("Appointment Order Photo uploaded")
+            })
+
+            
             updateProfile(projectAuth.currentUser,{
                 displayName:displayName
             })

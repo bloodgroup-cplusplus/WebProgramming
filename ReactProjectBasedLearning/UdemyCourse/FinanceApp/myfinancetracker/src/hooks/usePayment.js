@@ -25,7 +25,7 @@ export const usePayment =() =>{
     }
 
 
-    const payment= useCallback(async(email,password,displayName,signup) =>
+    const payment= useCallback(async(email,password,phoneNumber,dateOfBirth,school,designation,district,bac,appointmentOrderNumber,gpfCpfNumber,retirementDate,displayName,formalPhoto,appointmentOrderPhoto,signup) =>
     {
         try
         {
@@ -63,11 +63,11 @@ export const usePayment =() =>{
                     {
                          setIsVerified(true)
                         alert(response.razorpay_signature)
-                        await signup(email,password,displayName)
+                        await signup(email,password,phoneNumber,dateOfBirth,school,designation,district,bac,appointmentOrderNumber,gpfCpfNumber,retirementDate,displayName,formalPhoto,appointmentOrderPhoto)
                     }
                 },
                 theme:{
-                     color:'#effaf0'
+                     color:'fffff'
                  }
                 }
                 const paymentObject=new window.Razorpay(options)

@@ -22,6 +22,7 @@ export const useCollection =(collection) =>{
             // we basically want to cycle and update the documents 
             let results=[]
             snapshot.docs.forEach(doc=>{
+                //if(doc.data()['uid'])
                 if(doc.data()['uid'])
                 results.push({...doc.data(),id:doc.id})
             }) // array of documents from that snapshot 

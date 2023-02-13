@@ -22,13 +22,14 @@ export default function Signup() {
   const[retirementDate,setRetirementDate] = useState("")
   const [loading,setLoading] = useState(false)
   const [displayName, setDisplayName] = useState("")
+  const[fileUploadError,setFileUploadError] = useState(null);
   const{payment,isVerified}=usePayment()
   const {signup,isPending,error} = useSignup()
   const handleSubmit= async(e)=>{
     e.preventDefault()
     setLoading(true);
     try{
-          await payment(email,password,displayName,signup) 
+          await payment(email,password,phoneNumber,dateOfBirth,school,designation,district,bac,appointmentOrderNumber,gpfCpfNumber,retirementDate,displayName,formalPhoto,appointmentOrderPhoto,signup) 
     }
     catch(error)
     {
@@ -47,25 +48,62 @@ export default function Signup() {
     }
 },[isVerified])
 
-const handleFileChange=(e)=>{
-  let selected_one=e.target.files[0]
-  let selected_two=e.target.files[1]
-  if(selected_one && selected_two)
+const handleFormalPhotoChange=(e)=>{
+  setFormalPhoto(null)
+  let selected=e.target.files[0]
+  if(!selected)
   {
-    setAppointmentOrderPhoto(selected_two)
-    setFormalPhoto(selected_one)
+    setFileUploadError("Please Select a file")
+    return 
+  }
+  if(!selected.type.includes('image'))
+  {
+    setFileUploadError("selected file must be an image")
+    return 
   }
 
+  if(selected.size>100000000)
+  {
+    setFileUploadError("Image file size must be less than 10 mb")
+    return 
+  }
+  setFileUploadError(null)
+  setFormalPhoto(selected)
+  console.log("Teacher Photo Uploaded")
+}
+
+
+const handleAppointmentOrderPhotoChange=(e)=>{
+  setAppointmentOrderPhoto(null)
+  let selected=e.target.files[0]
+  if(!selected)
+  {
+    setFileUploadError("Please Select a file")
+    return 
+  }
+  if(!selected.type.includes('image'))
+  {
+    setFileUploadError("selected file must be an image")
+    return 
+  }
+  if(selected.size>10000000000)
+  {
+    setFileUploadError("Image File size must be less than 10mb")
+    return 
+  }
+  setFileUploadError(null)
+  setAppointmentOrderPhoto(selected)
+  console.log("Appointment order photo uploaded")
 }
 
 
 
   return (
     <>
-     <div class="wrapper">
+     <div className="wrapper">
          <h2>Registration</h2>
          <form onSubmit = {handleSubmit}>
-          <div class="input-box">
+          <div className="input-box">
             <label>Full Name:</label>
             <input 
             type="text" 
@@ -74,7 +112,7 @@ const handleFileChange=(e)=>{
             value={displayName}
             required/>
         </div>
-      <div class="input-box">
+      <div className="input-box">
         <label>Email id :</label>
         <input 
          type="email" 
@@ -84,7 +122,7 @@ const handleFileChange=(e)=>{
          required/>
       </div>
 
-      <div class="input-box">
+      <div className="input-box">
         <label>Phone Number:</label>
         <input 
           type="number" 
@@ -93,7 +131,7 @@ const handleFileChange=(e)=>{
           value={phoneNumber}
           required/>
       </div>
-      <div class="input-box">
+      <div className="input-box">
         <label>Date of Birth:</label>
         <input type="date" 
          placeholder="Enter your Date of Birth" 
@@ -101,15 +139,15 @@ const handleFileChange=(e)=>{
          value={dateOfBirth}
          required/>
       </div>
-      <div class="input-box">
+      <div className="input-box">
         <label>Valid Formal Photo:</label>
         <input type="file" 
           placeholder="Attach Recent and Valid Formal Photo" 
-          onChange={handleFileChange}
+          onChange={handleFormalPhotoChange}
           required/>
       </div>
 
-      <div class="input-box">
+      <div className="input-box">
         <label>Current School:</label>
         <input 
          type="text" 
@@ -119,9 +157,9 @@ const handleFileChange=(e)=>{
          required/>
       </div>
 
-      <div class="input-box">
+      <div className="input-box">
         <label>Designation:</label>
-        <select class="select" required placeholder="Current Deisgnation" value={designation} onChange={(e)=>setDesignation(e.target.value)}>
+        <select className="select" required placeholder="Current Deisgnation" value={designation} onChange={(e)=>setDesignation(e.target.value)}>
           <option disabled selected>Select</option>
           <option>PPT</option>
           <option>PRT</option>
@@ -135,9 +173,9 @@ const handleFileChange=(e)=>{
         </select>
       </div>
 
-      <div class="input-box">
+      <div className="input-box">
         <label>District(School):</label>
-        <select class="select" required placeholder="District of current School" value={district} onChange={(e)=>setDistrict(e.target.value)}>
+        <select className="select" required placeholder="District of current School" value={district} onChange={(e)=>setDistrict(e.target.value)}>
           <option disabled selected>Select</option>
           <option>Gangtok</option>
           <option>Geyzing</option>
@@ -149,9 +187,9 @@ const handleFileChange=(e)=>{
 
       </div>
 
-      <div class="input-box">
+      <div className="input-box">
         <label>BAC(School):</label>
-        <select class="select" required placeholder="BAC of current school" value={bac} onChange={(e)=>setBac(e.target.value)}>
+        <select className="select" required placeholder="BAC of current school" value={bac} onChange={(e)=>setBac(e.target.value)}>
           <option disabled selected> Select</option>
           <option>Baiguney</option>
           <option>Chongrang</option>
@@ -189,7 +227,7 @@ const handleFileChange=(e)=>{
       </select>
 
       </div>
-      <div class="input-box">
+      <div className="input-box">
         <label>Appointment Order Number:</label>
         <input type="text" 
          placeholder="Appointment Order Number" 
@@ -198,16 +236,16 @@ const handleFileChange=(e)=>{
          required/>
       </div>
 
-      <div class="input-box">
+      <div className="input-box">
         <label>Appointment Order Photo:</label>
         <input type="file"
          placeholder="Appointment Order Photo" 
          required
-         onChange={handleFileChange}
+         onChange={handleAppointmentOrderPhotoChange}
          />
       </div>
 
-      <div class="input-box">
+      <div className="input-box">
         <label>GPF/CPF Number: </label>
         <input type="text"
          placeholder="Enter your Gpf/cpf number" 
@@ -215,7 +253,7 @@ const handleFileChange=(e)=>{
          onChange={(e)=>setGpfCpfNumber(e.target.value)}
          required/>
       </div>
-      <div class="input-box">
+      <div className="input-box">
         <label>Retirement date:</label>
         <input type="date"
          placeholder="Retirement date"
@@ -224,25 +262,25 @@ const handleFileChange=(e)=>{
         required/>
       </div>
 
-      <div class="input-box">
+      <div className="input-box">
         <label>Password:</label>
         <input type="password" 
         placeholder="Set a password for your account"
         value={password}
-        onChamge={(e)=>setPassword(e.target.value)}
+        onChange={(e)=>setPassword(e.target.value)}
          required/>
       </div>
 
-      <div class="policy">
+      <div className="policy">
         <input type="checkbox"/>
         <h3>I accept all terms & condition</h3>
       </div>
-      <div class="input-box button">
+      <div className="input-box button">
         {!isPending &&<input type="Submit" value="Checkout"/>}
         {isPending && <input type="Submit"value="Loading"disabled/>}
         {error && alert({error})}
       </div>
-      <div class="text">
+      <div className="text">
         <h3>Already have an account? <a href="/login">Login now</a></h3>
       </div>
       </form>

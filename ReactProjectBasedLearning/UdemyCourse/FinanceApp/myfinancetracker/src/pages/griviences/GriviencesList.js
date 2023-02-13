@@ -8,7 +8,7 @@ export default function GriviencesList({griviences}) {
   const[currentPage,setCurrentPage] = useState(1);
   const chunkSize=3;
 
-  // divide the form responses into chunks of 5
+  // divide the form responses into chunks of 3
 
   const formResponseChunks= griviences.reduce((acc,curr,i)=>{
     const chunkIndex=Math.floor(i/chunkSize)
@@ -26,9 +26,10 @@ export default function GriviencesList({griviences}) {
   return (
     <> 
     <ul className={styles.transactions}>
-        {currentFormResponses.map((transaction)=>(
-            <li key= {transaction.id}>
-                <p className={styles.amount}>{transaction.grivience}</p>
+        {currentFormResponses.map((griviences)=>(
+            <li key= {griviences.id}>
+                <p className={styles.amount}>{griviences.grivience}</p>
+                <p className={styles.amount}>{griviences.name}</p>
             </li>
         ))}
 
