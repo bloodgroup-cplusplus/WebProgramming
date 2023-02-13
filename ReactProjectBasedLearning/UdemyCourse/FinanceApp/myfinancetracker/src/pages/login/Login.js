@@ -6,11 +6,13 @@ import {useLogin} from "../../hooks/useLogin"
 import "./Login.css"
 
 import React from 'react'
+import { useGoogleAuth } from "../../hooks/useGoogleAuth"
 
 export default function Login() {
   const [email,setEmail] = useState("")
   const [password,setPassword] = useState("")
   const{login,error,isPending} = useLogin()
+  const{handleSignIn}=useGoogleAuth()
 
   const handleSubmit=(e)=>{
     e.preventDefault()

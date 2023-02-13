@@ -2,12 +2,12 @@
 import {useState,useEffect} from "react"
 import {query,where,getDocs,projectFirestore,collection,signInWithPopup,GoogleAuthProvider, projectAuth} from "../firebase/config"
 import {useAuthContext} from "./useAuthContext"
-import React from 'react'
 import { signInWithCredential } from "firebase/auth"
 
-export default function useGoogleAuth() {
+export const useGoogleAuth =()=> {
     const[email,setEmail]=useState("")
     const[error,setError]=useState("")
+    const[isCancelled,setIsCancelled]=useState(null)
     const[isPending,setIsPending]=useState(false)
     const{dispatch} = useAuthContext()
     const handleSignIn = async()=>{
@@ -17,11 +17,17 @@ export default function useGoogleAuth() {
         signInWithPopup(projectAuth,provider).then((result)=>{
             const user=result.user;
             setEmail(user.email);
-
+        
 
         //check if the email exists in firestore database
         const email_query= query(collection(projectFirestore,"Teachers_Data"),where("email", "==",user.email));
-        const query_snapshot=await getDocs(email_query)
+
+        async function gettingDocs(email_query)
+        {
+            const q=await getDocs(email_query)
+            return q
+        }
+        const query_snapshot=gettingDocs(email_query)
         query_snapshot.forEach((doc)=>{
             console.log(doc.id , "=>", doc.data())
         })
@@ -48,7 +54,7 @@ export default function useGoogleAuth() {
                 {
                     
                 
-                console.log(err.message)
+                console.log(error.message)
                 setError(error.message)
                 setIsPending(false)
                 }
