@@ -8,6 +8,7 @@ import Home from "./pages/home/Home"
 import Feed from "./pages/feed/Feed"
 import Signup from "./pages/signup/Signup"
 import Login from "./pages/login/Login"
+import Griviences from "./pages/griviences/Griviences"
 import Profile from "./pages/profile/Profile"
 
 // import compentns

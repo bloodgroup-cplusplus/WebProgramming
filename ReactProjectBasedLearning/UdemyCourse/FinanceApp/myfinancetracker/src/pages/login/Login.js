@@ -30,6 +30,7 @@ export default function Login() {
                  class= "input"
                  value={email}
                  onChange={(e)=>setEmail(e.target.value)}
+                 required
                  />            
               </div>
 
@@ -38,8 +39,10 @@ export default function Login() {
               type="password" 
               placeholder="Password" 
               class="password"
+              required
               value={password}
               onChange={(e)=>setPassword(e.target.value)}/>
+
             </div>
             <div class="field button-field">
               {!isPending && <button>Login</button>}
@@ -48,7 +51,7 @@ export default function Login() {
             </div>
           </form>
           <div class='form-link'>
-            <span>Don't Have an account? <a href="#" class="link signup-link">Signup</a></span>
+            <span>Don't Have an account? <a href="/signup" class="link signup-link">Signup</a></span>
           </div>
         </div>
         <div class="line"></div>
