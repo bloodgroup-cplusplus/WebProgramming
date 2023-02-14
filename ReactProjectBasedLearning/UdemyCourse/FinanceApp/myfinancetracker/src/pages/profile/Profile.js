@@ -20,8 +20,8 @@ export default function Profile() {
       <div className="text-data">
         <span className="name">Sikkim Teachers Association</span>
         <span className="job">Name: {user.displayName}</span>
-        {/*<--span className="job">STA ID: {documents.sta_id}</span>
-        <span className="job">School:{documents.school}</span>*/}
+        <span className="job">STA ID: {documents.sta_id}</span>
+        <span className="job">School:{documents.school}</span>
         <span className="job">Valid upto : 31 December 2023</span>
       </div>
       <div className="image">

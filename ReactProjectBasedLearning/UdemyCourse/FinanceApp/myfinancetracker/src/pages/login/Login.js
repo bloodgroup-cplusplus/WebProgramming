@@ -12,12 +12,13 @@ export default function Login() {
   const [email,setEmail] = useState("")
   const [password,setPassword] = useState("")
   const{login,error,isPending} = useLogin()
-  const{handleSignIn}=useGoogleAuth()
+  const[user,googleSignInError,signInWithGoogle]=useGoogleAuth()
 
   const handleSubmit=(e)=>{
     e.preventDefault()
     login(email,password)
   }
+  
   return (
     <>
     <section className="container forms">
@@ -57,11 +58,9 @@ export default function Login() {
           </div>
         </div>
         <div className="line"></div>
-        <div className="media-options">
-          <a href="#" class="field google">
-            <img src="google_logo.png" alt="" className="goolge-img"></img>
-            <span>Login With Google</span>
-          </a>
+        <div className="field button-field">
+          {!user &&<button onClick={signInWithGoogle}>Login With Google</button>}
+          {googleSignInError && alert(googleSignInError)}
         </div>
       </div>
     </section>

@@ -36,7 +36,7 @@ export const useSignup = () =>{
         {
             return Math.random() *(max-min)+min;
         }
-        var random_number=generate_random_number(100000,1000000000)
+        var random_number=Math.floor(generate_random_number(100000,1000000000))
 
        const sta_id=`STA/${random_number}/2023`
 
@@ -46,6 +46,9 @@ export const useSignup = () =>{
             const res=await createUserWithEmailAndPassword(projectAuth,email,password)
             console.log(res.user)
             // we can log the user from the console
+            // store uid in a variable so that it is easy to add into database well not easy but if you 
+            // use . inside json it creates problem (maybe? sorta)
+            const uid=res.user.uid;
 
             if(!res)
             {
@@ -67,7 +70,8 @@ export const useSignup = () =>{
                 appointmentOrderNumber,
                 gpfCpfNumber,
                 retirementDate,
-                sta_id
+                sta_id,
+                uid
             }
 
 
