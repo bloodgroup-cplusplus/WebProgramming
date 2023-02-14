@@ -165,6 +165,7 @@ export function useGoogleAuth()
                 {
                      // const check if email exists 
                     const emailExists=await docExists(authUser.user.email)
+                    console.log(emailExists)
                 // check if email exists 
                     if(emailExists)
                     {
@@ -179,7 +180,7 @@ export function useGoogleAuth()
                     else{
                         if(!googleSignInIsCancelled)
                         {
-                            setGoogleSignInError("User email does not exists in database")
+                            setGoogleSignInError("You have not registered. Please Register First")
                             setUser(null);
                         }
                     }
