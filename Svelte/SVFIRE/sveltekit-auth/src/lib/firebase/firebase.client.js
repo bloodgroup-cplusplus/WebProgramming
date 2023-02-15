@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { deleteApp, getApps, initializeApp,getApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
-import {getAuth,setPersistence, inMemoryPersistence} from "firebase/auth"
+import {getAuth,setPersistence,inMemoryPersistence} from "firebase/auth"
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
@@ -31,3 +31,7 @@ else{
     deleteApp(firebaseApp)
     firebaseApp=initializeApp(firebaseConfig)
 }
+
+// export the consts 
+
+export const auth = getAuth(firebaseApp)
