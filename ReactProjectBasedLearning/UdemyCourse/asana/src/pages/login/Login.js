@@ -18,10 +18,16 @@ export default function Login() {
   const handleSubmit=(e)=>{
     e.preventDefault()
     login(email,password)
+
+  }
+  const hadleGoogleAuth=()=>{
+
+
   }
 
   return (
 
+    <>
     <form onSubmit={handleSubmit} className= "auth-form">
       <h2>Login</h2>
       <label>
@@ -45,7 +51,20 @@ export default function Login() {
       {!isPending && <button className='btn'>Log in </button>}
       {isPending && <button className='btn' disabled>Loading</button>}
       {error && <div className='error'>{error}</div>}
+
     </form>
+
+      <div className='google'>      
+      <label>
+        <span>Already Registered? Sign in With Google</span>
+       {!isPending && <button className='btn'>Sign In With Google</button>}
+       {isPending && <button className='btn' disabled>Loading</button>}
+       {error && <div className='error'>{error}</div>}
+       </label>
+    </div>
+    </>
+
+
 
       
   )

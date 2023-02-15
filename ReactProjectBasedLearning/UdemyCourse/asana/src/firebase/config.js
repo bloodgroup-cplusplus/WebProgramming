@@ -35,6 +35,9 @@ const projectStorage=getStorage(app)
 
 
 
+
+//export things from this config file to be used in another files
+
 export {doc,updateDoc,addDoc,setDoc,ref,uploadBytes, getDownloadURL,projectFirestore,projectStorage, projectAuth, serverTimestamp,onAuthStateChanged,signInWithEmailAndPassword,signOut,createUserWithEmailAndPassword,collection,updateProfile}
 
 
