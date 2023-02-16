@@ -56,7 +56,7 @@ const cocktails = [
   },
 ];
 
-const awards = [
+const gangtok = [
   {
     imgUrl: images.award02,
     title: 'Bib Gourmond',
@@ -79,4 +79,4 @@ const awards = [
   },
 ];
 
-export default { wines, cocktails, awards };
+export default { wines, cocktails, gangtok };

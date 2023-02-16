@@ -23,7 +23,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family:var(--font-base);
 
     list-style: none;
 }
@@ -50,7 +49,7 @@
 }
 
 .app__navbar-login a:hover {
-    border-bottom: 1px solid var(--color-golden);
+    border-bottom: 1px solid var(--color-grey);
 }
 
 .app__navbar-login div {
@@ -94,13 +93,13 @@
     margin: 2rem;
     cursor: pointer;
     color: var(--color-white);
-    font-size: 1rem;
+    font-size: 2rem;
     text-align: center;
-    font-family: var(--font-base);
+    font-family: var(--font-gray);
 }
 
 .app__navbar-smallscreen_links li:hover {
-    color: var(--color-grey);
+    color: var(--color-gray);
 }
 
 @media screen and (min-width: 2000px) {
@@ -129,6 +128,6 @@
     }
 
     .app__navbar-logo img {
-        width: 120px;
+        width: 110px;
     }
 }

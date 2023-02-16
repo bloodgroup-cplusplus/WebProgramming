@@ -20,10 +20,16 @@ import award05 from '../assets/award05.png';
 import sign from '../assets/sign.png';
 import quote from '../assets/quote.png';
 import gericht from '../assets/gericht.png';
-import sta_logo from "../assets/sta_logo.png";
-
+import sta_logo from "../assets/sta_logo.png"
+import chief_minster from "../assets/chief_minister.png"
+import education_minister from "../assets/education_minister.png"
+import additional_chief_secretary from "../assets/additional_chief_secretary.png"
+import president from "../assets/president.png"
+import gangtok from "../assets/gangtok.png"
+import incharges from "../assets/incharges.png"
+import advisors from "../assets/advisors.png"
+import griviences_readdressal from "../assets/griviences_readdressal.png"
 export default {
-  sta_logo,
   bg,
   chef,
   G,
@@ -46,4 +52,13 @@ export default {
   sign,
   quote,
   gericht,
+  sta_logo,
+  chief_minster,
+  education_minister,
+  additional_chief_secretary,
+  president,
+  gangtok,
+  incharges,
+  advisors,
+  griviences_readdressal
 };

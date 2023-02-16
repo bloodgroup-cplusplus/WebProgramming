@@ -1,8 +1,9 @@
 import React from 'react';
 
-const SubHeading = () => (
-  <div>
-    SubHeading
+
+const SubHeading = ({ title }) => (
+  <div style={{ marginBottom: '1rem' }}>
+    <p className="p__cormorant">{title}</p>
   </div>
 );
 
