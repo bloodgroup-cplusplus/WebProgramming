@@ -23,7 +23,7 @@
     margin-top: 3rem;
 }
 
-.app__chef-sign p: {
+.app__chef-sign  {
     font-family: var(--font-base);
     font-weight: 400;
     font-size: 32px;

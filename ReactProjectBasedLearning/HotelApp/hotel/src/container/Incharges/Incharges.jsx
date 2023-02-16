@@ -4,7 +4,7 @@ import React from 'react'
 import { images } from '../../constants';
 
 const Incharges = () => (
-  <div className="app__header app__wrapper section__padding" id="contact">
+  <div className="app__header app__wrapper section__padding">
     <div className="app__wrapper_info">
       <h1 className="headtext__cormorantb" style={{ marginBottom: '3rem' }}>Incharges</h1>
       <div className="app__wrapper-content">

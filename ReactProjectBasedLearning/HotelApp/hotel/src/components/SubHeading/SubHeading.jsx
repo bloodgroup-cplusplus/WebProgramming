@@ -3,7 +3,7 @@ import React from 'react';
 
 const SubHeading = ({ title }) => (
   <div style={{ marginBottom: '1rem' }}>
-    <p className="p__cormorant">{title}</p>
+    <p className="p__cormorantb">{title}</p>
   </div>
 );
 

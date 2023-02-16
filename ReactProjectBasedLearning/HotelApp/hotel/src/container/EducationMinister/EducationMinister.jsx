@@ -17,10 +17,8 @@ const EducationMinister = () => (
         </div>
         </div>
 
-      <div className="app__chef-sign">
-        <p>Shri Kunga Nima Lepcha</p>
+        <p className="app__chef-sign">Shri Kunga Nima Lepcha</p>
         <p className="p__opensansb">Education Minister Sikkim</p>
-      </div>
     </div>
   </div>
 );

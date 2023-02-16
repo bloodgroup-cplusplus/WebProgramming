@@ -17,10 +17,8 @@ const ChiefMinister = () => (
         </div>
         </div>
 
-      <div className="app__chef-sign">
-        <p>Shri Prem Singh Tamang (Golay)</p>
+        <p className='app__chef-sign'>Shri Prem Singh Tamang (Golay)</p>
         <p className="p__opensansb">Chief Minister Sikkim</p>
-      </div>
     </div>
   </div>
 );

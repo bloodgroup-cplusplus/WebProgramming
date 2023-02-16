@@ -8,10 +8,12 @@ import Footer from './Footer/Footer';
 import Gallery from './Gallery/Gallery';
 import Header from './Header/Header';
 import Intro from './Intro/Intro';
-import Laurels from './Laurels/Laurels';
 import SpecialMenu from './Menu/SpecialMenu';
 import Grievances from './Grievances/Grievances';
 import Incharges from './Incharges/Incharges';
+import Advisors from './Advisors/Advisors';
+import GangtokDec from './GangtokDec/GangtokDec';
+import CecMembers from './Members/CecMembers';
 
 export {
   AboutUs,
@@ -24,8 +26,10 @@ export {
   Gallery,
   Header,
   Intro,
-  Laurels,
+ GangtokDec, 
   SpecialMenu,
   Grievances,
-  Incharges
+  Incharges,
+  Advisors,
+  CecMembers
 };

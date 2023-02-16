@@ -10,7 +10,7 @@ const Footer = () => (
       <div className="app__footer-links_contact">
         <h1 className="app__footer-headtext">Quick Links </h1>
         <p className="p__opensansb"><a href="https://www.sikkimhrdd.org/" target="_blank" rel="noreferrer">Sikkim Hrdd</a></p>
-        <p className="p__opensansb"><a href="https://sikkim.gov.in/" target="_blank" rel="noreferrer">Governmet of Sikkim </a></p>
+        <p className="p__opensansb"><a href="https://sikkim.gov.in/" target="_blank" rel="noreferrer">Government of Sikkim </a></p>
         <p className="p__opensansb"><a href="https://www.sikkimtourism.gov.in/Public/index" target="_blank" rel="noreferrer">Sikkim Tourism</a></p>
         <p className='p__opensansb'><a href="https://www.education.gov.in/en" target="_blank" rel="noreferrer">Ministry of Education </a></p>
         <p className='p__opensansb'><a href="https://nipunbharat.education.gov.in/" target="_blank" rel="noreferrer">Nipun Bharat</a></p>
