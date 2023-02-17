@@ -13,7 +13,7 @@ const AwardCard = ({ award: { subtitle } }) => (
 );
 
 const GangtokDec = () => (
-  <div className="app__header app__wrapper section__padding" id="awards">
+  <div className="app__header app__wrapper section__padding">
     <div className="app__wrapper_info">
       <SubHeading title="District Executive Committee Members" />
       <h1 className="headtext__cormorantb">Gangtok </h1>
