@@ -12,7 +12,7 @@ const FindUs = () => {
     <div class="flex flex-wrap items-center">
       <div class="grow-0 shrink-0 basis-auto block w-full lg:flex lg:w-6/12 xl:w-4/12">
         <div class="map-container-2 w-full">
-          <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" class="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg" frameborder="0" height="500px" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1772.1028806011616!2d88.60963066347658!3d27.338034999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e6a5bbb75d51a7%3A0x4eebebe52fd52581!2sSir%20T.N.S.S.S%20SCHOOL%20GANGTOK!5e0!3m2!1sen!2sin!4v1676737564897!5m2!1sen!2sin" width="400" height="300"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
       <div class="grow-0 shrink-0 basis-auto w-full lg:w-6/12 xl:w-8/12">
