@@ -1,8 +1,11 @@
 import Navbar from "./Components/Navbar"
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
+import FindUs from "./Components/FindUs";
+import ChiefMinister from "./Components/ChiefMinister";
 import Cec from "./Components/Cec";
 import Dec from "./Components/Dec";
+import Gallery from "./Components/Gallery";
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 import Signup from "./Pages/Signup"
 import Login from "./Pages/Login"
@@ -18,8 +21,11 @@ function App() {
       <Route path="/login" element={<Login/>}/>
     </Routes>
     </BrowserRouter>
+    <ChiefMinister/>
     <Cec/>
     <Dec/>
+    <Gallery/>
+    <FindUs/>
     <Footer/>
     </>
     
