@@ -1,4 +1,16 @@
 import React from 'react'
+import history from "./Images/history.png"
+import new_members from "./Images/new_members.png"
+import mala_press from "./Images/mala_press.png"
+import new_members_press from "./Images/new_members_press.png"
+import sanitization_drive from "./Images/sanitization_drive.png"
+import blood_donation from "./Images/blood_donation.png"
+import latest_photo from "./Images/latest_photo.png"
+import president_press from "./Images/president_press.png"
+import zoom from "./Images/zoom.png"
+import with_banner from "./Images/with_banner.png"
+import with_cm from "./Images/with_cm.png"
+import blood_again from "./Images/blood_again.png"
 
 function Gallery() {
   return (
@@ -10,39 +22,146 @@ function Gallery() {
       <div class="flex flex-wrap w-1/3">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"/>
+            src={history}/>
         </div>
       </div>
       <div class="flex flex-wrap w-1/3">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp"/>
+            src={new_members}/>
         </div>
       </div>
       <div class="flex flex-wrap w-1/3">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp"/>
+            src={mala_press}/>
         </div>
       </div>
       <div class="flex flex-wrap w-1/3">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp"/>
+            src={new_members_press}/>
         </div>
       </div>
       <div class="flex flex-wrap w-1/3">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp"/>
+            src={sanitization_drive}/>
         </div>
       </div>
       <div class="flex flex-wrap w-1/3">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"/>
+            src={blood_donation}/>
         </div>
       </div>
+
+
+      <div class="flex flex-wrap w-1/3">
+        <div class="w-full p-1 md:p-2">
+          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+            src={latest_photo}/>
+        </div>
+      </div>
+
+
+
+      <div class="flex flex-wrap w-1/3">
+        <div class="w-full p-1 md:p-2">
+          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+            src={president_press}/>
+        </div>
+      </div>
+
+
+     <div class="flex flex-wrap w-1/3">
+        <div class="w-full p-1 md:p-2">
+          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+            src={zoom}/>
+        </div>
+      </div>
+
+
+      <div class="flex flex-wrap w-1/3">
+        <div class="w-full p-1 md:p-2">
+          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+            src={with_banner}/>
+        </div>
+      </div>
+
+
+
+      <div class="flex flex-wrap w-1/3">
+        <div class="w-full p-1 md:p-2">
+          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+            src={with_cm}/>
+        </div>
+      </div>
+
+
+
+
+      <div class="flex flex-wrap w-1/3">
+        <div class="w-full p-1 md:p-2">
+          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+            src={blood_again}/>
+        </div>
+      </div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
   </div>
 </section>
