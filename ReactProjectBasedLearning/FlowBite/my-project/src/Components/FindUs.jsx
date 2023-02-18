@@ -20,7 +20,7 @@ const FindUs = () => {
           <div class="mb-12 grow-0 shrink-0 basis-auto w-full md:w-6/12 lg:w-full xl:w-6/12 px-3 md:px-6 xl:px-12">
             <div class="flex items-start">
               <div class="shrink-0">
-                <div class="p-4 bg-blue-600 rounded-md shadow-md w-14 h-14 flex items-center justify-center">
+                <div class="p-4 bg-black rounded-md shadow-md w-14 h-14 flex items-center justify-center">
                   <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="headset" class="w-5 text-white"
                     role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path fill="currentColor"
@@ -31,15 +31,15 @@ const FindUs = () => {
               </div>
               <div class="grow ml-6">
                 <p class="font-bold mb-1">Technical support</p>
-                <p class="text-gray-500">support@example.com</p>
-                <p class="text-gray-500">+1 234-567-89</p>
+                <p class="text-gray-500">bhushansemail@gmail.com</p>
+                <p class="text-gray-500"><a tel="+917076680559">7076680559</a></p>
               </div>
             </div>
           </div>
           <div class="mb-12 grow-0 shrink-0 basis-auto w-full md:w-6/12 lg:w-full xl:w-6/12 px-3 md:px-6 xl:px-12">
             <div class="flex items-start">
               <div class="shrink-0">
-                <div class="p-4 bg-blue-600 rounded-md shadow-md w-14 h-14 flex items-center justify-center">
+                <div class="p-4 bg-black rounded-md shadow-md w-14 h-14 flex items-center justify-center">
                   <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dollar-sign"
                     class="w-3 text-white" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 512">
                     <path fill="currentColor"
@@ -49,7 +49,7 @@ const FindUs = () => {
                 </div>
               </div>
               <div class="grow ml-6">
-                <p class="font-bold mb-1">Sales questions</p>
+                <p class="font-bold mb-1">Donation questions</p>
                 <p class="text-gray-500">sales@example.com</p>
                 <p class="text-gray-500">+1 234-567-89</p>
               </div>
@@ -58,7 +58,7 @@ const FindUs = () => {
           <div class="mb-12 grow-0 shrink-0 basis-auto w-full md:w-6/12 lg:w-full xl:w-6/12 px-3 md:px-6 xl:px-12">
             <div class="flex align-start">
               <div class="shrink-0">
-                <div class="p-4 bg-blue-600 rounded-md shadow-md w-14 h-14 flex items-center justify-center">
+                <div class="p-4 bg-black rounded-md shadow-md w-14 h-14 flex items-center justify-center">
                   <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="newspaper"
                     class="w-5 text-white" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                     <path fill="currentColor"
@@ -77,7 +77,7 @@ const FindUs = () => {
           <div class="mb-12 lg:mb-0 grow-0 shrink-0 basis-auto w-full md:w-6/12 lg:w-full xl:w-6/12 px-3 md:px-6 xl:px-12">
             <div class="flex align-start">
               <div class="shrink-0">
-                <div class="p-4 bg-blue-600 rounded-md shadow-md w-14 h-14 flex items-center justify-center">
+                <div class="p-4 bg-black rounded-md shadow-md w-14 h-14 flex items-center justify-center">
                   <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bug" class="w-5 text-white"
                     role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path fill="currentColor"
@@ -88,8 +88,8 @@ const FindUs = () => {
               </div>
               <div class="grow ml-6">
                 <p class="font-bold mb-1">Bug report</p>
-                <p class="text-gray-500">bugs@example.com</p>
-                <p class="text-gray-500">+1 234-567-89</p>
+                <p class="text-gray-500">bhushansemail@gmail.com</p>
+                <p class="text-gray-500">+917076680559</p>
               </div>
             </div>
           </div>

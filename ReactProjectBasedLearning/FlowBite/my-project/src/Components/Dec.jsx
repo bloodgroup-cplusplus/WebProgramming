@@ -4,62 +4,151 @@ import geyzing from "./Images/geyzing.png"
 import mangan from "./Images/mangan.png"
 import namchi from "./Images/namchi.png"
 import pakyong from "./Images/pakyong.png"
+import soreng from "./Images/soreng.png"
 
 function Dec() {
   return (
 
-    <section class="bg-white dark:bg-gray-900">
-  <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-      <div class="max-w-screen-md mb-8 lg:mb-16">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">District Executive Committee</h2>
-          <p class="text-gray-500 sm:text-xl dark:text-gray-400">Sikkim State is divided into six districts and each district is assigned with its respective executive members</p>
-      </div>
-      <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-          <div>
-              <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-              <img src={gangtok}class="h-6 mr-3 sm:h-9" alt="Sta Logo" />
-              </div>
-              <h3 class="mb-2 text-xl font-bold dark:text-white">Gangtok</h3>
-              <p class="text-gray-500 dark:text-gray-400">Plan it, create it, launch it. Collaborate seamlessly with all  the organization and hit your marketing goals every month with our marketing plan.</p>
-          </div>
-          <div>
-              <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                  <img src={geyzing} class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg>
-              </div>
-              <h3 class="mb-2 text-xl font-bold dark:text-white">Geyzing</h3>
-              <p class="text-gray-500 dark:text-gray-400">Protect your organization, devices and stay compliant with our structured workflows and custom permissions made for you.</p>
-          </div>
-          <div>
-              <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                  <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path><path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path></svg>                    
-              </div>
-              <h3 class="mb-2 text-xl font-bold dark:text-white">Mangan</h3>
-              <p class="text-gray-500 dark:text-gray-400">Auto-assign tasks, send Slack messages, and much more. Now power up with hundreds of new templates to help you get started.</p>
-          </div>
-          <div>
-              <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                  <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path></svg>
-              </div>
-              <h3 class="mb-2 text-xl font-bold dark:text-white">Namchi</h3>
-              <p class="text-gray-500 dark:text-gray-400">Audit-proof software built for critical financial operations like month-end close and quarterly budgeting.</p>
-          </div>
-          <div>
-              <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                  <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
-              </div>
-              <h3 class="mb-2 text-xl font-bold dark:text-white">Pakyong</h3>
-              <p class="text-gray-500 dark:text-gray-400">Craft beautiful, delightful experiences for both marketing and product with real cross-company collaboration.</p>
-          </div>
-          <div>
-              <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                  <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
-              </div>
-              <h3 class="mb-2 text-xl font-bold dark:text-white">Soreng</h3>
-              <p class="text-gray-500 dark:text-gray-400">Keep your company’s lights on with customizable, iterative, and structured workflows built for all efficient teams and individual.</p>
-          </div>
-      </div>
-  </div>
-</section>
+    <>
+    <h2 class="text-center mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">District Executive Committee</h2>
+    <div class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2">
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Gangtok District</h3>
+            <p class="my-4 font-light">PRESIDENT: Chungden Bhutia (HM/IC Ranka Raigaon PS)</p>
+            <p class="my-4 font-light">VICE PRESIDENT I : Bhagirath Giri (HM/IC Zingla PS)</p> 
+            <p class="my-4 font-light">VICE PRESIDENT II : Leela Sharma (PGT Deorali SSS)</p>
+            <p class="my-4 font-light">GENERAL SECRETARY : Bikash Sundas (GT SMGSSS Khamdong) </p>
+            <p class="my-4 font-light">JOINT SECRETARY : Rohit Gautam (PRT Samdong SSS)</p> 
+            <p class="my-4 font-light">TREASURER I : Khem Lall Timsina (HM Ranka BAC)</p>
+            <p class="my-4 font-light">TREASURER II: Pintso Bhutia (GT Sichey SSS)</p>
+            <p class="my-4 font-light">PUBLICITY SECRETARY I: Lekhnath Bhattarai (PGT Samdong SSS)</p>
+            <p class="my-4 font-light">PUBLICITY SECRETARY II: Purna Bahadur Subba (HM Sakyong Chisopani JHS)</p>
+            <p class="my-4 font-light">LITERARY SECRETARY : Rakesh Pandey (GT Khambal JHS)</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <img class="rounded-full w-9 h-9" src={gangtok} alt="profile picture"/>
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Gangtok East Sikkim</div>
+            </div>
+        </figcaption>    
+    </figure>
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-tr-lg dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Geyzing District</h3>
+            <p class="my-4 font-light">PRESIDENT : Mahdadev Bhandari (PRT/HM,IC Sanku-PS)</p> 
+            <p class="my-4 font-light">VICE PRESIDENT I : Sudip Subba (PRT/HM,IC Pewathang Tashiding PS)</p>
+            <p class="my-4 font-light">VICE PRESIDENT II : Anita Rana (PRT Geyzing GSSSS)</p>
+            <p class="my-4 font-light">GENERAL SECRETARY : Krishna Rai (PRT/HM,IC Lethang PS)</p> 
+            <p class="my-4 font-light">JOINT SECRETARY : Prerna Lepcha (HM,Lower Radhu PS)</p>
+            <p class="my-4 font-light">PUBLICITY SECRETARY I : Ram Kumar Sharma (GT Bermiok SS)</p>
+            <p class="my-4 font-light">PUBLICITY SECRETARY II : Serina Tamang (PRT,Najoor Berfok JHS)</p>
+            <p class="my-4 font-light">TREASURER I : Tshering Zangpoo (PGT Pelling SSS)</p>
+            <p class="my-4 font-light">TREASURER II : Lakpa Hissey Sherpa (HM Upper Martam PS)</p>
+            <p class= "my-4 font-light">OFFICE SECRETARY : Ravi Khaling (HM/IC Ramitay PS)</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <img class="rounded-full w-9 h-9" src={geyzing} alt="profile picture"/>
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Geyzing West Sikkim</div>
+            </div>
+        </figcaption>    
+    </figure>
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-bl-lg md:border-b-0 md:border-r dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Mangan District</h3>
+            <p class="my-4 font-light">PRESIDENT : Sonam Tamang (PRT Naday Monastic PS)</p> 
+            <p class="my-4 font-light">VICE PRESIDENT : Dawgyal Bhutia (BLT Tingchim SS)</p>
+            <p class="my-4 font-light">GENERAL SECRETARY : Jay Jay Lepcha (HM JHS Lingthem)</p>
+            <p class="my-4 font-light">JOINT SECRETARY I : Mingma Sherpa (HM GPS Lum)</p> 
+            <p class="my-4 font-light">JOINT SECRETARY II : Thupden Lachungpa (GT Swayem JHS)</p>
+            <p class="my-4 font-light">TREASURER : Pema Ongyal Bhutia (PRT Phodong PS)</p>
+            <p class="my-4 font-light">PUBLICITY SECRETARY I : Samuel Samser (PPT Theng PS)</p>
+            <p class="my-4 font-light">PUBLICITY SECRETARY II : Peutook Kazi (PRT Manul SS)</p>
+            <p class="my-4 font-light">LITERARY SECRETARY : Lhaden Lepcha (PRT Malling PS)</p>
+            <p class= "my-4 font-light">OFFICE SECRETARY : Den Tshering Lepcha (PRT Phensong PS)</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <img class="rounded-full w-9 h-9" src={mangan} alt="profile picture"/>
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Mangan North Sikkim</div>
+            </div>
+        </figcaption>    
+    </figure>
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Namchi District</h3>
+            <p class="my-4 font-light">PRESIDENT : NT Lepcha (PRT Mangbrue PS)</p> 
+            <p class="my-4 font-light">VICE PRESIDENT I : DB Thapa (PRT Dhar-gaon PS)</p>
+            <p class="my-4 font-light">VICE PRESIDENT II : Bikram Mukhia (PGT VCGLSSS Ravangla)</p>
+            <p class="my-4 font-light">GENERAL SECRETARY : Rekash Pradhan (GT GJHS Panchgharey)</p> 
+            <p class="my-4 font-light">JOINT SECRETARY I : Sunil Gurung (PRT Textbook Section Namchi)</p>
+            <p class="my-4 font-light">JOINT SECRETARY II : Namgyal Sherpa (PRT Kewzing SSS)</p>
+            <p class="my-4 font-light">PUBLICITY SECRETARY I : Durga Prasad Sharma (GT Temi SSS)</p>
+            <p class="my-4 font-light"> PUBLICITY SECRETARY II : HB Kharga (GT Lingee SS)</p>
+            <p class="my-4 font-light">TREASURER I : Sujata Rai (HM Dhar-Gaon PS)</p>
+            <p class= "my-4 font-light">TREASURER II : Sushma Basnet (HM Rubdi Toribari PS)</p>
+            <p class= "my-4 font-light"> OFFICE SECRETARY : Surya Man Pradhan (Maniram SS PRT)</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <img class="rounded-full w-9 h-9" src={namchi} alt="profile picture"/>
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Namchi South Sikkim</div>
+            </div>
+        </figcaption>    
+    </figure>
+    </div>
+
+    <div class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2">
+
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Pakyong District</h3>
+            <p class="my-4 font-light">PRESIDENT : NT Sherpa (PRT/HM,IC Titiribotey PS)</p> 
+            <p class="my-4 font-light">VICE PRESIDENT I : Karma Tenzing Bhutia (HM Parkha JHS)</p>
+            <p class="my-4 font-light">VICE PRESIDENT II : GS Regmi (HM Gangchung JHS)</p>
+            <p class="my-4 font-light">GENERAL SECRETARY : Vinod Pradhan (PRT Rhenok SSS)</p> 
+            <p class="my-4 font-light">JOINT SECRETARY I : Mahendra Thapa (PGT Chujachen SSS)</p>
+            <p class="my-4 font-light">JOINT SECRETARY II : Subash Rai (HM Loosing PS)</p>
+            <p class="my-4 font-light">PUBLICITY SECRETARY I : Sunil Karki (GTY Upper Sumin JHS)</p>
+            <p class="my-4 font-light">PUBLICITY SECRETARY II : Bhim Pradhan (GT Rhenock Bazar -JHS)</p>
+            <p class="my-4 font-light">TREASURER I : Sunita Devi Sharma (GT Duga-Lakha JHS)</p>
+            <p class= "my-4 font-lignt">TREASURER II : Ladenla Lassoppa (PRT Pakyong Bazaar-JHS)</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <img class="rounded-full w-9 h-9" src={pakyong} alt="profile picture"/>
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Pakyong East Sikkim</div>
+            </div>
+        </figcaption>    
+    </figure>
+
+
+
+
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Soreng District</h3>
+            <p class="my-4 font-light">PRESIDENT : Lakhhang Subba (GT Sombaria SS)</p> 
+            <p class="my-4 font-light">VICE PRESIDENT I : Sharmila Bhandari (PRT Soreng SSS)</p>
+            <p class="my-4 font-light">VICE PRESIDENT II : Nirmal Chettri (GT Deythang SSS)</p>
+            <p class="my-4 font-light">GENERAL SECRETARY : Suman Khati (PRT Upeer Chujen JHS)</p> 
+            <p class="my-4 font-light">JOINT SECRETARY I : Buddha Hang Subba (GT Lungyam JHS)</p>
+            <p class="my-4 font-light">JOINT SECRETARY II : Dinesh Rai (HM Rupsang PS)</p>
+            <p class="my-4 font-light">PUBLICITY SECRETARY : Prabin Gurung (AHM/GT Rinchengpong SS)</p>
+            <p class="my-4 font-light">TREASURER : Kailash Gurung (PRT Singling JHS)</p>
+            <p class="my-4 font-light">ASST TREASURER : Kunsang Dolma Tamang (PRT Bhumsey JHS)</p>
+            <p class="my-4 font-light">OFFICE SECRETARY : Mon Maya Sarki (PRT Birdang JHS)</p>
+            <p class= "my-4 font-light">LITERARY SECRETARY : Suman Chettri (GT Bojek JHS)</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <img class="rounded-full w-9 h-9" src={soreng} alt="profile picture"/>
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Soreng West Sikkim</div>
+            </div>
+        </figcaption>    
+    </figure>
+    </div>
 
 
 
@@ -76,6 +165,24 @@ function Dec() {
 
 
 
+
+
+
+
+
+</>
+
+    
+
+
+
+
+
+
+
+
+
+    
       
   )
 }
