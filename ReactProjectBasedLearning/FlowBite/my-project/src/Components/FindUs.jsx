@@ -2,7 +2,7 @@ import React from 'react'
 
 const FindUs = () => {
   return (
-    <div id="contacts">
+    <div id="contact">
         <div class="container my-24 px-6 mx-auto">
 
 <section class="mb-32 text-gray-800">
@@ -68,7 +68,7 @@ const FindUs = () => {
                 </div>
               </div>
               <div class="grow ml-6">
-                <p class="font-bold mb-1">Press</p>
+                <p class="font-bold mb-1">Press Release</p>
                 <p class="text-gray-500">press@example.com</p>
                 <p class="text-gray-500">+1 234-567-89</p>
               </div>
