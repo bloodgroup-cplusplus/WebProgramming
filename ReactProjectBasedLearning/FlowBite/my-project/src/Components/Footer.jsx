@@ -18,14 +18,23 @@ function Footer() {
                 <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Quick Links</h2>
                 <ul class="text-gray-600 dark:text-gray-400">
                     <li class="mb-4">
-                        <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
                     </li>
                     <li>
-                        <a href="https://tailwindcss.com/" class="hover:underline">Governemt of Sikkim</a>
                     </li>
-
                     <li>
-                        <a href = "https:://razorpay.com/" class="hover:underline">Razorpay</a>
+                        <a href="https://www.sikkimhrdd.org/" target="_blank" rel="noreferrer">Sikkim Hrdd</a>
+                    </li>
+                    <li>
+                        <a href="https://sikkim.gov.in/" target="_blank" rel="noreferrer">Government of Sikkim </a>
+                        </li>
+                    <li>
+                        <a href="https://www.sikkimtourism.gov.in/Public/index" target="_blank" rel="noreferrer">Sikkim Tourism</a>
+                    </li>
+                    <li>
+                        <a href="https://www.education.gov.in/en" target="_blank" rel="noreferrer">Ministry of Education </a>
+                    </li>
+                    <li>
+                        <a href="https://nipunbharat.education.gov.in/" target="_blank" rel="noreferrer">Nipun Bharat</a>
                     </li>
                 </ul>
             </div>

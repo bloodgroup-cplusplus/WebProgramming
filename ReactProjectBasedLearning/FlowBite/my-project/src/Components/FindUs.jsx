@@ -2,7 +2,7 @@ import React from 'react'
 
 const FindUs = () => {
   return (
-    <div>
+    <div id="contacts">
         <div class="container my-24 px-6 mx-auto">
 
 <section class="mb-32 text-gray-800">
