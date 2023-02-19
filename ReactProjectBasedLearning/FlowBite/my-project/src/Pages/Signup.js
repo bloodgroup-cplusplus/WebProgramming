@@ -143,13 +143,16 @@ return (
 
                   <div>
                       <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Current School</label>
-                      <input type="text" name="school" id="current_school" placeholder="Enter your valid whatsapp number"  onChange={(e)=>setSchool(e.target.value)} value={school} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
+                      <input type="text" name="school" id="current_school" placeholder="Enter your current school"  onChange={(e)=>setSchool(e.target.value)} value={school} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
                   </div>
+
+                 
 
 
                   <div>
-                      <label for="designation" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Designation</label>
-                      <select className="select" required placeholder="Current Deisgnation" value={designation} onChange={(e)=>setDesignation(e.target.value)}>
+
+                  <label for="designation" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Designation</label>
+                      <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required placeholder="Current Deisgnation" value={designation} onChange={(e)=>setDesignation(e.target.value)}>
                       <option disabled selected>Select</option>
                           <option>PPT</option>
                           <option>PRT</option>
@@ -168,7 +171,7 @@ return (
                       <label for="district" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                         District (School)
                       </label>
-                      <select className="select" required placeholder="District of current School" value={district} onChange={(e)=>setDistrict(e.target.value)}>
+                      <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required placeholder="District of current School" value={district} onChange={(e)=>setDistrict(e.target.value)}>
                             <option disabled selected>Select</option>
                             <option>Gangtok</option>
                             <option>Geyzing</option>
@@ -186,7 +189,7 @@ return (
                   <div>
                       <label for="bac" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">BAC (School)</label>
                       
-                      <select className="select" required placeholder="BAC of current school" value={bac} onChange={(e)=>setBac(e.target.value)}>
+                      <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required placeholder="BAC of current school" value={bac} onChange={(e)=>setBac(e.target.value)}>
                               <option disabled selected> Select</option>
                               <option>Baiguney</option>
                               <option>Chongrang</option>

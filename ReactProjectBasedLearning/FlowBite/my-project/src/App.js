@@ -6,6 +6,8 @@ import Home from "./Pages/Home";
 import Login from "./Pages/Login"
 import Signup from "./Pages/Signup"
 import Feed from "./Pages/Feed"
+import Griviences from "./Pages/Griviences";
+import AddGrivience from "./Pages/AddGrivience";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       <Route path="/signup" element={<Signup/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/feed" element={<Feed/>}/>
+      <Route path = "/griviences" element={<Griviences/>}/>
+      <Route path="/addgriviences" element={<AddGrivience/>}/>
     </Routes>
     </BrowserRouter>
     <Footer/>
