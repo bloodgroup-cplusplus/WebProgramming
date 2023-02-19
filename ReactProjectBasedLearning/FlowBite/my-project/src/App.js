@@ -5,6 +5,7 @@ import {BrowserRouter,Routes,Route} from "react-router-dom"
 import Home from "./Pages/Home";
 import Login from "./Pages/Login"
 import Signup from "./Pages/Signup"
+import Feed from "./Pages/Feed"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path = "/" element = {<Home/>}/>
       <Route path="/signup" element={<Signup/>}/>
       <Route path="/login" element={<Login/>}/>
+      <Route path="/feed" element={<Feed/>}/>
     </Routes>
     </BrowserRouter>
     <Footer/>
