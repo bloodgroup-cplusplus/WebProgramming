@@ -8,24 +8,34 @@ import Signup from "./Pages/Signup"
 import Feed from "./Pages/Feed"
 import Griviences from "./Pages/Griviences";
 import AddGrivience from "./Pages/AddGrivience";
+import Profile from "./Pages/Profile";
+
+
+import {useAuthContext} from "./Hooks/useAuthContext"
+
+
+
 
 function App() {
+  const {authIsReady,user} = useAuthContext()
   return (
-    <>    
-    <BrowserRouter>
-    <Navbar/>
-    <Routes>
-      <Route path = "/" element = {<Home/>}/>
-      <Route path="/signup" element={<Signup/>}/>
-      <Route path="/login" element={<Login/>}/>
-      <Route path="/feed" element={<Feed/>}/>
-      <Route path = "/griviences" element={<Griviences/>}/>
-      <Route path="/addgriviences" element={<AddGrivience/>}/>
-    </Routes>
-    </BrowserRouter>
-    <Footer/>
-    </>
-    
+    <div className="App">
+      {authIsReady &&(
+      <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        <Route path = "/" element={user?<Profile/>:<Home/>}/>
+        <Route path = "/griviences" element={user?<Griviences/>:<Login/>}/>
+        <Route path = "/addgriviences" element={user?<AddGrivience/>:<Login/>}/>
+        <Route path = "/home" element={user?<Profile/>:<Home/>}/>
+        <Route path = "/login" element = {user?<Profile/>:<Login/>}/>
+        <Route path = "/signup" element = {user?<Profile/>:<Signup/>}/>
+        <Route path = "/feed" element = {<Feed/>}/>
+      </Routes>
+      <Footer/>
+      </BrowserRouter>
+      )}
+   </div>
   );
 }
 

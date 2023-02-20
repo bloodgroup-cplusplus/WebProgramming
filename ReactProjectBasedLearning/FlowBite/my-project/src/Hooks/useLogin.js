@@ -4,7 +4,7 @@
 
 import {useState,useEffect} from "react"
 
-import {projectAuth, signInWithEmailAndPassword} from "../firebase/config"
+import {projectAuth, signInWithEmailAndPassword} from "../Firebase/config"
 
 import {useAuthContext} from "./useAuthContext"
 

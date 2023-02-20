@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react"
 
-import {projectAuth} from "../firebase/config"
+import {projectAuth} from "../Firebase/config"
 
 import {useAuthContext} from "../Hooks/useAuthContext"
 
