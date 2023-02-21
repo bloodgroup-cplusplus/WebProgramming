@@ -7,7 +7,7 @@
 // we use this object everytime we want to create the project firestore
 
 import {useReducer,useEffect,useState} from "react"
-import { projectFirestore,serverTimestamp,addDoc,collection as firestore_collection } from "../Firebase/config"
+import { projectFirestore,serverTimestamp, setDoc,doc } from "../Firebase/config"
 
 // we want to create a hook itself 
 // lets create an initial state 
@@ -81,13 +81,14 @@ export const useFirestore=(collection) =>{
     // first let's add document 
 
     // add a document 
-    const addDocument = async(doc) =>{
+    const addDocument = async(docs) =>{
         dispatch({type:'IS_PENDING'})
         try{
             const createdAt=serverTimestamp() 
-            const addedDocument= await addDoc(firestore_collection(projectFirestore,collection),{...doc,createdAt})
-            alert("Your grivience is added")
-            dispatchIfNotCancelled({type:'ADDED_DOCUMENT',payload:addedDocument})
+            //const addedDocument= await addDoc(firestore_collection(projectFirestore,collection),{...doc,createdAt})
+            const grievRef=doc(projectFirestore,collection,docs['email'])
+            setDoc(grievRef,{...docs,createdAt})
+            dispatchIfNotCancelled({type:'ADDED_DOCUMENT',payload:grievRef})
 
 
 

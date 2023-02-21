@@ -5,12 +5,12 @@ import {useFirestore} from "../Hooks/useFirestore"
 
 const AddGrivience = () => {
   const{user} = useAuthContext()
-  const[name,setName] = useState('')
+  const[name,setName] = useState("")
   const[email,setEmail] = useState("")
   const[schoolName,setSchoolName] = useState("")
   const[staid,setStaId] = useState("")
   const[headline,setHeadline] = useState("")
-  const[grivience,setGrivience]=useState('')
+  const[grivience,setGrivience]=useState("")
   const{addDocument,response}=useFirestore("Griviences")
   const uid = user.uid
 
@@ -38,37 +38,37 @@ const AddGrivience = () => {
           <h2 class="mb-1 text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
             Write a grivience
           </h2>
-          <form class="mt-4 space-y-4 lg:mt-5 md:space-y-5" action={handleSubmit}>
+          <form class="mt-4 space-y-4 lg:mt-5 md:space-y-5" onSubmit={handleSubmit}>
               <div>
                   <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
-                  <input type="text" value={name} onChange={(e)=>setName(e.target.value)} name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black" placeholder="Your Name" required=""/>
+                  <input type="text" value={name} onChange={(e)=>setName(e.target.value)} name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black" placeholder="Your Name" required/>
               </div>
 
               <div>
                   <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                  <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black" placeholder="name@company.com" required=""/>
+                  <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black" placeholder="name@company.com" required/>
               </div>
 
               <div>
                   <label for="school_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">School Name</label>
-                  <input type="text" value={schoolName} onChange={(e)=>setSchoolName(e.target.value)} name="school_name" id="school" placeholder="School Name" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
+                  <input type="text" value={schoolName} onChange={(e)=>setSchoolName(e.target.value)} name="school_name" id="school" placeholder="School Name" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
               </div>
 
               <div>
                   <label for="sta_id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">STA ID</label>
-                  <input type="text" value={staid} onChange={(e)=>setStaId(e.target.value)} name="sta_id" id="sta_id" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Name" required=""/>
+                  <input type="text" value={staid} onChange={(e)=>setStaId(e.target.value)} name="sta_id" id="sta_id" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Name" required/>
               </div>
               <div>
                   <label for="headline" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Short Headline For Your Grivience</label>
-                  <input type="text" value={headline} onChange={(e)=>setHeadline(e.target.value)} name="sta_id" id="sta_id" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Short Grivience Headline" required=""/>
+                  <input type="text" value={headline} onChange={(e)=>setHeadline(e.target.value)} name="sta_id" id="sta_id" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Short Grivience Headline" required/>
  
               </div>
 
 
               <div class="sm:col-span-2">
                         <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Grivience</label>
-                        <textarea  value={grivience} onChange={(e)=>setGrivience(e.target.value)} id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Write your grivience here"></textarea>                    
-                    </div>
+                        <textarea  value={grivience} onChange={(e)=>setGrivience(e.target.value)} id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Write your grivience here" required></textarea>                    
+              </div>
 
 
 
