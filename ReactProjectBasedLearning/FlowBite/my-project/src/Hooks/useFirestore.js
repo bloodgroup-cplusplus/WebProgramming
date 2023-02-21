@@ -7,7 +7,7 @@
 // we use this object everytime we want to create the project firestore
 
 import {useReducer,useEffect,useState} from "react"
-import { projectFirestore,serverTimestamp,addDoc,collection as firestore_collection } from "../firebase/config"
+import { projectFirestore,serverTimestamp,addDoc,collection as firestore_collection } from "../Firebase/config"
 
 // we want to create a hook itself 
 // lets create an initial state 

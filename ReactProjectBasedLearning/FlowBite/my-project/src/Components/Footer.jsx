@@ -36,6 +36,17 @@ function Footer() {
                     <li>
                         <a href="https://nipunbharat.education.gov.in/" target="_blank" rel="noreferrer">Nipun Bharat</a>
                     </li>
+
+                    <li>
+                        <a href="http://www.mdmsikkim.com/#/" target="_blank" rel="noreferrer">Mid Day Meal Scheme</a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.samagrashikshasikkim.org/" target="_blank" rel="noreferrer">Samagra Shiksha Sikkim</a>
+                    </li>
+
+
+
                 </ul>
             </div>
             <div>

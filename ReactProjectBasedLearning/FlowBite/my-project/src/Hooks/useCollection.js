@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react"
-import { projectFirestore,onSnapshot,collection as firestore_collection} from "../firebase/config"
+import { projectFirestore,onSnapshot,collection as firestore_collection} from "../Firebase/config"
 
 
 export const useCollection =(collection) =>{

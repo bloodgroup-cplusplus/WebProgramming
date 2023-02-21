@@ -6,7 +6,7 @@ import Home from "./Pages/Home";
 import Login from "./Pages/Login"
 import Signup from "./Pages/Signup"
 import Feed from "./Pages/Feed"
-import Griviences from "./Pages/Griviences";
+import Griviences from "./Pages/ListGriviences";
 import AddGrivience from "./Pages/AddGrivience";
 import Profile from "./Pages/Profile";
 
@@ -25,7 +25,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path = "/" element={user?<Profile/>:<Home/>}/>
-        <Route path = "/griviences" element={user?<Griviences/>:<Login/>}/>
+        <Route path = "/listgriviences" element={user?<Griviences/>:<Login/>}/>
         <Route path = "/addgriviences" element={user?<AddGrivience/>:<Login/>}/>
         <Route path = "/home" element={user?<Profile/>:<Home/>}/>
         <Route path = "/login" element = {user?<Profile/>:<Login/>}/>
