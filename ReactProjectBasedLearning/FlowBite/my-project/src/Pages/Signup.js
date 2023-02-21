@@ -230,7 +230,7 @@ return (
 
                   <div>
                       <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Appointment Order Number</label>
-                      <input type="email" name="email" id="email" placeholder="Appointment Order Number" onChange={(e)=>setAppointmentOrderNumber(e.target.value)} value={appointmentOrderNumber} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black" required=""/>
+                      <input type="text" name="appointment_order" id="appointment" placeholder="Appointment Order Number" onChange={(e)=>setAppointmentOrderNumber(e.target.value)} value={appointmentOrderNumber} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black" required=""/>
                   </div>
 
                   <div>
@@ -239,8 +239,8 @@ return (
                   </div>
 
                   <div>
-                      <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">GPF/CPF Number:</label>
-                      <input type="file" name="formal_photo" id="photo" placeholder="GPF/CPF Number"  onChange={(e)=>setGpfCpfNumber(e.target.value)} value={gpfCpfNumber} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
+                      <label for="gpfcpf" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">GPF/CPF Number:</label>
+                      <input type="text" name="gpf_cpf" id="gpfcpf" placeholder="GPF/CPF Number"  onChange={(e)=>setGpfCpfNumber(e.target.value)} value={gpfCpfNumber} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
                   </div>
 
                   <div>
