@@ -15,6 +15,15 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <div className='container'>
+        <Routes>
+          <Route path="/" element={<Dashboard/>}/>
+          <Route path ="/create" element={<Create/>}/>
+          <Route path="/projects/:id" element={<Project/>}/>
+          <Route path ="/signup" element = {<Signup/>}/>
+          <Route path = "/login" element = {<Login/>}/>
+        </Routes>
+      </div>
 
       </BrowserRouter>
 
