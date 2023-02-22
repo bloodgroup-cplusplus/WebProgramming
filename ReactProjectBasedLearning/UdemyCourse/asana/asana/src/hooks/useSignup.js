@@ -1,6 +1,6 @@
 // use state 
 import {useEffect, useState,useCallback} from "react"
-import {projectAuth,ref,projectFirestore,doc,createUserWithEmailAndPassword,updateProfile, uploadBytes,projectStorage, setDoc} from "../Firebase/config"
+import {projectAuth,ref,projectFirestore,doc,createUserWithEmailAndPassword,updateProfile, uploadBytes,projectStorage, setDoc,getDownloadURL} from "../Firebase/config"
 
 import { useAuthContext } from "./useAuthContext"
 
@@ -11,12 +11,15 @@ export const useSignup = () =>{
     const [error, setError] = useState(null)
     const[isPending,setIsPending] = useState(false)
     const[isCancelled,setIsCancelled] = useState(false)
+    const[imageURL,setImageURL] = useState(null)
     const {dispatch} = useAuthContext()
 
     // we need to wait for the user to fill up the form 
 
     // inside the function we use the await keyword
-    const signup = useCallback(async (email,password,phoneNumber,dateOfBirth,school,designation,district,bac,appointmentOrderNumber,gpfCpfNumber,retirementDate,displayName,formalPhoto,appointmentOrderPhoto)=>{
+    const signup=useCallback(async(email,password,displayName,thumbnail)=>{
+    //const signup = useCallback(async (email,password,phoneNumber,dateOfBirth,school,designation,district,bac,appointmentOrderNumber,gpfCpfNumber,retirementDate,displayName,formalPhoto,appointmentOrderPhoto)=>{
+
         // certain properties that firebase auth allows 
         // display name 
         //photo url 
@@ -61,15 +64,15 @@ export const useSignup = () =>{
 
                 displayName,
                 email,
-                phoneNumber,
-                dateOfBirth,
-                school,
-                designation,
-                district,
-                bac,
-                appointmentOrderNumber,
-                gpfCpfNumber,
-                retirementDate,
+               // phoneNumber,
+               // dateOfBirth,
+               // school,
+               // designation,
+               // district,
+               // bac,
+               // appointmentOrderNumber,
+               // gpfCpfNumber,
+               // retirementDate,
                 sta_id,
                 uid
             }
@@ -86,22 +89,28 @@ export const useSignup = () =>{
 
 
             // upload users photo 
-            const teacherPhotouploadPath = `teacher_profile/${res.user.uid}/${formalPhoto.name}`
+            const teacherPhotouploadPath = `teacher_profile/${res.user.uid}/${thumbnail.name}`
             const teacherImgRef=ref(projectStorage,teacherPhotouploadPath)
-            await uploadBytes(teacherImgRef,formalPhoto.name).then((snapshot)=>{
+            await uploadBytes(teacherImgRef,thumbnail.name).then((snapshot)=>{
                 console.log("Teacher Photo Uploaded")
             })
 
             // upload users appointment order photo 
-            const appointmentOrderuploadPath = `teacher_profile/${res.user.uid}/${appointmentOrderPhoto.name}`
-            const appointmentOrderImgRef=ref(projectStorage,appointmentOrderuploadPath)
-            await uploadBytes(appointmentOrderImgRef,appointmentOrderPhoto.name).then((snapshot)=>{
-                console.log("Appointment Order Photo uploaded")
-            })
+           // const appointmentOrderuploadPath = `teacher_profile/${res.user.uid}/${appointmentOrderPhoto.name}`
+           // const appointmentOrderImgRef=ref(projectStorage,appointmentOrderuploadPath)
+          //  await uploadBytes(appointmentOrderImgRef,appointmentOrderPhoto.name).then((snapshot)=>{
+           //     console.log("Appointment Order Photo uploaded")
+           // })
+            // while updating the profile make sure that the user's documents has first been posted online 
+            // after that we update the image from the post 
+
+            //upload user thumbnail
+            getDownloadURL(teacherImgRef).then(url=>setImageURL(url)).catch(error=>console.log(error));
 
             
             updateProfile(projectAuth.currentUser,{
-                displayName:displayName
+                displayName,
+                imageURL
             })
 
             // dispatch login action 
