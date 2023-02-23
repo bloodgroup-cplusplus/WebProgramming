@@ -1,14 +1,17 @@
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import Header from '@/components/Header'
+import Hero from '@/components/Hero'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <div>
-      <h1 className='text-blue-500'>Lets build an Awesome portfolio</h1>
       <Header/>
+      <section id="hero">
+        <Hero/>
+      </section>
       {/* Hero */}
       {/* About */}
       {/* Experience */}
