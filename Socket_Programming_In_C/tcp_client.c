@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<unistd.h>
 
 // we include types and socket for definition of socket functions that we are going to be using 
 // for our sockets 
@@ -44,10 +45,16 @@ int main()
     if(connection_status ==-1)
     {
         printf("There was an error making a connection to the remote server");
+        return -1 ;
     }
     // receive data from the server
     char server_response[299] ;
     recv(network_socket,&server_response,sizeof(server_response),0);
+
+    // print out the server's response 
+    printf("The server sent the data %s\n", server_response);
+    // close the socket with the close function 
+    int close(int fd);
 
 
     return 0;
