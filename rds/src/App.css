@@ -1,0 +1,44 @@
+body{
+
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    
+    background: #FFFFFF;
+    }
+    
+    
+    .video_frame{
+    
+    position: absolute;
+    width: 1140px;
+    height: 976px;
+    left: 150px;
+    top: 0px;
+    
+    background: #FFFFFF;
+    }
+    
+    
+    .hero{
+    
+    position: absolute;
+    width: 1065px;
+    height: 736px;
+    left: 247px;
+    top: 259px;
+    
+    background: url(Rangtsung-1 (2).png);
+    }
+    
+    navbar{
+    
+    position: absolute;
+    width: 67px;
+    height: 69px;
+    left: 150px;
+    top: 11px;
+    background: url(Screen Shot 2023-02-28 at 16.08.png);
+    border-radius: 154.5px;
+    }
+    
