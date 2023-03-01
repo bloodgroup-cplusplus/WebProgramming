@@ -7,7 +7,7 @@
 // we use this object everytime we want to create the project firestore
 
 import {useReducer,useEffect,useState} from "react"
-import { projectFirestore,serverTimestamp, setDoc,doc } from "../Firebase/config"
+import { projectFirestore,serverTimestamp, setDoc,doc,getDoc } from "../Firebase/config"
 
 // we want to create a hook itself 
 // lets create an initial state 
@@ -44,8 +44,10 @@ const firestoreReducer = (state,action ) =>{
 }
 // collection is the collection we want to work with 
 // the colleciton could be articles/ news/ griefs etc
-export const useFirestore=(collection) =>{
+export const useFirestore=(collection,user) =>{
     const [response,dispatch] = useReducer(firestoreReducer,initialState)
+    const[readError,setReadError] = useState(null)
+    const[result,readResult]=useState(null)
     // custom state objects that represents that response 
     // we can name the reducer whatever we want 
     // it represents the respones we show back from firestore 
@@ -87,6 +89,7 @@ export const useFirestore=(collection) =>{
             const createdAt=serverTimestamp() 
             //const addedDocument= await addDoc(firestore_collection(projectFirestore,collection),{...doc,createdAt})
             const grievRef=doc(projectFirestore,collection,docs['email'])
+            alert("Data Added")
             setDoc(grievRef,{...docs,createdAt})
             dispatchIfNotCancelled({type:'ADDED_DOCUMENT',payload:grievRef})
 
@@ -112,11 +115,35 @@ export const useFirestore=(collection) =>{
     // cleanup function goes inside use effect hook 
     // when the component first mounts the dom we use it 
     // to return a cleanup function we can say setiscancelled(true)
+
+
+    //read document from firebase 
+    // use effect to read data only once when the component mounts
+
+    useEffect(()=>{
+    const readDocument = async()=>{
+        const docRef = doc(projectFirestore,collection,user.email)
+        const docSnap = await getDoc(docRef)
+        if(docSnap.exists())
+        {
+            console.log("it reads")
+            readResult(docSnap.data())
+        }
+        else{
+            readResult(null)
+            setReadError("No such document")
+            console.log("No such document")
+        }
+
+    }
+    readDocument()
+},[user])
+
     useEffect(()=>{
         return () =>setIsCancelled(true)
     },[])
 
-    return {addDocument,deleteDocument,response}
+    return {addDocument,deleteDocument,response,result,readError}
 
 
 }

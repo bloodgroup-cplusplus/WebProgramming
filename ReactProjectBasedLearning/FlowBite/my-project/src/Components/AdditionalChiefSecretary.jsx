@@ -23,7 +23,7 @@ const AdditionalChiefSecretary = () => {
             <div class="px-6 py-12 md:px-12">
               <h2 class="text-3xl font-bold mb-2 text-black">Shri GP Uphadhyay</h2>
               <p class="font-semibold mb-4">Additional Chief Secretary Sikkim</p>
-              <p class="text-gray-500 mb-6"> 
+              <p class="text-gray-500 mb-6 font-extralight"> 
               "It is extremely hearting to note that Sikkim Teacher's Association (STA) is going to launch its website soon. In the present age of digital communication, a complete up-to-date website has become a necessity for an effective communication. STA is an extremely important organization providing the much needed link between the Goverment and a vast majority of teachers. i have observed that STA has always come up with very positive suggestion, many of which have immensely benefited the entire teaching process. I sincerely hope that STA will keep positively for improving the teaching learning in our State. I compliment STA on this important step of launching their website. I also wish them all success and exhort them to keep it updated at all times.​"
               </p> 
             </div>

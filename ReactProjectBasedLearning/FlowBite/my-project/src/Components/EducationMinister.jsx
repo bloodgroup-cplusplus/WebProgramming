@@ -21,7 +21,7 @@ const EducationMinister = () => {
             <div class="px-6 py-12 md:px-12">
               <h2 class="text-3xl font-bold mb-2 text-black">Shri Kunga Nima Lepcha</h2>
               <p class="font-semibold mb-4">Education Minister Sikkim</p>
-              <p class="text-gray-500 mb-6">
+              <p class="text-gray-500 mb-6 font-extralight">
               "I have great pleasure in conveying my best wishes to the Sikkim Teachers Association for launching their official website, which brings all the teachers of various disciplines on a common platform. Today the internet is first place most people go when looking for information. It is the most powerful means of commun​ication and a globally acce​ssible to anyone, anywhere, anytime. I applaud the entire teaching faculty of our state for their sincere, dedicated and relentless work in imparting quality to our dear students. Hope this website gives an insight into the activities related to teachers. I also congratulate the editorial team for the hard work and dedication they have invested in creating this website, and wish them success in all future endeavors."
               </p> 
             </div>

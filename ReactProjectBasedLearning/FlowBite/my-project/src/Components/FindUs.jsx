@@ -31,8 +31,7 @@ const FindUs = () => {
               </div>
               <div class="grow ml-6">
                 <p class="font-bold mb-1">Technical support</p>
-                <p class="text-gray-500">bhushansemail@gmail.com</p>
-                <p class="text-gray-500"><a tel="+917076680559">7076680559</a></p>
+                <p class="text-gray-500 font-extralight"><a href="mailto:filer.gloves.0t@icloud.com">filer.gloves.0t@icloud.com</a></p>
               </div>
             </div>
           </div>
@@ -50,8 +49,8 @@ const FindUs = () => {
               </div>
               <div class="grow ml-6">
                 <p class="font-bold mb-1">Donation questions</p>
-                <p class="text-gray-500">sales@example.com</p>
-                <p class="text-gray-500">+1 234-567-89</p>
+                <p class="text-gray-500 font-extralight">sales@example.com</p>
+                <p class="text-gray-500 font-extralight">+1 234-567-89</p>
               </div>
             </div>
           </div>
@@ -69,8 +68,8 @@ const FindUs = () => {
               </div>
               <div class="grow ml-6">
                 <p class="font-bold mb-1">Press Release</p>
-                <p class="text-gray-500">press@example.com</p>
-                <p class="text-gray-500">+1 234-567-89</p>
+                <p class="text-gray-500 font-extralight">press@example.com</p>
+                <p class="text-gray-500 font-extralight">+1 234-567-89</p>
               </div>
             </div>
           </div>
@@ -88,8 +87,7 @@ const FindUs = () => {
               </div>
               <div class="grow ml-6">
                 <p class="font-bold mb-1">Bug report</p>
-                <p class="text-gray-500">bhushansemail@gmail.com</p>
-                <p class="text-gray-500">+917076680559</p>
+                <p class="text-gray-500 font-extralight"><a href="mailto:filer.gloves.0t@icloud.com">filer.gloves.0t@icloud.com</a></p>
               </div>
             </div>
           </div>

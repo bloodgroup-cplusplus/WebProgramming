@@ -36,7 +36,7 @@ export const usePayment =() =>{
                 setError(res.error)
                 return 
             }
-            const data = await fetch("http://localhost:1337/razorpay",{method:'POST'}).then((t)=>
+            const data = await fetch("https://us-central1-backend-d709f.cloudfunctions.net/app/razorpay",{method:'POST'}).then((t)=>
                 t.json()
             )
        

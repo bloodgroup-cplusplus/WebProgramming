@@ -1,6 +1,6 @@
 // use state 
 import {useEffect, useState,useCallback} from "react"
-import {projectAuth,ref,projectFirestore,doc,createUserWithEmailAndPassword,updateProfile, uploadBytes,projectStorage, setDoc} from "../Firebase/config"
+import {projectAuth,ref,projectFirestore,doc,createUserWithEmailAndPassword,updateProfile, uploadBytes,projectStorage, setDoc, getDownloadURL} from "../Firebase/config"
 
 import { useAuthContext } from "./useAuthContext"
 
@@ -10,6 +10,7 @@ export const useSignup = () =>{
 
     const [error, setError] = useState(null)
     const[isPending,setIsPending] = useState(false)
+    const[imageUrl,setImageUrl] = useState("")
     const[isCancelled,setIsCancelled] = useState(false)
     const {dispatch} = useAuthContext()
 
@@ -77,7 +78,7 @@ export const useSignup = () =>{
 
             // upload teacher's data 
             try{
-                await setDoc(doc(projectFirestore,"Teachers_Data",res.user.uid),data)
+                await setDoc(doc(projectFirestore,"Teachers_Data",data['email']),data)
                     console.log("data added to cloud firestore")
             }catch(error)
             {
@@ -86,23 +87,34 @@ export const useSignup = () =>{
 
 
             // upload users photo 
-            const teacherPhotouploadPath = `teacher_profile/${res.user.uid}/${formalPhoto.name}`
+            const teacherPhotouploadPath = `teacher_profile/${data['email']}/${formalPhoto.name}`
             const teacherImgRef=ref(projectStorage,teacherPhotouploadPath)
             await uploadBytes(teacherImgRef,formalPhoto.name).then((snapshot)=>{
                 console.log("Teacher Photo Uploaded")
             })
 
             // upload users appointment order photo 
-            const appointmentOrderuploadPath = `teacher_profile/${res.user.uid}/${appointmentOrderPhoto.name}`
+            const appointmentOrderuploadPath = `teacher_profile/${data['email']}/${appointmentOrderPhoto.name}`
             const appointmentOrderImgRef=ref(projectStorage,appointmentOrderuploadPath)
             await uploadBytes(appointmentOrderImgRef,appointmentOrderPhoto.name).then((snapshot)=>{
                 console.log("Appointment Order Photo uploaded")
             })
 
+            getDownloadURL(teacherImgRef).then(url=>{
+                setImageUrl(url)
+            }).catch(error=>{
+                console.log(error)
+
+            })
+
+
+
             
             updateProfile(projectAuth.currentUser,{
-                displayName:displayName
+                displayName:displayName,
+                imageUrl,
             })
+            console.log('display name and profile photo updated')
 
             // dispatch login action 
             dispatch({type:'LOGIN',payload:res.user})

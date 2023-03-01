@@ -1,5 +1,4 @@
 import React from 'react'
-import sta_logo from "../Components/Images/sta_logo.png"
 import {useState,useEffect} from "react"
 import {useSignup} from "../Hooks/useSignup"
 import{usePayment} from "../Hooks/usePayment"
@@ -112,38 +111,38 @@ return (
               <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                   Register For Membership
               </h1>
-              <form class="space-y-4 md:space-y-6" action="#">
+              <form class="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
                 <div>
 
                 </div>
                 <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full Name</label>
-                      <input type="name" name="name" id="name" placeholder="Enter your full name" onChange={(e)=>setDisplayName(e.target.value)} value={displayName} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black" required=""/>
+                      <input type="name" name="name" id="name" placeholder="Enter your full name" onChange={(e)=>setDisplayName(e.target.value)} value={displayName} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black" required/>
 
                   <div>
                       <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-                      <input type="email" name="email" id="email" placeholder="Enter your valid email" onChange={(e)=>setEmail(e.target.value)} value={email} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black" required=""/>
+                      <input type="email" name="email" id="email" placeholder="Enter your valid email" onChange={(e)=>setEmail(e.target.value)} value={email} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black" required/>
                   </div>
                   <div>
                       <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone Number (Whatsapp)</label>
-                      <input type="text" name="phone_number" id="confirm-password" placeholder="Enter your valid whatsapp number"  onChange={(e)=>setPhoneNumber(e.target.value)} value = {phoneNumber} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
+                      <input type="text" name="phone_number" id="confirm-password" placeholder="Enter your valid whatsapp number"  onChange={(e)=>setPhoneNumber(e.target.value)} value = {phoneNumber} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
                   </div>
 
                   <div>
                       <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date of Birth</label>
-                      <input type="date" name="date_of_birth" id="dob" placeholder="Date of birth"  onChange={(e)=>setDateOfBirth(e.target.value)} value={dateOfBirth} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
+                      <input type="date" name="date_of_birth" id="dob" placeholder="Date of birth"  onChange={(e)=>setDateOfBirth(e.target.value)} value={dateOfBirth} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
                   </div>
 
 
                   <div>
                       <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Valid Formal Photo</label>
-                      <input type="file" name="formal_photo" id="photo" placeholder="Attach a formal photo"  onChange={handleFormalPhotoChange} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
+                      <input type="file" name="formal_photo" id="photo" placeholder="Attach a formal photo"  onChange={handleFormalPhotoChange} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
                   </div>
 
 
 
                   <div>
                       <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Current School</label>
-                      <input type="text" name="school" id="current_school" placeholder="Enter your current school"  onChange={(e)=>setSchool(e.target.value)} value={school} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
+                      <input type="text" name="school" id="current_school" placeholder="Enter your current school"  onChange={(e)=>setSchool(e.target.value)} value={school} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
                   </div>
 
                  
@@ -171,7 +170,7 @@ return (
                       <label for="district" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                         District (School)
                       </label>
-                      <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required placeholder="District of current School" value={district} onChange={(e)=>setDistrict(e.target.value)}>
+                      <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" requiredceholder="District of current School" value={district} onChange={(e)=>setDistrict(e.target.value)}>
                             <option disabled selected>Select</option>
                             <option>Gangtok</option>
                             <option>Geyzing</option>
@@ -189,7 +188,7 @@ return (
                   <div>
                       <label for="bac" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">BAC (School)</label>
                       
-                      <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required placeholder="BAC of current school" value={bac} onChange={(e)=>setBac(e.target.value)}>
+                      <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" requiredceholder="BAC of current school" value={bac} onChange={(e)=>setBac(e.target.value)}>
                               <option disabled selected> Select</option>
                               <option>Baiguney</option>
                               <option>Chongrang</option>
@@ -230,32 +229,32 @@ return (
 
                   <div>
                       <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Appointment Order Number</label>
-                      <input type="text" name="appointment_order" id="appointment" placeholder="Appointment Order Number" onChange={(e)=>setAppointmentOrderNumber(e.target.value)} value={appointmentOrderNumber} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black" required=""/>
+                      <input type="text" name="appointment_order" id="appointment" placeholder="Appointment Order Number" onChange={(e)=>setAppointmentOrderNumber(e.target.value)} value={appointmentOrderNumber} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black" required/>
                   </div>
 
                   <div>
                       <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Appointment Order Photo</label>
-                      <input type="file" name="formal_photo" id="photo" placeholder="Appointment Order Photo"  onChange={handleAppointmentOrderPhotoChange} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
+                      <input type="file" name="formal_photo" id="photo" placeholder="Appointment Order Photo"  onChange={handleAppointmentOrderPhotoChange} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
                   </div>
 
                   <div>
                       <label for="gpfcpf" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">GPF/CPF Number:</label>
-                      <input type="text" name="gpf_cpf" id="gpfcpf" placeholder="GPF/CPF Number"  onChange={(e)=>setGpfCpfNumber(e.target.value)} value={gpfCpfNumber} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
+                      <input type="text" name="gpf_cpf" id="gpfcpf" placeholder="GPF/CPF Number"  onChange={(e)=>setGpfCpfNumber(e.target.value)} value={gpfCpfNumber} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
                   </div>
 
                   <div>
                       <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Retirement Date:</label>
-                      <input type="date" name="date_of_birth" id="dob" placeholder="Retirement Date"  onChange={(e)=>setRetirementDate(e.target.value)} value={retirementDate} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
+                      <input type="date" name="date_of_birth" id="dob" placeholder="Retirement Date"  onChange={(e)=>setRetirementDate(e.target.value)} value={retirementDate} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
                   </div>
 
                   <div>
                       <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                      <input type="password" name="password" id="password" placeholder="Create a password for your account" onChange={(e)=>setPassword(e.target.value)} value={password} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black" required=""/>
+                      <input type="password" name="password" id="password" placeholder="Create a password for your account" onChange={(e)=>setPassword(e.target.value)} value={password} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black" required/>
                   </div>
 
                   <div class="flex items-start">
                       <div class="flex items-center h-5">
-                        <input id="terms" aria-describedby="terms" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required=""/>
+                        <input id="terms" aria-describedby="terms" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required/>
                       </div>
                       <div class="ml-3 text-sm">
                         <label for="terms" class="font-light text-gray-500 dark:text-gray-300">I accept the <a class="font-medium text-primary-600 hover:underline dark:text-primary-500" href="#">Terms and Conditions</a></label>
