@@ -11,16 +11,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main > 
+      <main className='bg-white px-10 ' > 
         <section className=' min-h-screen'>
           <nav className='py-10 mb-12 flex justify-between'>
-          <h1>My Resume</h1>
-          <ul>
+          <h1 className='text-xl'>My Resume</h1>
+          <ul className='flex items-center'>
             <li>
-              <BsFillMoonStarsFill/>
+              <BsFillMoonStarsFill className='cursor-pointer text-2xl'/>
             </li>
             <li>
-              <a href="#">Resume</a>
+              <a className=' bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8' href="#">Resume</a>
 
             </li>
           </ul>
