@@ -3,6 +3,9 @@ import {BsFillMoonStarsFill} from "react-icons/bs"
 import {AiFillTwitterCircle,AiFillLinkedin,AiFillYoutube} from "react-icons/ai" 
 import Image from "next/Image";
 import deved from "../public/dev-ed-wave.png"
+import design from "../public/design.png";
+import code from "../public/code.png";
+import consulting from "../public/consulting.png";
 
 
 
@@ -43,6 +46,67 @@ export default function Home() {
             <Image src={deved} layout="fill" objectFit="cover" />
           </div>
         </section>
+        {/*section two */ }
+
+        <section>
+          <div>
+            <h3 className='text-3xl py-1'> Services I offer</h3>
+            <p className='text-md py-2 leading-8 text-gray-800'>Lorem ipsum generaturm 
+            <span className='text-teal-500'>started and collaborated with talented people to create digits for both business and consumer use </span>
+             </p>
+
+             <p className='text-md py-2 leading-8 text-gray-800'>
+              I offer from a wide range of services. Including programming and teaching
+             </p>
+          </div>
+          <div>
+            <div className='text-center shadow-lg p-10 rounded-xl my-10'>
+              <Image src={design} width={100} height={100} />
+              <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
+              <p className='py-2'>Creating elegan t diesigns suited for your needs according to design theory 
+              </p>
+              <h4 className='py-4 text-teal-600'>Design tools I use</h4>
+              <p className='text-gray-800 py-1'>Photoshop</p>
+              <p className='text-gray-800 py-1'>Figma</p>
+              <p className='text-gray-800 py-1'>Webflow</p>
+              <p>Canva</p>
+            </div>
+
+            <div>
+            <div className='text-center shadow-lg p-10 rounded-xl my-10'>
+              <Image src={code} width={100} height={100} />
+              <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
+              <p className='py-2'>Creating elegan t diesigns suited for your needs according to design theory 
+              </p>
+              <h4 className='py-4 text-teal-600'>Design tools I use</h4>
+              <p className='text-gray-800 py-1'>Photoshop</p>
+              <p className='text-gray-800 py-1'>Figma</p>
+              <p className='text-gray-800 py-1'>Webflow</p>
+              <p>Canva</p>
+            </div>
+          </div>
+
+
+          <div>
+            <div className='text-center shadow-lg p-10 rounded-xl my-10'>
+              <Image src={consulting} width={100} height={100} />
+              <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
+              <p className='py-2'>Creating elegan t diesigns suited for your needs according to design theory 
+              </p>
+              <h4 className='py-4 text-teal-600'>Design tools I use</h4>
+              <p className='text-gray-800 py-1'>Photoshop</p>
+              <p className='text-gray-800 py-1'>Figma</p>
+              <p className='text-gray-800 py-1'>Webflow</p>
+              <p>Canva</p>
+            </div>
+          </div>
+
+
+
+          </div>
+        </section>
+
+
       </main>
     </>
   )
