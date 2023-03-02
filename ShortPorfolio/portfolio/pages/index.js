@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import {BsFillMoonStarsFill} from "react-icons/bs"
+import {AiFillTwitterCircle,AiFillLinkedin,AiFillYoutube} from "react-icons/ai" 
 
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
       <main className='bg-white px-10 ' > 
         <section className=' min-h-screen'>
           <nav className='py-10 mb-12 flex justify-between'>
-          <h1 className='text-xl'>My Resume</h1>
+          <h1 className='text-xl font-burtons'>My Resume</h1>
           <ul className='flex items-center'>
             <li>
               <BsFillMoonStarsFill className='cursor-pointer text-2xl'/>
@@ -25,6 +26,16 @@ export default function Home() {
             </li>
           </ul>
           </nav>
+          <div>
+            <h2>Bhushan</h2>
+            <h3>Developer and Designer.</h3>
+            <p> Hey I am bhushan lol . </p> 
+          </div>
+          <div>
+            <AiFillLinkedin/>
+            <AiFillTwitterCircle/>
+            <AiFillYoutube/>
+          </div>
         </section>
       </main>
     </>
