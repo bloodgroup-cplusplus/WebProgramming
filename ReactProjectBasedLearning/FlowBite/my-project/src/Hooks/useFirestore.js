@@ -8,6 +8,7 @@
 
 import {useReducer,useEffect,useState} from "react"
 import { projectFirestore,serverTimestamp, setDoc,doc,getDoc } from "../Firebase/config"
+import {dayjs} from "dayjs"
 
 // we want to create a hook itself 
 // lets create an initial state 
@@ -87,6 +88,7 @@ export const useFirestore=(collection,user) =>{
         dispatch({type:'IS_PENDING'})
         try{
             const createdAt=serverTimestamp() 
+            //const moment=dayjs(createdAt.toDate());
             //const addedDocument= await addDoc(firestore_collection(projectFirestore,collection),{...doc,createdAt})
             const grievRef=doc(projectFirestore,collection,docs['email'])
             alert("Data Added")
