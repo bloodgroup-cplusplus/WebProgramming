@@ -1,33 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React from "react"
+import {useQuery} from "@apollo/react-hooks"
+import {gql} from "apollo-boost"
 
+const GET_POSTS = gql `
+
+  query getPosts{
+    posts{
+      title 
+      text 
+      comments :{
+        author
+        text
+      }
+    }
+  }
+`
 function App() {
-  const [count, setCount] = useState(0)
+  // we can start using our hooks in our app component
+  const {loading,error,data} = useQuery(GET_POSTS)
+  if(loading ) return "Loading ..."
+  if(error) return`Error ${error.message}` 
+  
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <>
+    {data.posts.map(post=>{
+      <>
+      <h1>{post.title}</h1>
+      <p>{post.text}</p>
+      {post.comments.map((comment)=>{
+        return <p><strong>{comment.author}</strong> {comment.text}</p>
+      })}
+      
+      </>
+    })}
+    </>
+    
   )
 }
 
