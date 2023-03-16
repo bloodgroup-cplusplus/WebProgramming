@@ -1,6 +1,7 @@
 import React from "react"
 import {useQuery} from "@apollo/react-hooks"
 import {gql} from "apollo-boost"
+import { AddComment } from "./AddComment"
 
 const GET_POSTS = gql `
 
@@ -8,7 +9,7 @@ const GET_POSTS = gql `
     posts{
       title 
       text 
-      comments :{
+      comments {
         author
         text
       }
@@ -17,13 +18,19 @@ const GET_POSTS = gql `
 `
 function App() {
   // we can start using our hooks in our app component
+  console.log("its ok ")
   const {loading,error,data} = useQuery(GET_POSTS)
   if(loading ) return "Loading ..."
   if(error) return`Error ${error.message}` 
+  if(data)
+  {
+   console.log(data)
+ }
   
 
   return (
     <>
+    
     {data.posts.map(post=>{
       <>
       <h1>{post.title}</h1>
@@ -34,6 +41,7 @@ function App() {
       
       </>
     })}
+    <AddComment/>
     </>
     
   )
