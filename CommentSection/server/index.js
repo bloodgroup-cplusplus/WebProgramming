@@ -18,7 +18,7 @@ const posts = [{
 // add into the server 
 
 
-const typeDefs = gql 
+const typeDefs = gql  `
 
 type Comment {
     author :String 
@@ -28,7 +28,7 @@ type Comment {
 type Post{
     title: String 
     text:String 
-    comments:[Comments]
+    comments:[Comment]
 }
 
 
@@ -40,6 +40,7 @@ type Query {
 type Mutation {
     addComment (author :String, text:String):Comment
 }
+`
 
 
 // if types is the way to tell the server what kind of data you want in your database, resolver is 
@@ -57,7 +58,18 @@ const resolvers = {
 
             const newComment = {author: args.author, text: args.text}
             // we take this new comment and push it into the array of texts for our posts 
+            posts[0].comments.push(newComment);
+            return newComment;
 
         }
     }
 }
+
+// once we have our queries and resolvers defined we now create the server 
+
+
+const server = new ApolloServer({typeDefs,resolvers})
+server.listen().then(({url})=>{
+    // define a function that will accept a url 
+    console.log(`Server is running on ${url}` )
+})
