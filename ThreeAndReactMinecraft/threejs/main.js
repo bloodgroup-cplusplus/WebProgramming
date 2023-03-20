@@ -1,6 +1,4 @@
 import * as THREE from "three"
-function App() {
-  function create_threed_scene(){
   // create our scene
   const scene = new THREE.Scene();
 
@@ -33,20 +31,12 @@ function App() {
   // using a canvas 
 
 
-  // Render 
+  // Renderer 
   const canvas = document.querySelector('.webgl');
 
-  const render = new THREE.WebGLRenderer({canvas})
-
-}
-
-return (
-  <div>{create_threed_scene}</div>
-)
+  const renderer = new THREE.WebGLRenderer({canvas})
 
 
-
-
-}
-
-export default App
+  // define how big our render is and how to set size 
+  renderer.setSize(800,600)
+  renderer.render(scene,camera)
