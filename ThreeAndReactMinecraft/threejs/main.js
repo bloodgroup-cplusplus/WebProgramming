@@ -77,6 +77,16 @@ import {OrbitControls} from "three/examples/jsm/controls/OrbitControls"
 
   // Controls 
   const controls = new OrbitControls(camera,canvas)
+  controls.enableDamping=true
+  // this disables pan
+  controls.enablePan=false
+
+  // this disables zoom
+  controls.enableZoom=false
+
+  // add auto rotation to true 
+  controls.autoRotate=true
+  controls.autoRotateSpeed=5
 
 
   // Resize 
@@ -95,6 +105,7 @@ import {OrbitControls} from "three/examples/jsm/controls/OrbitControls"
   })
 
   const loop = () =>{
+    controls.update()
     renderer.render(scene,camera)
     window.requestAnimationFrame(loop)
 
