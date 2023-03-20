@@ -13,9 +13,17 @@ import * as THREE from "three"
   const mesh = new THREE.Mesh(geometry,material)
   scene.add(mesh)
 
+
+  // cREate a light 
+
+  const light = new THREE.PointLight(0xffffff,1,100)
+  light.position.set(0,10,10)
+
+  scene.add(light)
+
   // Create a camera 
 
-  const camera = new THREE.PerspectiveCamera(45,800,600)
+  const camera = new THREE.PerspectiveCamera(45,800/600)
   // we are going to keep it nice and simple 
   // the field of view is how much can this camera see
   // we wouldn't go above 50
@@ -25,6 +33,10 @@ import * as THREE from "three"
 
   // the thing we see on the screen is what the camera is looking at 
   // add this camera to the scene 
+
+  // move the camera z axis ( dimension z value to 20)
+
+  camera.position.z = 20
 
   scene.add(camera)
   // render the scene on the screen 
