@@ -73,6 +73,8 @@ import {OrbitControls} from "three/examples/jsm/controls/OrbitControls"
 
   // define how big our render is and how to set size 
   renderer.setSize(sizes.width,sizes.height)
+  // set pixel ratio
+  renderer.setPixelRatio(2)
   renderer.render(scene,camera)
 
   // Controls 
@@ -80,6 +82,7 @@ import {OrbitControls} from "three/examples/jsm/controls/OrbitControls"
   controls.enableDamping=true
   // this disables pan
   controls.enablePan=false
+  // enable hover 
 
   // this disables zoom
   controls.enableZoom=false
