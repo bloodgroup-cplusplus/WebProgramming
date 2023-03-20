@@ -1,4 +1,5 @@
 import * as THREE from "three"
+import "./styles.css"
   // create our scene
   const scene = new THREE.Scene();
 
@@ -63,3 +64,19 @@ import * as THREE from "three"
   // define how big our render is and how to set size 
   renderer.setSize(sizes.width,sizes.height)
   renderer.render(scene,camera)
+
+
+  // Resize 
+  window.addEventListener('resize',()=>{
+    //update the sizes 
+    console.log(window.innerWidth)
+    sizes.width= window.innerWidth;
+    sizes.height = window.innerHeight;
+
+    //update camera 
+    camera.aspect = sizes.width/sizes.height
+
+    // 
+    renderer.setSize(sizes.width,sizes.height)
+  }
+  )
