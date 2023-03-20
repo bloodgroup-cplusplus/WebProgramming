@@ -13,17 +13,28 @@ import * as THREE from "three"
   const mesh = new THREE.Mesh(geometry,material)
   scene.add(mesh)
 
+  // get the size of the viewport here 
+  //Sizes 
+  const sizes = {
+    width: window.innerWidth,
+    height:window.innerHeight,
+
+  }
+  // we can add this sizes to our camera 
+
 
   // cREate a light 
 
   const light = new THREE.PointLight(0xffffff,1,100)
   light.position.set(0,10,10)
+  // this is the (x,y,z) postion for the light
 
   scene.add(light)
 
   // Create a camera 
 
-  const camera = new THREE.PerspectiveCamera(45,800/600)
+  const camera = new THREE.PerspectiveCamera(45,sizes.width/sizes.height,0.1,100)
+  // 0.1 and 100 are the near and far clipping points 
   // we are going to keep it nice and simple 
   // the field of view is how much can this camera see
   // we wouldn't go above 50
@@ -50,5 +61,5 @@ import * as THREE from "three"
 
 
   // define how big our render is and how to set size 
-  renderer.setSize(800,600)
+  renderer.setSize(sizes.width,sizes.height)
   renderer.render(scene,camera)
