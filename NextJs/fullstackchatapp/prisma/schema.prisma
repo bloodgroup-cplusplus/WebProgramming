@@ -19,15 +19,18 @@ datasource db {
 }
 
 model Post{
-  id Int @id @default (autoincrement())
+  id String @id @default (cuid())
   createdAt DateTime @default (now())
   updatedAt DateTime @updatedAt
-  title String @db.VarChar(255)
-
-  content String?
+  title String 
   published Boolean @default(false)
-  authorId Int
+  // define a property on fthe post one user has many posts 
+  userId    String 
+  user         User @relation(fields:[userId],references:[id])
 }
+
+
+
 
 
 
@@ -70,6 +73,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  post         Post[]
 }
 
 model VerificationToken {
@@ -79,3 +83,5 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+
