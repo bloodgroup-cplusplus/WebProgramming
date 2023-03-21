@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// the blueprint for each type of datatype 
+// using prisma migrate
+// there is the default datatype 
+// we can limit the length of string with varchar 255
+// we have a question mark which shows it is optional 
+
+
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Post{
+  id Int @id @default (autoincrement())
+  createdAt DateTime @default (now())
+  updatedAt DateTime @updatedAt
+  title String @db.VarChar(255)
+
+  content String?
+  published Boolean @default(false)
+  authorId Int
+}
