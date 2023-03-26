@@ -12,8 +12,7 @@ module.exports = {
   },
 
   plugins: [
-    require('@tailwindcss/typography')({
-      className: 'wysiwyg',
-    }),
+    require('@tailwindcss/typography')
+  
   ]
 }
