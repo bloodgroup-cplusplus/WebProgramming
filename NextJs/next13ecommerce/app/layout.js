@@ -19,14 +19,20 @@ export default function RootLayout({ children }) {
       <header className='sticky top-0 p-6 bg-white border-b border-solid border-blue-900
       shadow-md z-50 text-2xl sm:text-3xl md:text-4xl sm:p-8 flex item-center justify-between'>
         <Link href = {"/"}>
-        <h1 className='uppercase cursor-pointer hover:'>Fruit Shop</h1>
+        <h1 className='uppercase cursor-pointer hover:'>Chads Fruit Shop</h1>
         </Link>
         <i className="fa-solid cursor-pointer hover:text-slate-500 fa-cart-shopping"></i>
       </header>
         <div className='flex-1'>
           {children}
         </div>
+        <footer className='flex items-center  flex-wrap justify-center border-t border-solid border-slate-300 p-4 md:p-8'>
+          <Link href={"https://www.instagram.com/trevorwallace/?hl=en"} target="_blank">
+          <i className='fa-brands fa-instagram text-slate-700 hover:text-slate-500 cursor-pointer text-2xl sm:text-3xl md:text-4xl'></i>
+          </Link>
+        </footer>
       </body>
     </html>
+
   )
 }
