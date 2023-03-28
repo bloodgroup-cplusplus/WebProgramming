@@ -9,14 +9,16 @@ async function getStripeProducts()
 
     })
     const res = await stripe.prices.list({
-      expand:['data-product']
+      expand:['data.product']
     })
     const prices= res.data 
     return prices
 
 }
 
-export default function Home() {
+export default async function Home() {
+  const products = await getStripeProducts()
+  console.log(products)
   return (
     <main className='p-4'> 
     </main>
