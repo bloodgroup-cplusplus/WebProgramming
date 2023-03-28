@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Stripe from 'stripe'
+import ProductCard from './ProductCard'
 
 
 async function getStripeProducts()
@@ -20,7 +21,14 @@ export default async function Home() {
   const products = await getStripeProducts()
   console.log(products)
   return (
-    <main className='p-4'> 
+    <main className='p-4 flex flex-col'> 
+    <div className=' max-w-[1000px] w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3'>
+    {products.map((product,productIndex)=>{
+      return (
+        <ProductCard key = {productIndex} product={product}/>
+      )
+    })}
+    </div>
     </main>
   )
 }
