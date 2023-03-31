@@ -2,6 +2,7 @@
 import {FC} from "react"
 import { useState } from "react"
 import ReactCalendar from "react-calendar"
+import {add} from "date-fns"
 
 interface indexProps{}
 interface DateType{
@@ -14,6 +15,27 @@ const index:FC<indexProps> = ({}) =>{
         justDate:null, 
         dateTime:null,
     })
+
+    const getTimes = () =>{
+        if(!date.justDate) return 
+        const {justDate} = date 
+        const beginning = add(justDate,{hours:9})
+        const end = add(justDate,{hours:17}) 
+        const interval = 30 // in minutes 
+        // from beginning to end with 30 minutes interval 
+
+        const times = []
+
+        for(let i = beginning ; i <= end; i= add(i,{minutes:interval}))
+        {
+            times.push(i)
+        }
+
+        return times
+
+
+    }
+    const times = getTimes()
     return (
         <div className="h-screen flex flex-col justify-center items-center">
             {date.justDate?(
