@@ -8,7 +8,9 @@ import { api } from "~/utils/api";
 
 const Home: NextPage = () => {
   const user = useUser();
-  const {data} = api.posts.getAll.useQuery();
+  const {data,isLoading} = api.posts.getAll.useQuery();
+  if(!data || isLoading) return <div>Loading</div>
+  if(!data) return <div>Something went wrong</div>
 
   return (
     <>
@@ -19,12 +21,15 @@ const Home: NextPage = () => {
       </Head>
       <main className=" flex  h-screen justify-center">
         <div className=" h-full w-full  md: max-w-2xl border-x border-slate-400" >
-        <div>
-          {!user.isSignedIn &&<SignInButton/>}
+        <div className="border-b border-slate-400 p-4">
+          {!user.isSignedIn &&(
+            <div className="flex justify-center">
+            <SignInButton/>
+            </div>)}
           {!!user.isSignedIn && <SignOutButton/>}
         </div>
-        <div>
-          {data?.map((post)=> (<div key={post.id}>{post.content}</div>))}
+        <div className="flex flex-col">
+          {[...data,...data]?.map((post)=> (<div key={post.id} className="p-8 border-slate-400  border-b">{post.content}</div>))}
         </div> 
         </div>
       </main>
