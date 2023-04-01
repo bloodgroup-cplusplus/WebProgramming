@@ -37,7 +37,10 @@ const PostView = (props:PostWithUser)=>{
     <div key = {post.id} className=" flex gap-3 border-b border-slate-400 p-4">
       <img src={author.profileImageUrl} className="rounded-full h-14 w-14" />
       <div className="flex flex-col">
-        <div className="flex text-slate-300"><span>{author.username}</span></div>
+        <div className="flex gap-1  text-slate-300">
+          <span>{author.username}</span>
+          <span className="font-thin">{`· 1 hour ago`} </span>
+          </div>
       </div>
       <span>{post.content}</span>
     </div>
