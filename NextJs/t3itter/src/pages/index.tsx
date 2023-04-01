@@ -3,6 +3,7 @@ import Head from "next/head";
 import { SignOutButton} from "@clerk/nextjs"
 import { SignInButton } from "@clerk/nextjs";
 import { useUser } from "@clerk/nextjs";
+import { RouterOutputs } from "~/utils/api";
 import Image from "next/image";
 
 import { api } from "~/utils/api";
@@ -12,6 +13,7 @@ import { api } from "~/utils/api";
 
 const CreatePostWizard =() =>{
   const{user} = useUser();
+  console.log(user)
 
   if(!user) return null ;
 
@@ -21,6 +23,23 @@ const CreatePostWizard =() =>{
     <input placeholder="Type some emojis!" className="grow bg-transparent outline-none"/>
   </div>
   );
+};
+// rather than having to define the type for what it takes we have type of one element of 
+// get all 
+
+type PostWithUser = RouterOutputs["posts"]["getAll"][number];
+
+
+const PostView = (props:PostWithUser)=>{
+  const{post, author} = props;
+
+  return (
+    <div key = {post.id} className=" flex gap-3 border-b border-slate-400 p-4">
+      <img src={author.profileImageUrl} className="rounded-full h-14 w-14" />
+      <span>{post.content}</span>
+    </div>
+  );
+
 };
 
 const Home: NextPage = () => {
@@ -46,8 +65,9 @@ const Home: NextPage = () => {
           {user.isSignedIn && <CreatePostWizard/>}
         </div>
         <div className="flex flex-col">
-          {[...data,...data]?.map((post)=> (<div key={post.id} className="p-8 border-slate-400  border-b">{post.content}</div>))}
-        </div> 
+          {[...data,...data]?.map((fullPost)=> ( <PostView {...fullPost} key={fullPost.post.id}/>
+          ))}
+        </div>
         </div>
       </main>
     </>
