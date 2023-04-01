@@ -3,8 +3,25 @@ import Head from "next/head";
 import { SignOutButton} from "@clerk/nextjs"
 import { SignInButton } from "@clerk/nextjs";
 import { useUser } from "@clerk/nextjs";
+import Image from "next/image";
 
 import { api } from "~/utils/api";
+
+
+// create post wizard 
+
+const CreatePostWizard =() =>{
+  const{user} = useUser();
+
+  if(!user) return null ;
+
+  return (
+    <div  className = "flex gap-3  w-full">
+    <img src ={user.profileImageUrl} alt="Profile image" className="h-14 w-14 rounded-full"/>
+    <input placeholder="Type some emojis!" className="grow bg-transparent outline-none"/>
+  </div>
+  );
+};
 
 const Home: NextPage = () => {
   const user = useUser();
@@ -26,7 +43,7 @@ const Home: NextPage = () => {
             <div className="flex justify-center">
             <SignInButton/>
             </div>)}
-          {!!user.isSignedIn && <SignOutButton/>}
+          {user.isSignedIn && <CreatePostWizard/>}
         </div>
         <div className="flex flex-col">
           {[...data,...data]?.map((post)=> (<div key={post.id} className="p-8 border-slate-400  border-b">{post.content}</div>))}
