@@ -22,7 +22,7 @@ const Profile = () => {
     <div class="flex justify-center md:m-auto flex-col items-center pb-10">
         <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src={sta_logo} alt="sta_logo"/>
         <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Sikkim Teachers Association</h5>
-        <span class="text-sm text-gray-500 dark:text-gray-400">Name: {result['displayName']} </span> 
+        <span class="text-sm text-gray-500 dark:text-gray-400">TEACHERS NAME: {result['displayName']} </span> 
         <span class="text-sm text-gray-500 dark:text-gray-400">SCHOOL:{result['school']} </span>
         <span class="text-sm text-gray-500 dark:text-gray-400">DESIGNATION: {result['designation']} </span>
         <span class="text-sm text-gray-500 dark:text-gray-400">STA ID: {result['sta_id']} </span>
