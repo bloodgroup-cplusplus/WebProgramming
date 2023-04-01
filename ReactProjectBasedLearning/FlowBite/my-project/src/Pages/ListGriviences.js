@@ -9,7 +9,7 @@ const ListGriviences = ({griviences,user}) => {
    // const[currentPage,setCurrentPage] = useState(1)
    // const chunkSize=5;
     console.log(griviences)
-    griviences.sort((a,b)=>a.createdAt-b.createdAt)
+    griviences.sort((a,b)=>b.createdAt-a.createdAt)
 
 
     // sort according to the created date 
