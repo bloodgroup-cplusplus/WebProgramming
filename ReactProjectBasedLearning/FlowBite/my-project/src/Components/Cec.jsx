@@ -31,7 +31,7 @@ function Cec() {
       </div> 
       <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={president} alt="Bonnie Avatar"/>
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={president} alt="Kunzang Sherpa"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Kunzang Sherpa</a>
               </h3>
@@ -40,7 +40,7 @@ function Cec() {
               
           </div>
           <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={bhim_subba} alt="Helene Avatar"/>
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={bhim_subba} alt="Bhim Subba"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Bhim Subba</a>
               </h3>
@@ -48,7 +48,7 @@ function Cec() {
               <p className='font-extralight text-gray-500'>PRT Kitam SSS Namchi District</p>
           </div>
           <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={chewang_chopel_bhutia} alt="Jese Avatar"/>
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={chewang_chopel_bhutia} alt="Chewang Chopel Bhutia"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Chewang Chopel Bhutia</a>
               </h3>
@@ -57,7 +57,7 @@ function Cec() {
               
           </div>
           <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={tp_sharma} alt="Joseph Avatar"/>
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={tp_sharma} alt="TP Sharma"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">TP Sharma</a>
               </h3>
@@ -66,7 +66,7 @@ function Cec() {
               
           </div>
           <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={laxuman_sharma} alt="Sofia Avatar"/>
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={laxuman_sharma} alt="Laxuman Sharma"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Laxuman Sharma</a>
               </h3>
@@ -75,7 +75,7 @@ function Cec() {
               
           </div>
           <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={dinesh} alt="Leslie Avatar"/>
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={dinesh} alt="Dinesh Bhattarai"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Dinesh Bhattarai</a>
               </h3>
@@ -84,7 +84,7 @@ function Cec() {
               </div>
               
           <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={gyalchen_dadul_bhutia} alt="Michael Avatar"/>
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={gyalchen_dadul_bhutia} alt="Gyalchen Dadul Bhutia"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Gyalchen Dadul Bhutia</a>
               </h3>
@@ -93,7 +93,7 @@ function Cec() {
               
           </div>
           <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={paul_lepcha} alt="Neil Avatar"/>
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={paul_lepcha} alt="Paul Lepcha"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Paul Lepcha</a>
               </h3>
@@ -103,7 +103,7 @@ function Cec() {
           </div>
 
          <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={phigu_tshering_bhutia} alt="Neil Avatar"/>
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={phigu_tshering_bhutia} alt="Phigu Tshering Bhutia"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Phigu Tshering Bhutia</a>
               </h3>
@@ -114,7 +114,7 @@ function Cec() {
 
 
          <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={diwash_pradhan} alt="Neil Avatar"/>
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={diwash_pradhan} alt="Diwash Pradhan"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Diwash Pradhan</a>
               </h3>
@@ -125,7 +125,7 @@ function Cec() {
 
 
           <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={antim_shanker} alt="Neil Avatar"/>
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={antim_shanker} alt="Antim Shanker"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Antim Shanker</a>
               </h3>
@@ -136,7 +136,7 @@ function Cec() {
 
 
           <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={mala_zigdel_dorjee} alt="Neil Avatar"/>
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={mala_zigdel_dorjee} alt="Mala Zigdel Dorjee"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Mala Zigdel Dorjee</a>
               </h3>
@@ -148,7 +148,7 @@ function Cec() {
 
 
           <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={padenla_bhutia} alt="Neil Avatar"/>
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={padenla_bhutia} alt="Padenla Bhutia"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Padenla Bhutia</a>
               </h3>
@@ -159,7 +159,7 @@ function Cec() {
 
 
           <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={roshan_sharma} alt="Neil Avatar"/>
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={roshan_sharma} alt="Roshan Sharma"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Roshan Sharma</a>
               </h3>
@@ -171,7 +171,7 @@ function Cec() {
 
 
           <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={shiv_kumar_chettri} alt="Neil Avatar"/>
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={shiv_kumar_chettri} alt="Shiv Kumar Chettri"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Shiv Kumar Chettri</a>
               </h3>
@@ -183,7 +183,7 @@ function Cec() {
 
 
           <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={dillip_sharma} alt="Neil Avatar"/>
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={dillip_sharma} alt="Dillip Sharma"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Dillip Sharma</a>
               </h3>
@@ -196,7 +196,7 @@ function Cec() {
 
 
           <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={deependra_gurung} alt="Neil Avatar"/>
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={deependra_gurung} alt="Deependra Gurung"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Deependra Gurung</a>
               </h3>
@@ -208,7 +208,7 @@ function Cec() {
 
 
           <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={kailash_sharma} alt="Neil Avatar"/>
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={kailash_sharma} alt="Kailash Sharma"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Kailash Sharma</a>
               </h3>
@@ -216,31 +216,6 @@ function Cec() {
               <p className='font-extralight text-gray-500'>HM Pakyong JHS Pakyong District</p>
               
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       </div>  
   </div>
