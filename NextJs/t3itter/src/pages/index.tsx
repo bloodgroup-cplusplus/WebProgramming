@@ -4,7 +4,9 @@ import { SignOutButton} from "@clerk/nextjs"
 import { SignInButton } from "@clerk/nextjs";
 import { useUser } from "@clerk/nextjs";
 import { RouterOutputs } from "~/utils/api";
-import Image from "next/image";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime"
+dayjs.extend(relativeTime)
 
 import { api } from "~/utils/api";
 
@@ -39,7 +41,7 @@ const PostView = (props:PostWithUser)=>{
       <div className="flex flex-col">
         <div className="flex gap-1  text-slate-300">
           <span>{author.username}</span>
-          <span className="font-thin">{`· 1 hour ago`} </span>
+          <span className="font-thin">{`· ${dayjs(post.createdAt).fromNow()}`} </span>
           </div>
       </div>
       <span>{post.content}</span>
