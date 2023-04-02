@@ -7,12 +7,12 @@ import {getStorage,ref,uploadBytes,getDownloadURL} from "firebase/storage"
 // firebase config
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD1H2YKLoLE5-V-aeeZIHPZb2BEoZ-qw6k",
-  authDomain: "fir-f0f56.firebaseapp.com",
-  projectId: "fir-f0f56",
-  storageBucket: "fir-f0f56.appspot.com",
-  messagingSenderId: "310785965569",
-  appId: "1:310785965569:web:4d2d45ac55114aeaf24a00"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId:process.env.REACT_APP_FIREBASE_APP_ID
 };
 
 
