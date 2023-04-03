@@ -7,6 +7,7 @@ export default function HomePage() {
       <p>Some content</p>
       <p>Some content again</p>
       <p>Lets add some content again </p>
+      <p>Lets build a tension</p>
     </div>
   ); 
 }
