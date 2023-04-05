@@ -33,3 +33,8 @@ function send(res)
 
     setTimeout(()=>send(res),1000);
 }
+
+app.listen(port)
+console.log(port)
+
+console.log(`Listening on ${port}`)
