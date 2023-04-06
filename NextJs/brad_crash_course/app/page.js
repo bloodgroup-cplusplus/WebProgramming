@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Homepage = () => {
   return (
     <div>
-      <h1>Welcom to Chad's Media</h1>
+      <h1>Welcome to Chad's Media</h1>
       <ul>
         <li>
           <Link href ="/">Home</Link>
@@ -16,11 +16,11 @@ const Homepage = () => {
         </li>
 
         <li>
-          <Link href = '/about/'>Team</Link>
+          <Link href = '/about/team'>Team</Link>
         </li>
       </ul>
     </div>
   )
 }
 
-export default page
+export default Homepage
