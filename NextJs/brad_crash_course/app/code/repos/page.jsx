@@ -6,6 +6,7 @@ async function fetchRepos()
 
 {
     const response = await fetch ('https://api.github.com/users/bloodgroup-cplusplus/repos')
+    await new Promise((resolve)=>setTimeout(resolve,1000));//
     const repos = await response.json();
     return repos;
 
