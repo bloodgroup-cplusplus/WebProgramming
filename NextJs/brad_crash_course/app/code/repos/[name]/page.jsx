@@ -1,5 +1,6 @@
 import React from 'react'
 import Repo from '@/app/components/Repo'
+import RepoDirs from '@/app/components/RepoDirs'
 import Link from 'next/link'
 
 const RepoPage = ({params:{name}}) => {
@@ -9,6 +10,7 @@ const RepoPage = ({params:{name}}) => {
             Back To Repositories 
             </Link>
         <Repo name={name}/>
+        <RepoDirs name ={name}/>
     </div>
   )
 }
