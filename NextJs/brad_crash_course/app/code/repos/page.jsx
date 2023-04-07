@@ -1,3 +1,7 @@
+import Link from "next/link"
+import {FaStar,FaCodeBranch,FaEye} from "react-icons/"
+
+
 async function fetchRepos()
 
 {
@@ -18,8 +22,21 @@ const ReposPage =  async () =>{
     // the code is not reflected on the client side browser console
     // if we say " use client on the top and then console log then it's going to be put on the browser"
     console.log(repos)
-    return <div>
-        {repos[0].name}
+    return <div className="repos-container">
+        <h2>Repositories</h2>
+        <ul className="repo-list1">
+            {repos.map((repo)=>(
+                <li key = {repo.id} >
+                <Link href = {`/code/repos/${repo.name}`}>
+                    <h3>{repo.name} </h3>
+                    <div className="repo-details">
+                        <span>
+                        </span>
+                    </div>
+                </Link>
+                </li>
+            ))}
+        </ul>
     </div>
 }
 

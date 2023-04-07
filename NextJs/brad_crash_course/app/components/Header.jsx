@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
+
 const Header = () => {
   return (
     <header className='header'>
@@ -32,6 +33,9 @@ export default Header
 // - More secure against XSS attacks 
 // Cross site scripting again 
 // - Improvde developer experience 
+// If you had to get data from server you needed the server components 
+// But in case of client components you used the useEffect hook to get the data 
+// so you could run into infinite loops errors 
 
 // Just like with anything else, there are also disadvantages:
 // - Not as interactive 
