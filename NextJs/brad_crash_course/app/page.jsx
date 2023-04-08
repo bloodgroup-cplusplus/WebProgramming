@@ -1,6 +1,7 @@
 // rafce is react arrow functions component export
 import React from 'react'
 import Link from 'next/link'
+import Courses from "./components/Courses"
 
 
 const Homepage = () => {
