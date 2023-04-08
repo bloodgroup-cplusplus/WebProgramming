@@ -1,6 +1,7 @@
 'use client'
 import React from "react";
 import signUp from "../firebase/auth/signup";
+import { GoogleAuthProvider } from "firebase/auth";
 import { useRouter } from 'next/navigation'
 
 function Page() {
@@ -35,7 +36,9 @@ function Page() {
                 </label>
                 <button type="submit">Sign up</button>
             </form>
+            <p>or signup with google</p>
         </div>
+
     </div>);
 }
 
