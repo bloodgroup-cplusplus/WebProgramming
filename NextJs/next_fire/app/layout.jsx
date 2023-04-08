@@ -15,6 +15,8 @@ export default function RootLayout({ children }) {
            <Navbar/> 
           </main>
         {children}
+        <div></div>
+        <span></span>
         <Footer/>
         </AuthContextProvider>
         </body>
