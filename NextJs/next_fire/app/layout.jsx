@@ -2,6 +2,7 @@
 import './globals.css'
 import { AuthContextProvider } from './context/AuthContext'
 import Link from 'next/link'
+import Navbar from './components/Navbar'
 
 
 export default function RootLayout({ children }) {
@@ -10,16 +11,7 @@ export default function RootLayout({ children }) {
       <body>
         <AuthContextProvider>
           <main>
-            <nav>
-              <Link href = "/">
-              </Link>
-              <Link href = "/signin">
-                Signin
-              </Link>
-              <Link href = "/signup">
-                Signup
-              </Link>
-            </nav>
+           <Navbar/> 
           </main>
         {children}
         </AuthContextProvider>
