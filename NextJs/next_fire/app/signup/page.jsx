@@ -5,11 +5,13 @@ import { GoogleAuthProvider } from "firebase/auth";
 import logo from "../Images/Seal_of_Sikkim.png"
 import { useRouter } from 'next/navigation'
 import Image from "next/image";
+import {useAuthContext} from "../context/AuthContext"
 
 function Page() {
     const [email, setEmail] = React.useState('')
     const [password, setPassword] = React.useState('')
     const router = useRouter()
+    const {user} = useAuthContext()
 
     const handleForm = async (event) => {
         event.preventDefault()
