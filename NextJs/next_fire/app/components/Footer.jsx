@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import logo from "../Images/Seal_of_Sikkim.png"
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -8,10 +9,9 @@ const Footer = () => {
     <div class="mx-auto max-w-screen-xl">
         <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
-                <a href="https://flowbite.com" class="flex items-center">
+                <Link href="/" class="flex items-center">
                     <Image src={logo} height={100} width={100} alt="Seal of Sikkim"/>
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap  dark:text-white">Government of Sikkim</span>
-                </a>
+                </Link>
             </div>
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                 <div>
