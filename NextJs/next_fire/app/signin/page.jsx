@@ -8,7 +8,6 @@ import {useAuthContext} from "../context/AuthContext"
 import Link from "next/link"
 
 function Page() {
-    console.log("is this the problem ")
     const [email, setEmail] = React.useState('')
     const [password, setPassword] = React.useState('')
     const router = useRouter()
