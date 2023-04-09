@@ -7,6 +7,7 @@ import Image from "next/image";
 import {useAuthContext} from "../context/AuthContext"
 
 function Page() {
+    console.log("is this the problem ")
     const [email, setEmail] = React.useState('')
     const [password, setPassword] = React.useState('')
     const router = useRouter()
