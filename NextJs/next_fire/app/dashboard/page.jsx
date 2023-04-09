@@ -5,8 +5,6 @@ import { useAuthContext } from "../context/AuthContext"
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
 import Signout from "../firebase/auth/signout"
-import nbd_returns from "../Images/tadong.jpeg"
-import Image from "next/image"
 import Tadong from "../components/Tadong"
 import Burtuk from "../components/Burtuk"
 
