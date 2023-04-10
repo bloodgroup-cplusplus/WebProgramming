@@ -15,35 +15,83 @@ const Footer = () => {
             </div>
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                 <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Other Links</h2>
                     <ul class="text-gray-600 dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="https://flowbite.com" class="hover:underline">Flowbite</a>
+                            <a href="https://flowbite.com" class="hover:underline">Press Releases</a>
                         </li>
                         <li>
-                            <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                            <a href="https://tailwindcss.com/" class="hover:underline">News and Announcement</a>
                         </li>
+
+
+                        <li>
+                            <a href="https://tailwindcss.com/" class="hover:underline">Awards & Achievements</a>
+                        </li>
+
+                        <li>
+                            <a href="https://tailwindcss.com/" class="hover:underline">Web Directory</a>
+                        </li>
+
+                         <li>
+                            <a href="https://tailwindcss.com/" class="hover:underline">Be Involved</a>
+                        </li>
+
+   
+                         <li>
+                            <a href="https://tailwindcss.com/" class="hover:underline">IT Vendors</a>
+                        </li>
+
                     </ul>
                 </div>
                 <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Quick Links</h2>
                     <ul class="text-gray-600 dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                            <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Terms of Use</a>
                         </li>
                         <li>
-                            <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                            <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Disclaimer</a>
                         </li>
+
+
+                        <li>
+                            <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Accessibility Statement</a>
+                        </li>
+
+                        <li>
+                            <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Link to Us</a>
+                        </li>
+
+                        <li>
+                            <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Copyright</a>
+                        </li>
+
+
+
+
+
                     </ul>
                 </div>
                 <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Downloads & Media</h2>
                     <ul class="text-gray-600 dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Privacy Policy</a>
+                            <a href="#" class="hover:underline">Useful Forms</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                            <a href="#" class="hover:underline">Annual Reports</a>
+                        </li>
+
+                        <li>
+                            <a href = "#" className='hover:underline'>Registration</a>
+
+                        </li>
+                        <li>
+                            <a href = "#" className='hover:underline'>Photo Gallery</a>
+                        </li>
+                        <li>
+                            <a href ="#" className='hover:underline'>Video Gallery</a>
                         </li>
                     </ul>
                 </div>
