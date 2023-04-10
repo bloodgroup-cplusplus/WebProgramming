@@ -3,11 +3,11 @@ import Image from 'next/image'
 import logo from "../Images/Seal_of_Sikkim.png"
 import Link from 'next/link'
 import {useAuthContext} from "../context/AuthContext"
-import { Signout } from 'firebase/auth'
+import  SignOut  from "../firebase/auth/signout" 
 
 const Navbar = () => {
   const handleSignout=()=>{
-    const{result,error} = Signout() 
+    const{result,error} = SignOut() 
     if(error)
     {
       console.log('signout error')

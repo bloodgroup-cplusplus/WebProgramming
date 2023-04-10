@@ -11,7 +11,7 @@ let auth = getAuth(firebase_app)
 
 
 
-export default async function Signout()
+export default async function SignOut()
 {
     let result = null ;
     let error = null ; 
