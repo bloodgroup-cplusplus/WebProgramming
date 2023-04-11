@@ -1,6 +1,6 @@
 'use client'
 import React from "react"
-const page = () => {
+const Page = () => {
 
   return (
 <div id="defaultModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-modal md:h-full">
@@ -57,7 +57,7 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
 
 
 
