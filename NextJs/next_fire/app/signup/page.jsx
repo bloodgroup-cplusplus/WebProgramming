@@ -10,7 +10,8 @@ import Link from "next/link"
 function Page() {
     const [email, setEmail] = React.useState('')
     const [password, setPassword] = React.useState('')
-    const[name,setName] = React.useState('')
+    const[first_name,setFirstName] = React.useState('')
+    const[last_name,setLastName] = React.useState('')
     const router = useRouter()
     const {user} = useAuthContext()
 
@@ -47,9 +48,17 @@ function Page() {
                       <input type="email" name="email" id="email" value ={email} onChange={(e)=>setEmail(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-400 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required/>
                   </div>
                   <div>
-                      <label for="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Full Name</label>
-                      <input type="text" name="fullname" id="name" value={name} onChange={(e)=>setName(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-400 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your full name" required/>
+                      <label for="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your First  Name</label>
+                      <input type="text" name="fullname" id="name" value={first_name} onChange={(e)=>setFirstName(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-400 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your full name" required/>
                   </div>
+
+                    <div>
+                      <label for="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last Name</label>
+                      <input type="text" name="fullname" id="name" value={last_name} onChange={(e)=>setLastName(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-400 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your full name" required/>
+                  </div>
+
+
+
                   <div>
                       <label for="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
                       <input type="password" name="password" id="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
