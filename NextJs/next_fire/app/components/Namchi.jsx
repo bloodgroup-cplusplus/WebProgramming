@@ -12,7 +12,7 @@ const Namchi = () => {
             <Image className="w-full dark:hidden" src={namchi} alt="Nar Bahadur College Image" width={400} height={400}/>
         <div className="mt-4 md:mt-0">
             <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Sikkim Government College Namchi </h2>
-            <p>
+            <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
 
             The college has a beautifully conceptualized 3-storeyed building comprising of spacious classrooms, library, laboratories, offices and a multi-purpose auditorium. The hostels for both the girls and the boys with an intake capacity of 180 students have been constructed and is expected to function from August, 2022. The staff quarters for the faculties and non-teaching staff have been functioning since April, 2022. A sports complex is also being developed in the campus. 
     </p>
