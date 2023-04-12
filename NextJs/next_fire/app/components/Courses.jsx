@@ -1,5 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+import prof from "../Images/prof.jpeg"
 const Courses = () => {
   return (
     <section className="bg-white dark:bg-gray-900">
@@ -18,7 +20,7 @@ const Courses = () => {
               <p className="mb-5 font-light text-gray-500 dark:text-gray-400">Welcome to the Economics undergraduate department! Our program offers a diverse range of courses taught by renowned economists, providing students with a solid foundation in economic theory, quantitative analysis, and policy applications. We emphasize practical learning and provide opportunities for hands-on experience through internships, research projects, and collaborations with industry partners. Our graduates acquire the analytical and critical thinking skills necessary to succeed in finance, consulting, public policy, and academia. Join us for a rewarding journey in economics!</p>
               <div className="flex justify-between items-center">
                   <div className="flex items-center space-x-4">
-                      <img className="w-7 h-7 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Jese Leos avatar" />
+                      <Image  width={36} height={36} className="rounded-full" src={prof} alt="Jese Leos avatar" />
                       <span className="text-xs font-medium dark:text-white">
                           Dr.Somedean Genericsurname (HOD)
                       </span>
