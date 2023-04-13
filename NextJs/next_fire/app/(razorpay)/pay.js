@@ -37,7 +37,7 @@ export default async function Pay()
                 key:KEY_ID,
                 amount:result.amount,
                 currency:result.currency,
-                name:"Application Form",
+                name:"Application Fees",
                 order_id:result.id,
                 description:"Test Transaction",
                 handler:async function(response)
@@ -54,6 +54,7 @@ export default async function Pay()
                     if(response.razorpay_signature)
                     {
                          alert(`Your Payment Signature is:, ${response.razorpay_signature}`)
+                         
                     }
                 },
                 theme:{

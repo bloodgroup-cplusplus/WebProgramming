@@ -4,12 +4,12 @@ import Image from "next/image"
 import logo from "../Images/Seal_of_Sikkim.png"
 import { useAuthContext } from "../context/AuthContext"
 import Pay from "../(razorpay)/pay"
+import { useRouter } from "next/navigation"
   
 function Page()  {
 
   const {user} = useAuthContext()
   const[resultPhoto,setResultPhoto] = React.useState(null)
-  console.log(user)
   const handleResultPhotoChange=(e)=>{
     setResultPhoto(null)
     let selected = e.target.files[0]
