@@ -4,9 +4,18 @@ import Image from "next/image"
 import logo from "../Images/Seal_of_Sikkim.png"
 import { useAuthContext } from "../context/AuthContext"
 import Pay from "../(razorpay)/pay"
-import { useRouter } from "next/navigation"
+import { usePathname,useSearchParams } from 'next/navigation';
+function useNavigationEvent()
+{
+  const pathname= usePathname()
+  const searchParams = useSearchParams()
+  const value=searchParams.toString()
+  const myArray = value.split("&")
+  console.log(myArray)
+}
   
 function Page()  {
+  useNavigationEvent()
 
   const {user} = useAuthContext()
   const[resultPhoto,setResultPhoto] = React.useState(null)
