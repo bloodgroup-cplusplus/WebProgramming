@@ -29,7 +29,7 @@ export default async function Pay()
                  error = res.error
                 return 
             }
-            const result = await fetch(process.env.REACT_APP_BACKEND_API_LINK,{method:'POST'}).then((t)=>
+            const result = await fetch("https://us-central1-demobackend-c456f.cloudfunctions.net/app/razorpay",{method:'POST'}).then((t)=>
                 t.json()
             )
        
@@ -37,7 +37,7 @@ export default async function Pay()
                 key:KEY_ID,
                 amount:result.amount,
                 currency:result.currency,
-                name:"Sikkim Teachers Association Membership Fee",
+                name:"Application Form",
                 order_id:result.id,
                 description:"Test Transaction",
                 handler:async function(response)
@@ -54,7 +54,6 @@ export default async function Pay()
                     if(response.razorpay_signature)
                     {
                          alert(`Your Payment Signature is:, ${response.razorpay_signature}`)
-                        await signup(email,password,phoneNumber,dateOfBirth,school,designation,district,bac,appointmentOrderNumber,gpfCpfNumber,retirementDate,displayName,formalPhoto,appointmentOrderPhoto)
                     }
                 },
                 theme:{
