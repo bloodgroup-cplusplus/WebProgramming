@@ -3,7 +3,7 @@ import {createUserWithEmailAndPassword, getAuth,updateProfile} from "firebase/au
 
 const auth = getAuth(firebase_app)
 
-export default async function signUp(email,password,first_name,last_name)
+export default async function signUp(email,password,first_name)
 {
     let result = null 
     let error = null;
@@ -12,7 +12,6 @@ export default async function signUp(email,password,first_name,last_name)
         result = await createUserWithEmailAndPassword(auth,email,password);
         updateProfile(auth.currentUser,{
             displayName:first_name,
-            lastName:last_name
         })
 
     }catch(e)

@@ -2,6 +2,18 @@ import React from 'react'
 
 function Page()  {
   return (
+    <>
+
+<section class="bg-white dark:bg-gray-900">
+    <div class="grid max-w-screen-xl px-11 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div class="mr-auto place-self-center lg:col-span-7">
+            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Recent Announcements</h1>
+            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Recent announcements from the higher education department</p>
+           
+        </div>
+                 
+    </div>
+</section>
 
 <ol class="relative border-l border-gray-200 dark:border-gray-700">                  
     <li class="mb-10 ml-4">
@@ -27,6 +39,7 @@ function Page()  {
         <p class="text-base font-normal text-gray-500 dark:text-gray-400">All software firms should submit their final bids and show their design documents and plans to the Technical Secretary of Higher Education </p>
     </li>
 </ol>
+</>
 
   )
 }
