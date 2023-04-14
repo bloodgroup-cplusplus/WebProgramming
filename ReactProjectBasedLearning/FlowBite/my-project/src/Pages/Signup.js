@@ -234,22 +234,22 @@ return (
 
                   <div>
                       <label for="phone" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Appointment Order Photo</label>
-                      <input type="file" name="formal_photo" id="photo" placeholder="Appointment Order Photo"  onChange={handleAppointmentOrderPhotoChange} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+                      <input type="file" name="formal_photo" id="photo" placeholder="Appointment Order Photo"  onChange={handleAppointmentOrderPhotoChange} className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
                   </div>
 
                   <div>
                       <label for="gpfcpf" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">GPF/CPF Number:</label>
-                      <input type="text" name="gpf_cpf" id="gpfcpf" placeholder="GPF/CPF Number"  onChange={(e)=>setGpfCpfNumber(e.target.value)} value={gpfCpfNumber} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+                      <input type="text" name="gpf_cpf" id="gpfcpf" placeholder="GPF/CPF Number"  onChange={(e)=>setGpfCpfNumber(e.target.value)} value={gpfCpfNumber} className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
                   </div>
 
                   <div>
                       <label for="phone" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Retirement Date:</label>
-                      <input type="date" name="date_of_birth" id="dob" placeholder="Retirement Date"  onChange={(e)=>setRetirementDate(e.target.value)} value={retirementDate} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+                      <input type="date" name="date_of_birth" id="dob" placeholder="Retirement Date"  onChange={(e)=>setRetirementDate(e.target.value)} value={retirementDate} className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
                   </div>
 
                   <div>
                       <label for="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                      <input type="password" name="password" id="password" placeholder="Create a password for your account" onChange={(e)=>setPassword(e.target.value)} value={password} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black" required/>
+                      <input type="password" name="password" id="password" placeholder="Create a password for your account" onChange={(e)=>setPassword(e.target.value)} value={password} className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black" required/>
                   </div>
 
                   <div class="flex items-start">
