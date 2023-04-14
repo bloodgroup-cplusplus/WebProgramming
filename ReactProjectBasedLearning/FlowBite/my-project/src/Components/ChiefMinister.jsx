@@ -1,5 +1,5 @@
 import React from 'react'
-import chief_minister from "./Images/chief_minister.png"
+import chief_minister from "./Images/chief_minister.webp"
 
 
 function ChiefMinister() {

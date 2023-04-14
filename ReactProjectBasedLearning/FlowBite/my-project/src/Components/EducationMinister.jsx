@@ -1,5 +1,5 @@
 import React from 'react'
-import education_minister from "./Images/education_minister.png"
+import education_minister from "./Images/education_minister.webp"
 
 const EducationMinister = () => {
   return (

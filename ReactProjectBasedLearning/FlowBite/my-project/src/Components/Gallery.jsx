@@ -1,16 +1,16 @@
 import React from 'react'
-import history from "./Images/history.png"
-import new_members from "./Images/new_members.png"
-import mala_press from "./Images/mala_press.png"
-import new_members_press from "./Images/new_members_press.png"
-import sanitization_drive from "./Images/sanitization_drive.png"
-import blood_donation from "./Images/blood_donation.png"
-import latest_photo from "./Images/latest_photo.png"
-import president_press from "./Images/president_press.png"
-import zoom from "./Images/zoom.png"
-import with_banner from "./Images/with_banner.png"
-import with_cm from "./Images/with_cm.png"
-import blood_again from "./Images/blood_again.png"
+import history from "./Images/history.webp"
+import new_members from "./Images/new_members.webp"
+import mala_press from "./Images/mala_press.webp"
+import new_members_press from "./Images/new_members_press.webp"
+import sanitization_drive from "./Images/sanitization_drive.webp"
+import blood_donation from "./Images/blood_donation.webp"
+import latest_photo from "./Images/latest_photo.webp"
+import president_press from "./Images/president_press.webp"
+import zoom from "./Images/zoom.webp"
+import with_banner from "./Images/with_banner.webp"
+import with_cm from "./Images/with_cm.webp"
+import blood_again from "./Images/blood_again.webp"
 
 function Gallery() {
   return (

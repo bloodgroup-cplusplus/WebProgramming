@@ -1,5 +1,5 @@
 import React from 'react'
-import sta_logo from "./Images/sta_logo.png"
+import sta_logo from "./Images/sta_logo.webp"
 
 function Footer() {
   return (

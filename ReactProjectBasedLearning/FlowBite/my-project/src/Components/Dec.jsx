@@ -1,10 +1,10 @@
 import React from 'react'
-import gangtok from "./Images/gangtok.png"
-import geyzing from "./Images/geyzing.png"
-import mangan from "./Images/mangan.png"
-import namchi from "./Images/namchi.png"
-import pakyong from "./Images/pakyong.png"
-import soreng from "./Images/soreng.png"
+import gangtok from "./Images/gangtok.webp"
+import geyzing from "./Images/geyzing.webp"
+import mangan from "./Images/mangan.webp"
+import namchi from "./Images/namchi.webp"
+import pakyong from "./Images/pakyong.webp"
+import soreng from "./Images/soreng.webp"
 
 function Dec() {
   return (
