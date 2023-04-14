@@ -11,8 +11,7 @@ import AddGrivience from "./Pages/AddGrivience";
 import Profile from "./Pages/Profile";
 import DemoProfile from "./Pages/DemoProfile";
 import Comments from "./Pages/Comments";
-
-
+import ResetPassword from "./Pages/ResetPassword";
 import {useAuthContext} from "./Hooks/useAuthContext"
 
 
@@ -34,6 +33,7 @@ function App() {
         <Route path = "/login" element = {user?<Profile/>:<Login/>}/>
         <Route path = "/signup" element = {user?<Profile/>:<Signup/>}/>
         <Route path = "/feed" element = {<Feed/>}/>
+        <Route path= "/reset" element = {user?<Profile/>:<ResetPassword/>}/>
       </Routes>
       <Footer/>
       </BrowserRouter>
