@@ -33,7 +33,7 @@ function Cec() {
           <div class="text-center text-gray-500 dark:text-gray-400">
               <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={president} alt="Kunzang Sherpa"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Kunzang Sherpa</a>
+                  <p>Kunzang Sherpa</p>
               </h3>
               <p className='font-extralight text-gray-500'>President CEC (STA)</p>
               <p className='font-extralight text-gray-500'>PRT Piuretar PS Soreng District</p>
@@ -42,7 +42,7 @@ function Cec() {
           <div class="text-center text-gray-500 dark:text-gray-400">
               <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={bhim_subba} alt="Bhim Subba"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Bhim Subba</a>
+                  <p>Bhim Subba</p>
               </h3>
               <p className='font-extralight text-gray-500'>Vice President-I CEC (STA)</p>
               <p className='font-extralight text-gray-500'>PRT Kitam SSS Namchi District</p>
@@ -50,7 +50,7 @@ function Cec() {
           <div class="text-center text-gray-500 dark:text-gray-400">
               <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={chewang_chopel_bhutia} alt="Chewang Chopel Bhutia"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Chewang Chopel Bhutia</a>
+                  <p>Chewang Chopel Bhutia</p>
               </h3>
               <p className='font-extralight text-gray-500'>Vice President-II CEC(STA)</p>
               <p className='font-extralight text-gray-500'>PRT/IC Sipthang PS Mangan District</p>
@@ -59,7 +59,7 @@ function Cec() {
           <div class="text-center text-gray-500 dark:text-gray-400">
               <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={tp_sharma} alt="TP Sharma"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">TP Sharma</a>
+                  <p>TP Sharma</p>
               </h3>
               <p className='font-extralight text-gray-500'>General Secretary CEC (STA)</p>
               <p className='font-extralight text-gray-500'>HM Lingding JHS Gangtok District</p>
@@ -68,7 +68,7 @@ function Cec() {
           <div class="text-center text-gray-500 dark:text-gray-400">
               <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={laxuman_sharma} alt="Laxuman Sharma"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Laxuman Sharma</a>
+                  <p>Laxuman Sharma</p>
               </h3>
               <p className='font-extralight text-gray-500'>Joint Secretary CEC(STA)</p>
               <p className='font-extralight text-gray-500'>GT Lingding JHS Gangtok District</p>
@@ -77,35 +77,35 @@ function Cec() {
           <div class="text-center text-gray-500 dark:text-gray-400">
               <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={dinesh} alt="Dinesh Bhattarai"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Dinesh Bhattarai</a>
+                  <p>Dinesh Bhattarai</p>
               </h3>
               <p className='font-extralight text-gray-500'>Publicity Secretary CEC(STA)</p>
               <p className='font-extralight text-gray-500'>PRT Taksang Kaizaley PS Pakyong District</p>
               </div>
               
-          <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={gyalchen_dadul_bhutia} alt="Gyalchen Dadul Bhutia"/>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Gyalchen Dadul Bhutia</a>
+          <div className="text-center text-gray-500 dark:text-gray-400">
+              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={gyalchen_dadul_bhutia} alt="Gyalchen Dadul Bhutia"/>
+              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <p>Gyalchen Dadul Bhutia</p>
               </h3>
               <p className='font-extralight text-gray-500'>Treasurer CEC (STA)</p>
               <p className='font-extralight text-gray-500'>PRT Doksing PS Gangtok District</p>
               
           </div>
-          <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={paul_lepcha} alt="Paul Lepcha"/>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Paul Lepcha</a>
+          <div className="text-center text-gray-500 dark:text-gray-400">
+              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={paul_lepcha} alt="Paul Lepcha"/>
+              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <p>Paul Lepcha</p>
               </h3>
               <p className='font-extralight text-gray-500'>Office Secretary CEC (STA)</p>
               <p className='font-extralight text-gray-500'>PGT Chujachen SSS Pakyong District</p>
               
           </div>
 
-         <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={phigu_tshering_bhutia} alt="Phigu Tshering Bhutia"/>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Phigu Tshering Bhutia</a>
+         <div className="text-center text-gray-500 dark:text-gray-400">
+              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={phigu_tshering_bhutia} alt="Phigu Tshering Bhutia"/>
+              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <p>Phigu Tshering Bhutia</p>
               </h3>
               <p className='font-extralight text-gray-500'>Literary Secretary CEC (STA)</p>
               <p className='font-extralight text-gray-500'>PRT Singpeng PS Geyzing District</p>
@@ -113,10 +113,10 @@ function Cec() {
           </div>
 
 
-         <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={diwash_pradhan} alt="Diwash Pradhan"/>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Diwash Pradhan</a>
+         <div className="text-center text-gray-500 dark:text-gray-400">
+              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={diwash_pradhan} alt="Diwash Pradhan"/>
+              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <p>Diwash Pradhan</p>
               </h3>
               <p className='font-extralight text-gray-500'>Assistant Treasurer CEC (STA)</p>
               <p className='font-extralight text-gray-500'>GT Namchi SSS Namchi District</p>
@@ -124,10 +124,10 @@ function Cec() {
           </div>
 
 
-          <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={antim_shanker} alt="Antim Shanker"/>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Antim Shanker</a>
+          <div className="text-center text-gray-500 dark:text-gray-400">
+              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={antim_shanker} alt="Antim Shanker"/>
+              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <p>Antim Shanker</p>
               </h3>
               <p className='font-extralight text-gray-500'>Member Secretary CEC (STA)</p>
               <p className='font-extralight text-gray-500'>HM Okhrey SS Soreng District</p>
@@ -135,10 +135,10 @@ function Cec() {
           </div>
 
 
-          <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={mala_zigdel_dorjee} alt="Mala Zigdel Dorjee"/>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Mala Zigdel Dorjee</a>
+          <div className="text-center text-gray-500 dark:text-gray-400">
+              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={mala_zigdel_dorjee} alt="Mala Zigdel Dorjee"/>
+              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <p>Mala Zigdel Dorjee</p>
               </h3>
               <p className='font-extralight text-gray-500'>Member Secretary CEC (STA)</p>
               <p className='font-extralight text-gray-500'>Principal Modern SSS Gangtok District</p>
@@ -147,10 +147,10 @@ function Cec() {
 
 
 
-          <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={padenla_bhutia} alt="Padenla Bhutia"/>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Padenla Bhutia</a>
+          <div className="text-center text-gray-500 dark:text-gray-400">
+              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={padenla_bhutia} alt="Padenla Bhutia"/>
+              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <p>Padenla Bhutia</p>
               </h3>
               <p className='font-extralight text-gray-500'>Member Secretary CEC (STA)</p>
               <p className='font-extralight text-gray-500'>PPT Perbing JHS Gangtok District</p>
@@ -158,10 +158,10 @@ function Cec() {
           </div>
 
 
-          <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={roshan_sharma} alt="Roshan Sharma"/>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Roshan Sharma</a>
+          <div className="text-center text-gray-500 dark:text-gray-400">
+              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={roshan_sharma} alt="Roshan Sharma"/>
+              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <p>Roshan Sharma</p>
               </h3>
               <p className='font-extralight text-gray-500'>Member Secretary CEC (STA)</p>
               <p className='font-extralight text-gray-500'>PGT Soreng SSS Soreng District</p>
@@ -170,10 +170,10 @@ function Cec() {
 
 
 
-          <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={shiv_kumar_chettri} alt="Shiv Kumar Chettri"/>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Shiv Kumar Chettri</a>
+          <div className="text-center text-gray-500 dark:text-gray-400">
+              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={shiv_kumar_chettri} alt="Shiv Kumar Chettri"/>
+              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <p>Shiv Kumar Chettri</p>
               </h3>
               <p className='font-extralight text-gray-500'>Member Secretary CEC (STA)</p>
               <p className='font-extralight text-gray-500'>GT Mangzing SS Namchi District</p>
@@ -182,10 +182,10 @@ function Cec() {
 
 
 
-          <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={dillip_sharma} alt="Dillip Sharma"/>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Dillip Sharma</a>
+          <div className="text-center text-gray-500 dark:text-gray-400">
+              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={dillip_sharma} alt="Dillip Sharma"/>
+              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <p>Dillip Sharma</p>
               </h3>
               <p className='font-extralight text-gray-500'>Member Secretary CEC (STA)</p>
               <p className='font-extralight text-gray-500'>PRT Tingchum JHS Mangan District</p>
@@ -195,10 +195,10 @@ function Cec() {
 
 
 
-          <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={deependra_gurung} alt="Deependra Gurung"/>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Deependra Gurung</a>
+          <div className="text-center text-gray-500 dark:text-gray-400">
+              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={deependra_gurung} alt="Deependra Gurung"/>
+              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <p>Deependra Gurung</p>
               </h3>
               <p className='font-extralight text-gray-500'>Member Secretary  CEC (STA)</p>
               <p className='font-extralight text-gray-500'>HM,Middle Shyari PS Gangtok District</p>
@@ -207,10 +207,10 @@ function Cec() {
 
 
 
-          <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={kailash_sharma} alt="Kailash Sharma"/>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Kailash Sharma</a>
+          <div className="text-center text-gray-500 dark:text-gray-400">
+              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={kailash_sharma} alt="Kailash Sharma"/>
+              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <p>Kailash Sharma</p>
               </h3>
               <p className='font-extralight text-gray-500'>Member Secretary CEC (STA)</p>
               <p className='font-extralight text-gray-500'>HM Pakyong JHS Pakyong District</p>
