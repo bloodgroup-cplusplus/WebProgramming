@@ -23,60 +23,60 @@ import kailash_sharma from "./Images/kailash_sharma.webp"
 function Cec() {
   return (
     <div>
-      <section class="bg-white dark:bg-gray-900">
-  <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
-      <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Central Executive Committee</h2>
-          <p class="font-extralight text-gray-500 sm:text-xl dark:text-gray-400">Following are the 18 core members of Sikkim Teachers Association </p>
+      <section className="bg-white dark:bg-gray-900">
+  <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+      <div className="mx-auto mb-8 max-w-screen-sm lg:mb-16">
+          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Central Executive Committee</h2>
+          <p className="font-extralight text-gray-500 sm:text-xl dark:text-gray-400">Following are the 18 core members of Sikkim Teachers Association </p>
       </div> 
-      <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={president} alt="Kunzang Sherpa"/>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+      <div className="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="text-center text-gray-500 dark:text-gray-400">
+              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={president} alt="Kunzang Sherpa"/>
+              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <p>Kunzang Sherpa</p>
               </h3>
               <p className='font-extralight text-gray-500'>President CEC (STA)</p>
               <p className='font-extralight text-gray-500'>PRT Piuretar PS Soreng District</p>
               
           </div>
-          <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={bhim_subba} alt="Bhim Subba"/>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <div className="text-center text-gray-500 dark:text-gray-400">
+              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={bhim_subba} alt="Bhim Subba"/>
+              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <p>Bhim Subba</p>
               </h3>
               <p className='font-extralight text-gray-500'>Vice President-I CEC (STA)</p>
               <p className='font-extralight text-gray-500'>PRT Kitam SSS Namchi District</p>
           </div>
-          <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={chewang_chopel_bhutia} alt="Chewang Chopel Bhutia"/>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <div className="text-center text-gray-500 dark:text-gray-400">
+              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={chewang_chopel_bhutia} alt="Chewang Chopel Bhutia"/>
+              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <p>Chewang Chopel Bhutia</p>
               </h3>
               <p className='font-extralight text-gray-500'>Vice President-II CEC(STA)</p>
               <p className='font-extralight text-gray-500'>PRT/IC Sipthang PS Mangan District</p>
               
           </div>
-          <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={tp_sharma} alt="TP Sharma"/>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <div className="text-center text-gray-500 dark:text-gray-400">
+              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={tp_sharma} alt="TP Sharma"/>
+              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <p>TP Sharma</p>
               </h3>
               <p className='font-extralight text-gray-500'>General Secretary CEC (STA)</p>
               <p className='font-extralight text-gray-500'>HM Lingding JHS Gangtok District</p>
               
           </div>
-          <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={laxuman_sharma} alt="Laxuman Sharma"/>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <div className="text-center text-gray-500 dark:text-gray-400">
+              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={laxuman_sharma} alt="Laxuman Sharma"/>
+              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <p>Laxuman Sharma</p>
               </h3>
               <p className='font-extralight text-gray-500'>Joint Secretary CEC(STA)</p>
               <p className='font-extralight text-gray-500'>GT Lingding JHS Gangtok District</p>
               
           </div>
-          <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src={dinesh} alt="Dinesh Bhattarai"/>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <div className="text-center text-gray-500 dark:text-gray-400">
+              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={dinesh} alt="Dinesh Bhattarai"/>
+              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <p>Dinesh Bhattarai</p>
               </h3>
               <p className='font-extralight text-gray-500'>Publicity Secretary CEC(STA)</p>
