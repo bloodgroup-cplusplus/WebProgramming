@@ -1,6 +1,6 @@
 import React from 'react'
-import sta_logo from "../Components/Images/sta_logo.png"
-import seal from "../Components/Images/seal.png"
+import sta_logo from "../Components/Images/sta_logo.webp"
+import seal from "../Components/Images/seal.webp"
 import { useAuthContext } from '../Hooks/useAuthContext'
 import {useFirestore} from "../Hooks/useFirestore"
 

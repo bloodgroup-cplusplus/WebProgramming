@@ -1,5 +1,5 @@
 import React from 'react'
-import sta_logo from "../Components/Images/sta_logo.png"
+import sta_logo from "../Components/Images/sta_logo.webp"
 
 const DemoProfile = () => {
   return (
