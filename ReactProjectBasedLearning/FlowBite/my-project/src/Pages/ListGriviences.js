@@ -58,7 +58,7 @@ return (
               <p className="mb-5 font-light text-gray-500 dark:text-gray-400">{grivience['grivience']}</p>
               <div className="flex justify-between items-center">
                   <div className="flex items-center space-x-4">
-                      <img className="w-7 h-7 rounded-full" src={user.photoURL} alt="user avatar" />
+                      {/*<img className="w-7 h-7 rounded-full" src={user.photoURL} alt="user avatar" />*/}
                       <span className="font-medium dark:text-white">
                         {grivience['name']}
                       </span>
