@@ -1,5 +1,5 @@
 import React from 'react'
-import additional_chief_secretary from "./Images/additional_chief_secretary.png"
+import additional_chief_secretary from "./Images/additional_chief_secretary.webp"
 
 const AdditionalChiefSecretary = () => {
   return (
