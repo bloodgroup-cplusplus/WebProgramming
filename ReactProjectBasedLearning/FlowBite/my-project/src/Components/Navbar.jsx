@@ -1,6 +1,6 @@
 import React from 'react'
 import {useState} from "react"
-import sta_logo from "./Images/sta_logo.png"
+import sta_logo from "./Images/sta_logo.webp"
 import {useAuthContext} from "../Hooks/useAuthContext"
 import {useLogout} from "../Hooks/useLogout"
 
