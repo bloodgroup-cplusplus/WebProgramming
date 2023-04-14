@@ -10,18 +10,18 @@ function Dec() {
   return (
 
     <>
-    <h2 class="text-center mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">District Executive Committee</h2>
-    <div class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2">
-    <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r dark:bg-gray-800 dark:border-gray-700">
-        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Gangtok District</h3>
-            <p class="my-4 font-thin">President: <strong>Chungden Bhutia</strong> (HM/IC Ranka Raigaon PS)</p>
-            <p class="my-4 font-thin">Vice President I : <strong>Bhagirath Giri</strong> (HM/IC Zingla PS)</p> 
-            <p class="my-4 font-thin">Vice President II : <strong>Leela Sharma</strong> (PGT Deorali SSS)</p>
-            <p class="my-4 font-thin">General Secretary : <strong>Bikash Sundas</strong>(GT SMGSSS Khamdong) </p>
-            <p class="my-4 font-thin">Joint Secretary : <strong>Rohit Gautam</strong> (PRT Samdong SSS)</p> 
-            <p class="my-4 font-thin">Treasurer I : <strong>Khem Lall Timsina</strong> (HM Ranka BAC)</p>
-            <p class="my-4 font-thin">Treasurer II: <strong>Pintso Bhutia</strong> (GT Sichey SSS)</p>
+    <h2 className="text-center mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">District Executive Committee</h2>
+    <div className="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2">
+    <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r dark:bg-gray-800 dark:border-gray-700">
+        <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Gangtok District</h3>
+            <p className="my-4 font-thin">President: <strong>Chungden Bhutia</strong> (HM/IC Ranka Raigaon PS)</p>
+            <p className="my-4 font-thin">Vice President I : <strong>Bhagirath Giri</strong> (HM/IC Zingla PS)</p> 
+            <p className="my-4 font-thin">Vice President II : <strong>Leela Sharma</strong> (PGT Deorali SSS)</p>
+            <p className="my-4 font-thin">General Secretary : <strong>Bikash Sundas</strong>(GT SMGSSS Khamdong) </p>
+            <p className="my-4 font-thin">Joint Secretary : <strong>Rohit Gautam</strong> (PRT Samdong SSS)</p> 
+            <p className="my-4 font-thin">Treasurer I : <strong>Khem Lall Timsina</strong> (HM Ranka BAC)</p>
+            <p className="my-4 font-thin">Treasurer II: <strong>Pintso Bhutia</strong> (GT Sichey SSS)</p>
             <p class="my-4 font-thin">Publicity Secretary I: <strong>Lekhnath Bhattarai</strong> (PGT Samdong SSS)</p>
             <p class="my-4 font-thin">Publicity Secretary II: <strong>Purna Bahadur Subba</strong> (HM Sakyong Chisopani JHS)</p>
             <p class="my-4 font-thin">Literary Secretary : <strong>Rakesh Pandey</strong> (GT Khambal JHS)</p>
