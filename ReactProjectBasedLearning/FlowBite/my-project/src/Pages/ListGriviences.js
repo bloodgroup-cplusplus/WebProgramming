@@ -44,7 +44,7 @@ return (
           <h2 className="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"> Recent Griviences</h2>
           <p className="font-light text-gray-500 sm:text-xl dark:text-gray-400"></p>
       </div> 
-      <div class="grid gap-8 lg:grid-col-2">
+      <div className="grid gap-8 lg:grid-col-2">
         {griviences.map((grivience)=>(
           <article className="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
               <div className="flex justify-between items-center mb-5 text-gray-500">
