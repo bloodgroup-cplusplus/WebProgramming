@@ -22,51 +22,51 @@ function Dec() {
             <p className="my-4 font-thin">Joint Secretary : <strong>Rohit Gautam</strong> (PRT Samdong SSS)</p> 
             <p className="my-4 font-thin">Treasurer I : <strong>Khem Lall Timsina</strong> (HM Ranka BAC)</p>
             <p className="my-4 font-thin">Treasurer II: <strong>Pintso Bhutia</strong> (GT Sichey SSS)</p>
-            <p class="my-4 font-thin">Publicity Secretary I: <strong>Lekhnath Bhattarai</strong> (PGT Samdong SSS)</p>
-            <p class="my-4 font-thin">Publicity Secretary II: <strong>Purna Bahadur Subba</strong> (HM Sakyong Chisopani JHS)</p>
-            <p class="my-4 font-thin">Literary Secretary : <strong>Rakesh Pandey</strong> (GT Khambal JHS)</p>
+            <p className="my-4 font-thin">Publicity Secretary I: <strong>Lekhnath Bhattarai</strong> (PGT Samdong SSS)</p>
+            <p className="my-4 font-thin">Publicity Secretary II: <strong>Purna Bahadur Subba</strong> (HM Sakyong Chisopani JHS)</p>
+            <p className="my-4 font-thin">Literary Secretary : <strong>Rakesh Pandey</strong> (GT Khambal JHS)</p>
         </blockquote>
-        <figcaption class="flex items-center justify-center space-x-3">
-            <img class="rounded-full w-9 h-9" src={gangtok} alt="profile picture"/>
-            <div class="space-y-0.5 font-medium dark:text-white text-left">
-                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Gangtok East Sikkim</div>
+        <figcaption className="flex items-center justify-center space-x-3">
+            <img className="rounded-full w-9 h-9" src={gangtok} alt="profile picture"/>
+            <div className="space-y-0.5 font-medium dark:text-white text-left">
+                <div className="text-sm font-light text-gray-500 dark:text-gray-400">Gangtok East Sikkim</div>
             </div>
         </figcaption>    
     </figure>
-    <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-tr-lg dark:bg-gray-800 dark:border-gray-700">
-        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Geyzing District</h3>
-            <p class="my-4 font-thin">President : <strong>Mahdadev Bhandari</strong> (PRT/HM,IC Sanku-PS)</p> 
-            <p class="my-4 font-thin">Vice President I : <strong>Sudip Subba</strong> (PRT/HM,IC Pewathang Tashiding PS)</p>
-            <p class="my-4 font-thin">Vice President II : <strong>Anita Rana</strong> (PRT Geyzing GSSSS)</p>
-            <p class="my-4 font-thin">General Secretary : <strong>Krishna Rai</strong> (PRT/HM,IC Lethang PS)</p> 
-            <p class="my-4 font-thin">Joint Secretary : <strong>Prerna Lepcha</strong> (HM,Lower Radhu PS)</p>
-            <p class="my-4 font-thin">Publicity Secretary I : <strong>Ram Kumar Sharma</strong> (GT Bermiok SS)</p>
-            <p class="my-4 font-thin">Publicity Secretary II :<strong> Serina Tamang</strong> (PRT,Najoor Berfok JHS)</p>
-            <p class="my-4 font-thin">Treasurer I : <strong>Tshering Zangpoo </strong>(PGT Pelling SSS)</p>
-            <p class="my-4 font-thin">Treasurer II :<strong> Lakpa Hissey Sherpa</strong> (HM Upper Martam PS)</p>
-            <p class= "my-4 font-thin">Office Secretary : <strong>Ravi Khaling</strong>(HM/IC Ramitay PS)</p>
+    <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-tr-lg dark:bg-gray-800 dark:border-gray-700">
+        <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Geyzing District</h3>
+            <p className="my-4 font-thin">President : <strong>Mahdadev Bhandari</strong> (PRT/HM,IC Sanku-PS)</p> 
+            <p className="my-4 font-thin">Vice President I : <strong>Sudip Subba</strong> (PRT/HM,IC Pewathang Tashiding PS)</p>
+            <p className="my-4 font-thin">Vice President II : <strong>Anita Rana</strong> (PRT Geyzing GSSSS)</p>
+            <p className="my-4 font-thin">General Secretary : <strong>Krishna Rai</strong> (PRT/HM,IC Lethang PS)</p> 
+            <p className="my-4 font-thin">Joint Secretary : <strong>Prerna Lepcha</strong> (HM,Lower Radhu PS)</p>
+            <p className="my-4 font-thin">Publicity Secretary I : <strong>Ram Kumar Sharma</strong> (GT Bermiok SS)</p>
+            <p className="my-4 font-thin">Publicity Secretary II :<strong> Serina Tamang</strong> (PRT,Najoor Berfok JHS)</p>
+            <p className="my-4 font-thin">Treasurer I : <strong>Tshering Zangpoo </strong>(PGT Pelling SSS)</p>
+            <p className="my-4 font-thin">Treasurer II :<strong> Lakpa Hissey Sherpa</strong> (HM Upper Martam PS)</p>
+            <p className= "my-4 font-thin">Office Secretary : <strong>Ravi Khaling</strong>(HM/IC Ramitay PS)</p>
         </blockquote>
-        <figcaption class="flex items-center justify-center space-x-3">
-            <img class="rounded-full w-9 h-9" src={geyzing} alt="profile picture"/>
-            <div class="space-y-0.5 font-medium dark:text-white text-left">
-                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Geyzing West Sikkim</div>
+        <figcaption className="flex items-center justify-center space-x-3">
+            <img className="rounded-full w-9 h-9" src={geyzing} alt="profile picture"/>
+            <div className="space-y-0.5 font-medium dark:text-white text-left">
+                <div className="text-sm font-light text-gray-500 dark:text-gray-400">Geyzing West Sikkim</div>
             </div>
         </figcaption>    
     </figure>
-    <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-bl-lg md:border-b-0 md:border-r dark:bg-gray-800 dark:border-gray-700">
-        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Mangan District</h3>
-            <p class="my-4 font-thin">President :<strong> Sonam Tamang </strong>(PRT Naday Monastic PS)</p> 
-            <p class="my-4 font-thin">Vice President :<strong> Dawgyal Bhutia</strong> (BLT Tingchim SS)</p>
-            <p class="my-4 font-thin">General Secretary : <strong>Jay Jay Lepcha</strong> (HM JHS Lingthem)</p>
-            <p class="my-4 font-thin">Joint Secretary I :<strong> Mingma Sherpa</strong> (HM GPS Lum)</p> 
-            <p class="my-4 font-thin">Joint Secretary II : <strong>Thupden Lachungpa</strong> (GT Swayem JHS)</p>
-            <p class="my-4 font-thin">Treasurer : <strong>Pema Ongyal Bhutia</strong> (PRT Phodong PS)</p>
-            <p class="my-4 font-thin">Publicity Secretary I : <strong>Samuel Samser</strong> (PPT Theng PS)</p>
-            <p class="my-4 font-thin">Publicity Secretary II :<strong> Peutook Kazi</strong> (PRT Manul SS)</p>
-            <p class="my-4 font-thin">Literary Secretary : <strong>Lhaden Lepcha</strong> (PRT Malling PS)</p>
-            <p class= "my-4 font-thin">Office Secretary : <strong>Den Tshering Lepcha</strong> (PRT Phensong PS)</p>
+    <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-bl-lg md:border-b-0 md:border-r dark:bg-gray-800 dark:border-gray-700">
+        <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Mangan District</h3>
+            <p className="my-4 font-thin">President :<strong> Sonam Tamang </strong>(PRT Naday Monastic PS)</p> 
+            <p className="my-4 font-thin">Vice President :<strong> Dawgyal Bhutia</strong> (BLT Tingchim SS)</p>
+            <p className="my-4 font-thin">General Secretary : <strong>Jay Jay Lepcha</strong> (HM JHS Lingthem)</p>
+            <p className="my-4 font-thin">Joint Secretary I :<strong> Mingma Sherpa</strong> (HM GPS Lum)</p> 
+            <p className="my-4 font-thin">Joint Secretary II : <strong>Thupden Lachungpa</strong> (GT Swayem JHS)</p>
+            <p className="my-4 font-thin">Treasurer : <strong>Pema Ongyal Bhutia</strong> (PRT Phodong PS)</p>
+            <p className="my-4 font-thin">Publicity Secretary I : <strong>Samuel Samser</strong> (PPT Theng PS)</p>
+            <p className="my-4 font-thin">Publicity Secretary II :<strong> Peutook Kazi</strong> (PRT Manul SS)</p>
+            <p className="my-4 font-thin">Literary Secretary : <strong>Lhaden Lepcha</strong> (PRT Malling PS)</p>
+            <p className= "my-4 font-thin">Office Secretary : <strong>Den Tshering Lepcha</strong> (PRT Phensong PS)</p>
         </blockquote>
         <figcaption class="flex items-center justify-center space-x-3">
             <img class="rounded-full w-9 h-9" src={mangan} alt="profile picture"/>
