@@ -1,3 +1,4 @@
+'use client'
 import firebase_app from "../config";
 import { useState } from "react";
 import {getFirestore, doc, setDoc,collection} from "firebase/firestore"
@@ -11,16 +12,17 @@ export default async function addData(name,college_name,department_name,email,re
 {
     //const studentCollection = collection(db,college_name,department_name)
     //const studentDoc = doc(studentCollection,email)
-    const[resultImageURL,setResultImageURL] = useState("")
+    alert("its here")
+    alert("its here")
     const resultPhotouploadPath = `${college_name}/${department_name}/${email}/${resultPhoto.name}`
     const resultImageRef = ref(storage,resultPhotouploadPath)
+    alert("its okay upto here")
     await uploadBytes(resultImageRef,resultPhoto.name).then((snapshot)=>{
-        console.log("Result order photo uploaded")
+        alert("Result order photo uploaded")
     })
     getDownloadURL(resultImageRef).then(url=>{
-        setResultImageURL(url)
     }).catch(error=>{
-        console.log(error)
+        alert(error)
     })
 
     let result = null; 
@@ -30,7 +32,6 @@ export default async function addData(name,college_name,department_name,email,re
         email,
         college_name,
         department_name,
-        resultImageURL
     }
     try{
          await setDoc(doc(db,college_name,department_name),data);
