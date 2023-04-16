@@ -5,6 +5,8 @@ import logo from "../Images/Seal_of_Sikkim.png"
 import { useAuthContext } from "../(context)/AuthContext"
 import Pay from "../(razorpay)/pay"
 import { usePathname,useSearchParams } from 'next/navigation';
+import {useRouter} from "next/navigation"
+
 function useNavigationEvent()
 {
   const pathname= usePathname()
@@ -17,9 +19,11 @@ function useNavigationEvent()
 }
   
 function Page()  {
-  const {college_name,course_name} = useNavigationEvent()
-
+  
+  const router = useRouter()
   const {user} = useAuthContext()
+  
+  const{college_name,course_name} = useNavigationEvent()
   const[resultPhoto,setResultPhoto] = React.useState(null)
   const handleResultPhotoChange=(e)=>{
     setResultPhoto(null)
@@ -30,7 +34,7 @@ function Page()  {
   const handleForm = async (event) => {
     event.preventDefault()
 
-    const { result, error } = await Pay()
+    const { result, error } = await Pay(college_name,course_name)
 
     if (error) {
         return console.log(error)
@@ -93,6 +97,9 @@ function Page()  {
   else
   {
 
+      
+       return  router.push("/signin")
+      
 
   }
    

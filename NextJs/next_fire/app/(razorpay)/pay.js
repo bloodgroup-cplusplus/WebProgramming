@@ -1,5 +1,6 @@
 import { KEY_ID } from "./config"
 import React from "react"
+import addData from "../(firebase)/firestore/addData";
 
 async function loadScript(src)
 {
@@ -16,7 +17,7 @@ async function loadScript(src)
     })
 }
 
-export default async function Pay()
+export default async function Pay(college_name,department_name)
 {
      let result = null 
      let error = null
@@ -54,6 +55,7 @@ export default async function Pay()
                     if(response.razorpay_signature)
                     {
                          alert(`Your Payment Signature is:, ${response.razorpay_signature}`)
+                         addData(college_name,department_name)
                          
                     }
                 },
