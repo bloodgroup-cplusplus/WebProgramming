@@ -17,7 +17,7 @@ async function loadScript(src)
     })
 }
 
-export default async function Pay(college_name,department_name,email)
+export default async function Pay(name,college_name,department_name,email)
 {
      let result = null 
      let error = null
@@ -55,7 +55,7 @@ export default async function Pay(college_name,department_name,email)
                     if(response.razorpay_signature)
                     {
                          alert(`Your Payment Signature is:, ${response.razorpay_signature}`)
-                         addData(college_name,department_name,email)
+                         addData(name,college_name,department_name,email)
                          
                     }
                 },

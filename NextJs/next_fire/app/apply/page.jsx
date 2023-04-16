@@ -21,8 +21,7 @@ function useNavigationEvent()
 function Page()  {
   
   const router = useRouter()
-  const {user} = useAuthContext()
-  
+  const {user} = useAuthContext() 
   const{college_name,course_name} = useNavigationEvent()
   const[resultPhoto,setResultPhoto] = React.useState(null)
   const handleResultPhotoChange=(e)=>{
@@ -34,7 +33,7 @@ function Page()  {
   const handleForm = async (event) => {
     event.preventDefault()
 
-    const { result, error } = await Pay(college_name,course_name,user.email)
+    const { result, error } = await Pay(user.displayName,college_name,course_name,user.email)
 
     if (error) {
         return console.log(error)

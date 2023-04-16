@@ -12,8 +12,11 @@ import Link from 'next/link'
         <Image className="w-full dark:hidden" src={burtuk} alt="Nar Bahadur College Image" width={400} height={400}/>
     <div className="mt-4 md:mt-0">
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Sikkim Government College Burtuk </h2>
-        <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
-        To fulfill the dreams and aspirations of higher education in young minds by inculcating knowledge and skills for future education and employment.
+        <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400"> 
+Sikkim Govt College, Burtuk
+
+Sikkim Government College Burtuk was established in 2012 as the second campus of Sikkim Government College Tadong to meet the increasing demand for higher education in the state . It acquired its own separate identity as an independent college when it became affiliated to Sikkim University in August 2014. This Institution had a very humble beginning from a few rooms in the DIET building with only 179 students and 8 teachers. Today Sikkim Government College Burtuk has its own independent sprawling campus spread over 3.4 hectares of land at the Old India Press complex in Balwakhani. The current enrolment is of 1548 students. In the tenth years of its existence the student strength of the college has increased from a mere 179 to 1548.
+        
 
 </p>
 
