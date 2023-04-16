@@ -1,6 +1,6 @@
 'use client'
 import './globals.css'
-import { AuthContextProvider } from './context/AuthContext'
+import { AuthContextProvider } from './(context)/AuthContext'
 import Link from 'next/link'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'

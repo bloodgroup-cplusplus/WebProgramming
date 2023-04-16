@@ -4,7 +4,7 @@ import signUp from "../(firebase)/auth/signup";
 import logo from "../Images/Seal_of_Sikkim.png"
 import { useRouter } from 'next/navigation'
 import Image from "next/image";
-import {useAuthContext} from "../context/AuthContext"
+import {useAuthContext} from "../(context)/AuthContext"
 import Link from "next/link"
 
 function Page() {

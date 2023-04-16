@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Stripe Payment Form</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <style>
+      /* Add your own custom styles here */
+    </style>
+  </head>
+  <body>
+    <h1>My Stripe Payment Form</h1>
+    <form>
+      <label>
+        Card Number
+        <input type="text" name="cardNumber" id="cardNumber">
+      </label>
+      <label>
+        Expiry Date
+        <input type="text" name="expiryDate" id="expiryDate">
+      </label>
+      <label>
+        CVC
+        <input type="text" name="cvc" id="cvc">
+      </label>
+      <label>
+        Name on Card
+        <input type="text" name="nameOnCard" id="nameOnCard">
+      </label>
+      <label>
+        Email Address
+        <input type="email" name="emailAddress" id="emailAddress">
+      </label>
+      <button id="paymentRequestButton">
+        Pay with Apple Pay or Google Pay
+      </button>
+      <button type="submit" id="submitPaymentButton">
+        Pay with Card
+      </button>
+    </form>
+    <script>
+      var stripe = Stripe('YOUR_PUBLISHABLE_KEY');
+      var elements = stripe.elements();
+
+      // Create a Payment Request Button
+      var paymentRequest = stripe.paymentRequest({
+        country: 'US',
+        currency: 'usd',
+        total: {
+          label: 'Total',
+          amount: 1000, // Amount in cents
+        },
+        requestPayerName: true,
+        requestPayerEmail: true,
+      });
+
+      // Create a Payment Request Button Element
+      var paymentRequestButton = elements.create('paymentRequestButton', {
+        paymentRequest: paymentRequest,
+      });
+
+      // Mount the Payment Request Button Element
+      paymentRequestButton.mount('#paymentRequestButton');
+
+      // Handle the Payment Request Event
+      paymentRequest.on('paymentmethod', function(ev) {
+        // Confirm the Payment
+        stripe.confirmCardPayment('{PAYMENT_INTENT_CLIENT_SECRET}', {
+          payment_method: ev.paymentMethod.id,
+        }).then(function(result) {
+          if (result.error) {
+            // Display error message to the user
+            console.error(result.error.message);
+          } else {
+            // Display success message to the user
+            console.log(result.paymentIntent);
+          }
+        });
+      });
+
+      // Handle the Submit Payment Event
+      var submitPaymentButton = document.getElementById('submitPaymentButton');
+      submitPaymentButton.addEventListener('click', function(ev) {
+        ev.preventDefault();
+
+        // Create a Payment Method
+        stripe.createPaymentMethod('card', {
+          card: {
+            number: document.getElementById('cardNumber').value,
+            exp_month: document.getElementById('expiryDate').value.split('/')[0],
+            exp_year: document.getElementById('expiryDate').value.split('/')[1],
+            cvc: document.getElementById('cvc').value,
+            name: document.getElementById('nameOnCard').value,
+          },
+          billing_details: {
+            email: document.getElementById('emailAddress').value,
+          },
+        }).then(function(result) {
+          if (result.error) {
+            // Display error message to the user
+            console.error(result.error.message);
+          } else {
+            // Confirm the Payment
+            stripe.confirmCardPayment('{PAYMENT_INTENT_CLIENT_SECRET}', {
+              payment_method: result.paymentMethod.id,
+            }).then
