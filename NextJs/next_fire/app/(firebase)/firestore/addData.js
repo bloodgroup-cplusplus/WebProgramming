@@ -10,17 +10,14 @@ const storage =getStorage(firebase_app)
 
 export default async function addData(name,college_name,department_name,email,resultPhoto)
 {
-    //const studentCollection = collection(db,college_name,department_name)
-    //const studentDoc = doc(studentCollection,email)
-    alert("its here")
-    alert("its here")
+    let result_url = null;
     const resultPhotouploadPath = `${college_name}/${department_name}/${email}/${resultPhoto.name}`
     const resultImageRef = ref(storage,resultPhotouploadPath)
-    alert("its okay upto here")
     await uploadBytes(resultImageRef,resultPhoto.name).then((snapshot)=>{
-        alert("Result order photo uploaded")
+        alert("Result  photo uploaded")
     })
     getDownloadURL(resultImageRef).then(url=>{
+        result_url=url
     }).catch(error=>{
         alert(error)
     })
