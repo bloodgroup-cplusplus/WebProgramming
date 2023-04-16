@@ -1,0 +1,107 @@
+[debug] [2023-04-15T17:53:46.285Z] ----------------------------------------------------------------------
+[debug] [2023-04-15T17:53:46.285Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2023-04-15T17:53:46.286Z] CLI Version:   11.23.1
+[debug] [2023-04-15T17:53:46.286Z] Platform:      darwin
+[debug] [2023-04-15T17:53:46.286Z] Node Version:  v18.12.1
+[debug] [2023-04-15T17:53:46.286Z] Time:          Sat Apr 15 2023 23:23:46 GMT+0530 (India Standard Time)
+[debug] [2023-04-15T17:53:46.286Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-15T17:53:46.317Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-15T17:53:46.317Z] > authorizing via signed-in user (clrsclrsclrsclrsclrs@gmail.com)
+[debug] [2023-04-15T17:53:46.317Z] [iam] checking project nextfire-ba0e1 for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2023-04-15T17:53:46.318Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextfire-ba0e1:testIamPermissions [none]
+[debug] [2023-04-15T17:53:46.318Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextfire-ba0e1:testIamPermissions x-goog-quota-user=projects/nextfire-ba0e1
+[debug] [2023-04-15T17:53:46.318Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextfire-ba0e1:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-04-15T17:53:48.037Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextfire-ba0e1:testIamPermissions 200
+[debug] [2023-04-15T17:53:48.037Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextfire-ba0e1:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-04-15T17:53:48.038Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextfire-ba0e1 [none]
+[debug] [2023-04-15T17:53:48.800Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextfire-ba0e1 200
+[debug] [2023-04-15T17:53:48.800Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextfire-ba0e1 {"projectId":"nextfire-ba0e1","projectNumber":"833962044930","displayName":"nextfire","name":"projects/nextfire-ba0e1","resources":{"hostingSite":"nextfire-ba0e1","storageBucket":"nextfire-ba0e1.appspot.com","locationId":"asia-southeast2"},"state":"ACTIVE","etag":"1_3f546bee-a9c7-438c-bbea-c349b74e94ec"}
+[debug] [2023-04-15T17:53:49.423Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextfire-ba0e1/sites pageToken=&pageSize=10
+[debug] [2023-04-15T17:53:51.542Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextfire-ba0e1/sites 200
+[debug] [2023-04-15T17:53:51.542Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextfire-ba0e1/sites {"sites":[{"name":"projects/nextfire-ba0e1/sites/nextfire-ba0e1","defaultUrl":"https://nextfire-ba0e1.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-04-15T17:53:51.543Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextfire-ba0e1/sites 
+[debug] [2023-04-15T17:53:52.806Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextfire-ba0e1/sites 200
+[debug] [2023-04-15T17:53:52.806Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextfire-ba0e1/sites {"sites":[{"name":"projects/nextfire-ba0e1/sites/nextfire-ba0e1","defaultUrl":"https://nextfire-ba0e1.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-04-15T17:53:52.807Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextfire-ba0e1/webApps/-/config [none]
+[debug] [2023-04-15T17:53:54.410Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextfire-ba0e1/webApps/-/config 200
+[debug] [2023-04-15T17:53:54.410Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextfire-ba0e1/webApps/-/config {"projectId":"nextfire-ba0e1","appId":"1:833962044930:web:c1a0b3a00d1a24eaedc11b","storageBucket":"nextfire-ba0e1.appspot.com","locationId":"asia-southeast2","apiKey":"AIzaSyD2RzMdC3frhvsmd9XFKKkz8Tx0tnp91HQ","authDomain":"nextfire-ba0e1.firebaseapp.com","messagingSenderId":"833962044930"}
+[debug] [2023-04-15T17:54:02.957Z] TypeError: Cannot read properties of null (reading 'endsWith')
+    at ɵcodegenPublicDirectory (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:206:56)
+    at async prepareFrameworks (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/index.js:256:13)
+    at async deploy (/usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-04-15T17:55:59.812Z] ----------------------------------------------------------------------
+[debug] [2023-04-15T17:55:59.812Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2023-04-15T17:55:59.813Z] CLI Version:   11.23.1
+[debug] [2023-04-15T17:55:59.813Z] Platform:      darwin
+[debug] [2023-04-15T17:55:59.813Z] Node Version:  v18.12.1
+[debug] [2023-04-15T17:55:59.813Z] Time:          Sat Apr 15 2023 23:25:59 GMT+0530 (India Standard Time)
+[debug] [2023-04-15T17:55:59.813Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-15T17:55:59.845Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-15T17:55:59.845Z] > authorizing via signed-in user (clrsclrsclrsclrsclrs@gmail.com)
+[debug] [2023-04-15T17:55:59.845Z] [iam] checking project nextfire-ba0e1 for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2023-04-15T17:55:59.846Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextfire-ba0e1:testIamPermissions [none]
+[debug] [2023-04-15T17:55:59.846Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextfire-ba0e1:testIamPermissions x-goog-quota-user=projects/nextfire-ba0e1
+[debug] [2023-04-15T17:55:59.846Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextfire-ba0e1:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-04-15T17:56:02.384Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextfire-ba0e1:testIamPermissions 200
+[debug] [2023-04-15T17:56:02.384Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextfire-ba0e1:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-04-15T17:56:02.385Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextfire-ba0e1 [none]
+[debug] [2023-04-15T17:56:07.088Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextfire-ba0e1 200
+[debug] [2023-04-15T17:56:07.089Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextfire-ba0e1 {"projectId":"nextfire-ba0e1","projectNumber":"833962044930","displayName":"nextfire","name":"projects/nextfire-ba0e1","resources":{"hostingSite":"nextfire-ba0e1","storageBucket":"nextfire-ba0e1.appspot.com","locationId":"asia-southeast2"},"state":"ACTIVE","etag":"1_3f546bee-a9c7-438c-bbea-c349b74e94ec"}
+[debug] [2023-04-15T17:56:07.719Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextfire-ba0e1/sites pageToken=&pageSize=10
+[debug] [2023-04-15T17:56:09.977Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextfire-ba0e1/sites 200
+[debug] [2023-04-15T17:56:09.977Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextfire-ba0e1/sites {"sites":[{"name":"projects/nextfire-ba0e1/sites/nextfire-ba0e1","defaultUrl":"https://nextfire-ba0e1.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-04-15T17:56:09.978Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextfire-ba0e1/sites 
+[debug] [2023-04-15T17:56:12.640Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextfire-ba0e1/sites 200
+[debug] [2023-04-15T17:56:12.640Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextfire-ba0e1/sites {"sites":[{"name":"projects/nextfire-ba0e1/sites/nextfire-ba0e1","defaultUrl":"https://nextfire-ba0e1.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-04-15T17:56:12.641Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextfire-ba0e1/webApps/-/config [none]
+[debug] [2023-04-15T17:56:15.174Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextfire-ba0e1/webApps/-/config 200
+[debug] [2023-04-15T17:56:15.175Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextfire-ba0e1/webApps/-/config {"projectId":"nextfire-ba0e1","appId":"1:833962044930:web:c1a0b3a00d1a24eaedc11b","storageBucket":"nextfire-ba0e1.appspot.com","locationId":"asia-southeast2","apiKey":"AIzaSyD2RzMdC3frhvsmd9XFKKkz8Tx0tnp91HQ","authDomain":"nextfire-ba0e1.firebaseapp.com","messagingSenderId":"833962044930"}
+[debug] [2023-04-15T17:56:26.235Z] TypeError: Cannot read properties of null (reading 'endsWith')
+    at ɵcodegenPublicDirectory (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:206:56)
+    at async prepareFrameworks (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/index.js:256:13)
+    at async deploy (/usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-04-16T04:13:16.954Z] ----------------------------------------------------------------------
+[debug] [2023-04-16T04:13:16.955Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2023-04-16T04:13:16.955Z] CLI Version:   11.23.1
+[debug] [2023-04-16T04:13:16.955Z] Platform:      darwin
+[debug] [2023-04-16T04:13:16.955Z] Node Version:  v18.12.1
+[debug] [2023-04-16T04:13:16.958Z] Time:          Sun Apr 16 2023 09:43:16 GMT+0530 (India Standard Time)
+[debug] [2023-04-16T04:13:16.958Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-16T04:13:16.990Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-16T04:13:16.990Z] > authorizing via signed-in user (clrsclrsclrsclrsclrs@gmail.com)
+[debug] [2023-04-16T04:13:16.990Z] [iam] checking project nextfire-ba0e1 for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2023-04-16T04:13:16.991Z] > refreshing access token with scopes: []
+[debug] [2023-04-16T04:13:16.992Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-04-16T04:13:16.992Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-04-16T04:13:17.558Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-04-16T04:13:17.559Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-04-16T04:13:17.605Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextfire-ba0e1:testIamPermissions [none]
+[debug] [2023-04-16T04:13:17.606Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextfire-ba0e1:testIamPermissions x-goog-quota-user=projects/nextfire-ba0e1
+[debug] [2023-04-16T04:13:17.606Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextfire-ba0e1:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-04-16T04:13:19.463Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextfire-ba0e1:testIamPermissions 200
+[debug] [2023-04-16T04:13:19.464Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextfire-ba0e1:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-04-16T04:13:19.466Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextfire-ba0e1 [none]
+[debug] [2023-04-16T04:13:20.488Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextfire-ba0e1 200
+[debug] [2023-04-16T04:13:20.488Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextfire-ba0e1 {"projectId":"nextfire-ba0e1","projectNumber":"833962044930","displayName":"nextfire","name":"projects/nextfire-ba0e1","resources":{"hostingSite":"nextfire-ba0e1","storageBucket":"nextfire-ba0e1.appspot.com","locationId":"asia-southeast2"},"state":"ACTIVE","etag":"1_3f546bee-a9c7-438c-bbea-c349b74e94ec"}
+[debug] [2023-04-16T04:13:21.215Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextfire-ba0e1/sites pageToken=&pageSize=10
+[debug] [2023-04-16T04:13:23.068Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextfire-ba0e1/sites 200
+[debug] [2023-04-16T04:13:23.068Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextfire-ba0e1/sites {"sites":[{"name":"projects/nextfire-ba0e1/sites/nextfire-ba0e1","defaultUrl":"https://nextfire-ba0e1.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-04-16T04:13:23.070Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextfire-ba0e1/sites 
+[debug] [2023-04-16T04:13:24.378Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextfire-ba0e1/sites 200
+[debug] [2023-04-16T04:13:24.378Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextfire-ba0e1/sites {"sites":[{"name":"projects/nextfire-ba0e1/sites/nextfire-ba0e1","defaultUrl":"https://nextfire-ba0e1.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-04-16T04:13:24.379Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextfire-ba0e1/webApps/-/config [none]
+[debug] [2023-04-16T04:13:26.560Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextfire-ba0e1/webApps/-/config 200
+[debug] [2023-04-16T04:13:26.561Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextfire-ba0e1/webApps/-/config {"projectId":"nextfire-ba0e1","appId":"1:833962044930:web:c1a0b3a00d1a24eaedc11b","storageBucket":"nextfire-ba0e1.appspot.com","locationId":"asia-southeast2","apiKey":"AIzaSyD2RzMdC3frhvsmd9XFKKkz8Tx0tnp91HQ","authDomain":"nextfire-ba0e1.firebaseapp.com","messagingSenderId":"833962044930"}
+[debug] [2023-04-16T04:13:34.186Z] TypeError: Cannot read properties of null (reading 'endsWith')
+    at ɵcodegenPublicDirectory (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:206:56)
+    at async prepareFrameworks (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/index.js:256:13)
+    at async deploy (/usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.

@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import signUp from "../firebase/auth/signup";
+import signUp from "../(firebase)/auth/signup";
 import logo from "../Images/Seal_of_Sikkim.png"
 import { useRouter } from 'next/navigation'
 import Image from "next/image";

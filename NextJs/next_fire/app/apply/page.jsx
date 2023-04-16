@@ -11,11 +11,13 @@ function useNavigationEvent()
   const searchParams = useSearchParams()
   const value=searchParams.toString()
   const myArray = value.split("&")
-  console.log(myArray)
+  const college_name = myArray[0].substring(myArray[0].indexOf("=")+1)
+  const course_name = myArray[1].substring(myArray[1].indexOf("=")+1)
+  return {college_name,course_name}
 }
   
 function Page()  {
-  useNavigationEvent()
+  const {college_name,course_name} = useNavigationEvent()
 
   const {user} = useAuthContext()
   const[resultPhoto,setResultPhoto] = React.useState(null)
@@ -50,7 +52,7 @@ function Page()  {
               <form className="space-y-6 md:space-y-6" onSubmit={handleForm}>
                   <div>
                       <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                      <input type="email" name="email" id="email" value={user.email} placeholder={user.email} className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required=""/>
+                      <input type="email" name="email" id="email" value={user.email} placeholder={user.email} className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required=""/>
                   </div>
 
                   <div>
@@ -60,12 +62,12 @@ function Page()  {
                   
                   <div>
                     <label for = "text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">College</label>
-                    <input type = "text" name="college_name" id="name" value ={"Sikkim Government College Namchi"} placeholder={"Sikkim Government College Namchi"} className="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 "/>
+                    <input type = "text" name="college_name" id="name" value ={college_name}  className="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 "/>
                   </div>
 
                   <div>
                     <label for = "text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Course Applied</label>
-                    <input type = "text" name = "course" id="name" value={"Economics"} placeholder={"Bacholers in Arts Economics"} className = "bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600"/>
+                    <input type = "text" name = "course" id="name" value={course_name} placeholder={"Bacholers in Arts Economics"} className = "bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600"/>
                   </div>
 
                   <div>

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import logo from "../Images/Seal_of_Sikkim.png"
 import Link from 'next/link'
 import {useAuthContext} from "../context/AuthContext"
-import  SignOut  from "../firebase/auth/signout" 
+import  SignOut  from "../(firebase)/auth/signout" 
 import { useRouter } from 'next/navigation'
 
 const Navbar = () => {
