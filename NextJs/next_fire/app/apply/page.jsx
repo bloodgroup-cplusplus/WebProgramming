@@ -33,7 +33,7 @@ function Page()  {
   const handleForm = async (event) => {
     event.preventDefault()
 
-    const { result, error } = await Pay(user.displayName,college_name,course_name,user.email)
+    const { result, error } = await Pay(user.displayName,college_name,course_name,user.email,resultPhoto)
 
     if (error) {
         return console.log(error)
