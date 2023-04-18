@@ -41,6 +41,7 @@
 .app__navbar-links li {
     margin: 0 1rem;
     cursor: pointer;
+    color:white;
 }
 
 .app__navbar-links li:hover {
