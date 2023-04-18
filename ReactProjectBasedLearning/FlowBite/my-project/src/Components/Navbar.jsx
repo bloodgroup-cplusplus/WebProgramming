@@ -106,6 +106,42 @@ import './Navbar.css'
       )*/}
 
 
+      if(user)
+      {
+        return(
+          <nav className='app__navbar'>
+            <div className='app__navbar-logo'>
+              <img src={sta_logo} alt="app__logo"/>
+            </div>
+            <ul className='app__navbar-links'>
+              <li><a href="/">Profile</a></li>
+              <li><a href="/griviences">Griviences</a></li>
+              <li><a href="/addgrivience">Add Grivience</a></li>
+              <li><a href = "/feed">Feed</a></li>
+              <li><a href = "https://pages.razorpay.com/pl_KlizCHgO1U1j6y/view" target={"_blank"}></a></li>
+              <li onClick={logout}>Logout</li>
+            </ul>
+
+
+           <div className="app__navbar-smallscreen">
+        <GiHamburgerMenu color="#fff" fontSize={27} onClick={() => setToggleMenu(true)} />
+        {toggleMenu &&  (
+          <div className="app__navbar-smallscreen_overlay flex__center slide-bottom">
+            <HiOutlineXMark fontSize={27} className="overlay__close" onClick={() => setToggleMenu(false)} />
+            <ul className="app__navbar-smallscreen_links">
+              <li ><a href="/" onClick={() => setToggleMenu(false)}>Profile</a></li>
+              <li><a href="/griviences" onClick={() => setToggleMenu(false)}>Griviences</a></li>
+              <li><a href="/addgrivience" onClick={() => setToggleMenu(false)}>Add Grivience</a></li>
+              <li><a href="/feed" onClick={() => setToggleMenu(false)}>Feed</a></li>
+              <li><a href="https://pages.razorpay.com/pl_KlizCHgO1U1j6y/view" target={"_blank"}>Donate</a></li>
+              <li onClick ={logout}>Logout</li>
+            </ul>
+          </div>
+        )}
+      </div>
+          </nav>
+        )
+      }
 
 
 
@@ -114,6 +150,8 @@ import './Navbar.css'
 
 
 
+      if(!user)
+      {
 
 
       return (
@@ -122,31 +160,31 @@ import './Navbar.css'
         <img src={sta_logo} alt="app__logo" />
       </div>
       <ul className="app__navbar-links">
-        <li className="p__opensans"><a href="/">Home</a></li>
-        <li className="p__opensans"><a href="/login">Login</a></li>
-        <li className="p__opensans"><a href="/signup">Signup</a></li>
-        <li className="p__opensans"><a href="/feed">Feed</a></li>
-        <li className="p__opensans"><a href="https://pages.razorpay.com/pl_KlizCHgO1U1j6y/view" target={"_blank"}>Donate</a></li>
+        <li ><a href="/">Home</a></li>
+        <li ><a href="/login">Login</a></li>
+        <li ><a href="/signup">Signup</a></li>
+        <li ><a href="/feed">Feed</a></li>
+        <li><a href="https://pages.razorpay.com/pl_KlizCHgO1U1j6y/view" target={"_blank"}>Donate</a></li>
       </ul>
       
       <div className="app__navbar-smallscreen">
         <GiHamburgerMenu color="#fff" fontSize={27} onClick={() => setToggleMenu(true)} />
-        {toggleMenu && (
+        {toggleMenu &&  (
           <div className="app__navbar-smallscreen_overlay flex__center slide-bottom">
             <HiOutlineXMark fontSize={27} className="overlay__close" onClick={() => setToggleMenu(false)} />
             <ul className="app__navbar-smallscreen_links">
-              <li className='p__opensans'><a href="#home" onClick={() => setToggleMenu(false)}>Home</a></li>
-              <li className='p__opensans'><a href="#about" onClick={() => setToggleMenu(false)}>Login</a></li>
-              <li className='p__opensans'><a href="#menu" onClick={() => setToggleMenu(false)}>Signup</a></li>
-              <li className='p__opensans'><a href="#awards" onClick={() => setToggleMenu(false)}>Feed</a></li>
-              <li className='p__opensans'><a href="#contact" onClick={() => setToggleMenu(false)}>Contact</a></li>
-              <li className="p__opensans"><a href="#contact">Donate</a></li>
+              <li ><a href="/" onClick={() => setToggleMenu(false)}>Home</a></li>
+              <li><a href="/login" onClick={() => setToggleMenu(false)}>Login</a></li>
+              <li><a href="/signup" onClick={() => setToggleMenu(false)}>Signup</a></li>
+              <li><a href="/feed" onClick={() => setToggleMenu(false)}>Feed</a></li>
+              <li><a href="https://pages.razorpay.com/pl_KlizCHgO1U1j6y/view" target={"_blank"}>Donate</a></li>
             </ul>
           </div>
         )}
       </div>
     </nav>
   );
+        }
 
 
 
