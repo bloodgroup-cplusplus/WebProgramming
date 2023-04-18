@@ -116,7 +116,7 @@ import './Navbar.css'
             <ul className='app__navbar-links'>
               <li><a href="/">Profile</a></li>
               <li><a href="/griviences">Griviences</a></li>
-              <li><a href="/addgrivience">Add Grivience</a></li>
+              <li><a href="/addgriviences">Add Grivience</a></li>
               <li><a href = "/feed">Feed</a></li>
               <li><a href = "https://pages.razorpay.com/pl_KlizCHgO1U1j6y/view" target={"_blank"}></a></li>
               <li onClick={logout}>Logout</li>

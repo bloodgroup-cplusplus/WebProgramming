@@ -26,7 +26,7 @@ function App() {
       <Routes>
         <Route path="/comments" element={user?<Comments/>:<Home/>}/>
         <Route path = "/" element={user?<Profile/>:<Home/>}/>
-        <Route path ="/demoprofile" element={<DemoProfile/>}/>
+        {/*<Route path ="/demoprofile" element={<DemoProfile/>}/>*/}
         <Route path = "/griviences" element={user?<Griviences/>:<Login/>}/>
         <Route path = "/addgriviences" element={user?<AddGrivience/>:<Login/>}/>
         <Route path = "/home" element={user?<Profile/>:<Home/>}/>
