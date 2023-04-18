@@ -49,8 +49,8 @@ const FindUs = () => {
               </div>
               <div className="grow ml-6">
                 <p className="font-bold mb-1">Donation questions</p>
-                <p className="text-gray-500 font-extralight">sales@example.com</p>
-                <p className="text-gray-500 font-extralight">+1 234-567-89</p>
+                <p className="text-gray-500 font-extralight"><a href="mailto:associationsikkimteachers@gmail.com">associationsikkimteachers@gmail.com</a></p>
+                <p className="text-gray-500 font-extralight"><a href="tel:+919064757562">+919064757562</a></p>
               </div>
             </div>
           </div>

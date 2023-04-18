@@ -131,7 +131,7 @@ import './Navbar.css'
             <ul className="app__navbar-smallscreen_links">
               <li ><a href="/" onClick={() => setToggleMenu(false)}>Profile</a></li>
               <li><a href="/griviences" onClick={() => setToggleMenu(false)}>Griviences</a></li>
-              <li><a href="/addgrivience" onClick={() => setToggleMenu(false)}>Add Grivience</a></li>
+              <li><a href="/addgriviences" onClick={() => setToggleMenu(false)}>Add Grivience</a></li>
               <li><a href="/feed" onClick={() => setToggleMenu(false)}>Feed</a></li>
               <li><a href="https://pages.razorpay.com/pl_KlizCHgO1U1j6y/view" target={"_blank"}>Donate</a></li>
               <li onClick ={logout}>Logout</li>
