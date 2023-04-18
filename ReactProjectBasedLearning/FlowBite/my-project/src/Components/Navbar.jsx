@@ -3,12 +3,16 @@ import {useState} from "react"
 import sta_logo from "./Images/sta_logo.webp"
 import {useAuthContext} from "../Hooks/useAuthContext"
 import {useLogout} from "../Hooks/useLogout"
+import {GiHamburgerMenu} from "react-icons/gi"
+import {HiOutlineXMark} from "react-icons/hi2"
+import './Navbar.css'
 
  function Navbar()  {
   const{logout} = useLogout()
   const{user} = useAuthContext()
   const[toggleMenu,setToggleMenu]=useState(false)
-  return (
+{/* return (
+
 
 <nav className="bg-black border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
   <div className="container flex flex-wrap items-center justify-between mx-auto">
@@ -16,11 +20,11 @@ import {useLogout} from "../Hooks/useLogout"
         <img src={sta_logo}className="h-20 py-0 mr-3 sm:h-16" alt="Sta Logo" />
         <span className="self-center text-xl font-semibold whitespace-nowrap text-white">STA</span>
     </a>
-    {/*<button data-collapse-toggle="navbar-default" type="button" onClick={()=>setToggleMenu(true)} className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+    <button data-collapse-toggle="navbar-default" type="button" onClick={()=>setToggleMenu(true)} className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
       <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-  </button>*/}
-    <div className= "w-full md:block md:w-auto" id="navbar-default">
-      {toggleMenu && !user &&  (
+  </button>
+   <div className= "w-full md:block md:w-auto" id="navbar-default">
+      { !user &&  (
       <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-black md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-black dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
        
         <li>
@@ -99,7 +103,56 @@ import {useLogout} from "../Hooks/useLogout"
 
 
 
+      )*/}
 
-  )
+
+
+
+
+
+
+
+
+
+
+
+      return (
+        <nav className="app__navbar">
+      <div className="app__navbar-logo">
+        <img src={sta_logo} alt="app__logo" />
+      </div>
+      <ul className="app__navbar-links">
+        <li className="p__opensans"><a href="/">Home</a></li>
+        <li className="p__opensans"><a href="/login">Login</a></li>
+        <li className="p__opensans"><a href="/signup">Signup</a></li>
+        <li className="p__opensans"><a href="/feed">Feed</a></li>
+        <li className="p__opensans"><a href="https://pages.razorpay.com/pl_KlizCHgO1U1j6y/view" target={"_blank"}>Donate</a></li>
+      </ul>
+      
+      <div className="app__navbar-smallscreen">
+        <GiHamburgerMenu color="#fff" fontSize={27} onClick={() => setToggleMenu(true)} />
+        {toggleMenu && (
+          <div className="app__navbar-smallscreen_overlay flex__center slide-bottom">
+            <HiOutlineXMark fontSize={27} className="overlay__close" onClick={() => setToggleMenu(false)} />
+            <ul className="app__navbar-smallscreen_links">
+              <li className='p__opensans'><a href="#home" onClick={() => setToggleMenu(false)}>Home</a></li>
+              <li className='p__opensans'><a href="#about" onClick={() => setToggleMenu(false)}>Login</a></li>
+              <li className='p__opensans'><a href="#menu" onClick={() => setToggleMenu(false)}>Signup</a></li>
+              <li className='p__opensans'><a href="#awards" onClick={() => setToggleMenu(false)}>Feed</a></li>
+              <li className='p__opensans'><a href="#contact" onClick={() => setToggleMenu(false)}>Contact</a></li>
+              <li className="p__opensans"><a href="#contact">Donate</a></li>
+            </ul>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+
+
+
+
+
+
+
 }
 export default Navbar
