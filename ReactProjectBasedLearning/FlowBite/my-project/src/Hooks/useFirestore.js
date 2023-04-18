@@ -90,7 +90,7 @@ export const useFirestore=(collection,user) =>{
             //const moment=dayjs(createdAt.toDate());
             //const addedDocument= await addDoc(firestore_collection(projectFirestore,collection),{...doc,createdAt})
             const grievRef=doc(projectFirestore,collection,docs['email'])
-            alert("Your Grivience has been added.")
+            alert("Your Grivience has been added. Click on the griviences link to view it ")
             setDoc(grievRef,{...docs,createdAt})
             dispatchIfNotCancelled({type:'ADDED_DOCUMENT',payload:grievRef})
 
