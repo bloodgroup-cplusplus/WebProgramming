@@ -66,9 +66,9 @@ function Cec() {
               
           </div>
           <div className="text-center text-gray-500 dark:text-gray-400">
-              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={laxuman_sharma} alt="Laxuman Sharma"/>
+              <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={laxuman_sharma} alt="Laxuman Adhikari"/>
               <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <p>Laxuman Sharma</p>
+                  <p>Laxuman Adhikari</p>
               </h3>
               <p className='font-extralight text-gray-500'>Joint Secretary CEC(STA)</p>
               <p className='font-extralight text-gray-500'>GT Lingding JHS Gangtok District</p>

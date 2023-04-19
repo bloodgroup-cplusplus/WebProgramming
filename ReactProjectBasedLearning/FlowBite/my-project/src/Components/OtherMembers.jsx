@@ -47,8 +47,6 @@ function OtherMembers() {
       <p className="mb-4 font-extralight"><strong>Mr Pempa Lepcha</strong> - HM,PS</p>
       <p className = "mb-4 font-extralight"> <strong>Mr Siddharth Neopaney</strong> - PGT</p>
       <p className = "mb-4 font-extralight"><strong>Mrs Trinity G Namchu</strong> - PRT</p>
-      <p className = "mb-4 font-extralight"><strong>Mrs Sita Devi Subba</strong> - PPT</p>
-      <p className = "mb-4 font-extralight"> <strong>Mr Surendra Subba</strong> - GT</p>
     </div>
   </div>
 </section>
