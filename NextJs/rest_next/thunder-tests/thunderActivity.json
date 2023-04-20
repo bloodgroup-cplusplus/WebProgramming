@@ -1,0 +1,35 @@
+[
+  {
+    "_id": "dba6003d-9e55-4145-b798-31e9bfc18470",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/todos",
+    "url": "http://localhost:3000/api/todos",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-04-20T12:23:53.825Z",
+    "modified": "2023-04-20T12:23:53.825Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "eca25e3a-9857-4894-b936-6ae58c706d8b",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/todos",
+    "url": "http://localhost:3000/api/todos",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2023-04-20T12:32:07.235Z",
+    "modified": "2023-04-20T12:32:07.235Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\"id\":5}",
+      "form": []
+    },
+    "tests": []
+  }
+]
