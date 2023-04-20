@@ -31,5 +31,24 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "4b131dca-67c1-43f6-88e3-8c4d5bd8a8ab",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/todos",
+    "url": "http://localhost:3000/api/todos",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-04-20T12:40:07.061Z",
+    "modified": "2023-04-20T12:40:07.061Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\"userId\":5 , \"title\":\"Make the chad\"}\n",
+      "form": []
+    },
+    "tests": []
   }
 ]
