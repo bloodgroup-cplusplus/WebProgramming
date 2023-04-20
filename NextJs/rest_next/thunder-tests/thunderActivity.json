@@ -50,5 +50,43 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "d2aeb56b-e7b6-4486-9408-16f00a4010aa",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/todos",
+    "url": "http://localhost:3000/api/todos",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2023-04-20T13:01:23.098Z",
+    "modified": "2023-04-20T13:02:03.365Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\"userId\":5 , \"id\":5, \"title\":\"Make the chad\",\"completed\": true}\n",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "fa54349f-bedb-4db3-8ddd-4362a8a17244",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/todos/199",
+    "url": "http://localhost:3000/api/todos/199",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-04-20T13:11:59.443Z",
+    "modified": "2023-04-20T13:11:59.443Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\"userId\":5 , \"id\":5, \"title\":\"Make the chad\",\"completed\": true}\n",
+      "form": []
+    },
+    "tests": []
   }
 ]
