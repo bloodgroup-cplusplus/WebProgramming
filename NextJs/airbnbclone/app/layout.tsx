@@ -2,8 +2,10 @@ import './globals.css'
 import {Nunito} from "next/font/google"
 import Navbar from './components/navbar/Navbar'
 import ClientOnly from './components/ClientOnly'
-// this only wraps the client component during hydration
-import Modal from './components/modals/Modal'
+// the clientOnly  only wraps the client component during hydration
+//import Modal from './components/modals/Modal'
+
+import RegisterModal from './components/modals/RegisterModal'
 
 
 
@@ -25,7 +27,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ClientOnly>
-          <Modal title="Hello World" isOpen/>
+          <RegisterModal/>
+          {/*<Modal title="Hello World" isOpen/>*/}
         <Navbar/>
         </ClientOnly>
         {children}
