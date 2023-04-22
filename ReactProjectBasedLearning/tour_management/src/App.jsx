@@ -1,6 +1,6 @@
 import Carousel from "./components/Carousel";
 import Navbar from "./components/Navbar";
-
+import Footer from "./components/Footer";
 
 
 function App()
@@ -9,6 +9,7 @@ function App()
     <div>
       <Navbar/>
       <Carousel/>
+      <Footer/>
 
     </div>
   )
