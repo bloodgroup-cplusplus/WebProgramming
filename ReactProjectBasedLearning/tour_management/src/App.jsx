@@ -2,6 +2,7 @@ import Carousel from "./components/Carousel";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import Selects from "./components/Selects";
 
 
 function App()
@@ -11,6 +12,7 @@ function App()
       <Navbar/>
       <Hero/>
       <Carousel/>
+      <Selects/>
       <Footer/>
 
     </div>

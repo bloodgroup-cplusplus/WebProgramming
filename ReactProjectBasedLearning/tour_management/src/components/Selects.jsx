@@ -1,10 +1,10 @@
-import BoraBora from "../assets/borabora.jpg"
-import BoraBora2 from "../assets/borabora2.jpg"
-import Maldives from "../assets/maldives.jpg"
-import Maldives2 from "../assets/maldives2.jpg" 
-import Maldives3 from "../assets/maldives3.jpg"
-import KeyWest from "../assets/keywetst.jpg"
-import SelectCard from "./SelectCard";
+import BoraBora from "../assets/borabora.jpeg"
+import BoraBora2 from "../assets/borabora2.jpeg"
+import Maldives from "../assets/maldives.jpeg"
+import Maldives2 from "../assets/maldives2.jpeg" 
+import Maldives3 from "../assets/maldives3.jpeg"
+import KeyWest from "../assets/keywest.jpeg"
+import SelectsCard from "./SelectCards"
 
 const Selects =() =>{
     return(
