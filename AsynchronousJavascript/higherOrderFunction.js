@@ -2,6 +2,8 @@
 
 let logCall = function ()
 {
+
+    console.log("leena")
     console.log("Logcall was called back")
 };
 
